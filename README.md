@@ -24,7 +24,7 @@ O servidor local fica em http://127.0.0.1:4173. Após editar conteúdo ou códig
 | --- | --- | --- |
 | `proposta-1.html` | Moderno e acolhedor | Creme, verde discreto, tipografia serifada, fotografia em arco |
 | `proposta-2.html` | Tradicional e marcante | Preto, vermelho, tons de prata, fotografia de fundo e contraste forte |
-| `proposta-3.html` | Contemporâneo e institucional | Azul profundo, branco, linhas precisas, painel editorial com fotografia |
+| `proposta-3.html` | Contemporâneo e institucional | Areia, palha e marrom suave, linhas precisas, painel editorial com fotografia |
 
 Cada proposta tem um arquivo CSS próprio. Conteúdo, navegação e componentes são compartilhados, para manter a mesma arquitetura entre as três versões. A seleção de propostas é uma tela separada.
 
