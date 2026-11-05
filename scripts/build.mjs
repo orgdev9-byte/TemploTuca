@@ -1,0 +1,12 @@
+import { readFile, writeFile, mkdir, cp } from 'node:fs/promises';
+import { fileURLToPath } from 'node:url';
+import { resolve, join } from 'node:path';
+import { validate } from './model.mjs';
+const root = fileURLToPath(new URL('../', import.meta.url));
+const data = JSON.parse(await readFile(join(root, 'content/portal.json'), 'utf8'));
+validate(data);
+const dist = resolve(root, 'dist');
+await mkdir(dist, { recursive: true });
+await cp(join(root, 'src'), dist, { recursive: true });
+await writeFile(join(dist, 'portal-data.js'), `window.TUCA_CONTENT = ${JSON.stringify(data, null, 2)};\n`);
+console.log(`Protótipos gerados em ${dist} (${data.pages.length} páginas por proposta).`);
