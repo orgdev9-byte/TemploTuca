@@ -124,4 +124,4 @@ Os quatro testes automatizados do catálogo passaram. A geração estática, a v
 
 O repositório foi iniciado com uma apresentação na branch principal. Os protótipos são entregues por uma branch de revisão. Não há implantação do site ou conexão de domínio.
 
-Correção visual: o emblema original foi incluído nas três miniaturas da seleção. Nos cabeçalhos, ele passou a 108 px no desktop e 80 px no celular, com fundo de contraste. O carregamento foi confirmado nas três propostas e não houve rolagem horizontal na verificação de 320 px.
+Correção do logo (arquivos fornecidos em 05/11/2026): versão com fundo claro nos temas claros e no seletor, e transparente na proposta escura. Os arquivos são preservados sem edição. Foi removida a máscara circular, a borda e o preenchimento artificial. A largura é responsiva e a altura segue a proporção natural de cada arquivo (759 × 702 e 1006 × 1024).
