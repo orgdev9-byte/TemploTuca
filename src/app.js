@@ -1,0 +1,154 @@
+(() => {
+  'use strict';
+  // Replace only this adapter when a CMS is approved. Rendering consumes the same model.
+  const repository = { load: async () => window.TUCA_CONTENT };
+  const escape = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const themes = {
+    warm:{ number:'01',name:'Moderno e acolhedor',eyebrow:'Templo de Umbanda Caminhos de Aruanda',heading:'Uma casa.<br>Muitos caminhos.',intro:'Conheça o TUCA, explore os assuntos do portal e encontre as informações para sua visita.' },
+    dark:{ number:'02',name:'Tradicional e marcante',eyebrow:'Templo de Umbanda Caminhos de Aruanda',heading:'Presença.<br>Identidade. <em>TUCA.</em>',intro:'Um portal para apresentar a casa, reunir conhecimento e aproximar caminhos.' },
+    blue:{ number:'03',name:'Contemporâneo e institucional',eyebrow:'Conhecer é se aproximar',heading:'O TUCA,<br>mais perto<br>de você.',intro:'A casa, os conteúdos e a programação. Explore o portal do Templo de Umbanda Caminhos de Aruanda.' }
+  };
+  const theme = themes[document.body.dataset.theme];
+  const isSite = document.body.dataset.mode === "site";
+  let data, pages, roots, current, routeMap, calendarDate = new Date(new Date().getFullYear(),new Date().getMonth(),1);
+  let calendarFilter='all';
+  const children = id => pages.filter(p=>p.parentId===id).sort((a,b)=>a.order-b.order);
+  const ancestors = p => p.parentId ? [...ancestors(pages.find(x=>x.id===p.parentId)),pages.find(x=>x.id===p.parentId)] : [];
+  const route = p => p.id==='inicio' ? '/' : '/' + [...ancestors(p),p].map(x=>x.slug).join('/');
+  const href = p => '#' + route(p);
+  const link = (p,extra='') => `<a href="${escape(href(p))}" ${p.id===current?.id?'aria-current="page"':''} ${extra}>${escape(p.title)}</a>`;
+  const find = id => pages.find(p=>p.id===id);
+  function navItems(items) {
+    return `<ul>${items.filter(p=>p.showInNavigation).map(p=>{
+      const sub=children(p.id).filter(x=>x.showInNavigation);
+      return `<li class="nav-item"><div class="nav-row">${link(p)}${sub.length?`<button class="submenu-toggle" aria-expanded="false" aria-controls="menu-${escape(p.id)}" aria-label="Abrir submenu ${escape(p.title)}" data-label="${escape(p.title)}"><span aria-hidden="true">⌄</span></button>`:''}</div>${sub.length?`<div class="submenu" id="menu-${escape(p.id)}" hidden><a class="overview-link" href="${escape(href(p))}">Ver introdução →</a>${navItems(sub)}</div>`:''}</li>`;
+    }).join('')}</ul>`;
+  }
+  function closeSubmenus(except) {
+    document.querySelectorAll('.submenu-toggle[aria-expanded="true"]').forEach(btn=>{
+      const panel=document.getElementById(btn.getAttribute('aria-controls'));
+      if (except && (panel.contains(except) || btn===except)) return;
+      setSubmenu(btn,false);
+    });
+  }
+  function setSubmenu(btn,open) {
+    btn.setAttribute('aria-expanded',String(open));
+    btn.setAttribute('aria-label',`${open?'Fechar':'Abrir'} submenu ${btn.dataset.label}`);
+    document.getElementById(btn.getAttribute('aria-controls')).hidden=!open;
+  }
+  function closeMobile(restore=false) {
+    const btn=document.querySelector('.mobile-toggle');
+    btn.setAttribute('aria-expanded','false');
+    btn.setAttribute('aria-label','Abrir menu principal');
+    document.querySelector('.site-nav').classList.remove('mobile-open');
+    if(restore)btn.focus();
+  }
+  function header() {
+    return `<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+      ${isSite ? '' : `<div class="prototype-bar"><div class="wrap"><span>Proposta ${theme.number} <span class="prototype-name">· ${theme.name}</span></span><a href="propostas.html">Comparar propostas <span aria-hidden="true">↗</span></a></div></div>`}
+      <header class="site-header"><div class="brand-row wrap"><a class="brand" href="#/" aria-label="TUCA — Início"><img src="${escape(theme.number==='02' ? data.site.logoDark : data.site.logo)}" alt="Emblema original do TUCA" width="1006" height="1024"><span>TUCA<small>${isSite ? escape(data.site.tagline) : 'Templo de Umbanda<br>Caminhos de Aruanda'}</small></span></a>${isSite ? '' : '<p class="brand-message">É simples, é do bem,<br><strong>é Umbanda.</strong></p>'}${isSite ? `<a class="header-visit" href="${href(find('visite'))}">Planeje sua visita <span aria-hidden="true">↗</span></a>` : ''}<button class="mobile-toggle" aria-expanded="false" aria-controls="main-navigation" aria-label="Abrir menu principal"><span aria-hidden="true">☰</span> Menu</button></div>
+      <nav class="site-nav" id="main-navigation" aria-label="Navegação principal"><div class="wrap">${navItems(roots)}</div></nav></header>
+      <div class="demo-bar"><div class="wrap"><span class="demo-dot" aria-hidden="true"></span>${escape(data.site.demoNotice)}</div></div>`;
+  }
+  function cards(items) {
+    return `<div class="topic-grid">${items.map((p,i)=>`<a class="topic-card" href="${escape(href(p))}"><span class="card-index">${String(i+1).padStart(2,'0')}</span><h3>${escape(p.title)}</h3><p>${escape(p.summary)}</p><span class="card-bottom">Explorar página <span aria-hidden="true">↗</span></span></a>`).join('')}</div>`;
+  }
+  function home() {
+    return `<section class="hero wrap"><div class="hero-copy"><p class="eyebrow">${isSite ? escape(data.site.home.eyebrow) : theme.eyebrow}</p><h1 class="${isSite ? 'hero-title-name' : ''}">${isSite ? escape(data.site.home.title) : theme.heading}</h1><p class="hero-intro">${isSite ? escape(data.site.home.description) : theme.intro}</p><div class="hero-actions"><a class="button" href="${href(find('tuca'))}">Conheça o TUCA <span aria-hidden="true">↗</span></a><a class="text-link" href="${href(find('calendario'))}">Ver calendário <span aria-hidden="true">→</span></a></div></div><figure class="hero-photo"><img src="${escape(data.site.photo)}" alt="Fotografia original fornecida do congá do TUCA, com atabaque em primeiro plano" width="813" height="1314"><figcaption>Um olhar para a nossa casa <span>Fotografia original · TUCA</span></figcaption></figure><span class="hero-vertical" aria-hidden="true">TUCA / CAMINHOS DE ARUANDA</span></section>
+      <section class="quick-paths wrap" aria-label="Acessos rápidos"><a href="${href(find('visite'))}"><span class="eyebrow">01 · Sua visita</span><strong>Encontre seu caminho <span aria-hidden="true">↗</span></strong><p>Orientações e informações da casa.</p></a><a href="${href(find('orixas'))}"><span class="eyebrow">02 · Conhecimento</span><strong>Explore os assuntos <span aria-hidden="true">↗</span></strong><p>Orixás, Umbanda e Linhas de Trabalho.</p></a><a href="${href(find('calendario'))}"><span class="eyebrow">03 · Programação</span><strong>Acompanhe a agenda <span aria-hidden="true">↗</span></strong><p>Espaço para as próximas giras e eventos.</p></a></section>
+      <section class="portal-section wrap"><div class="section-heading"><div><p class="eyebrow">Conhecer, aprender, se aproximar</p><h2>Um portal para explorar.</h2></div><p>Escolha um assunto para navegar.</p></div>${cards([find('umbanda'),find('orixas'),find('linhas')])}</section>
+      <section class="agenda-callout wrap"><div><p class="eyebrow">Calendário da casa</p><h2>O próximo encontro<br>começa por aqui.</h2></div><div><span class="status-pill">Programação em preparação</span><p>Nenhuma data ou horário foi aprovado para este protótipo.</p><a class="text-link" href="${href(find('calendario'))}">Explorar o calendário <span aria-hidden="true">→</span></a></div></section>`;
+  }
+  function locationBlock() {
+    const place=data.site.location;
+    if(!place || !/^https:\/\/www\.google\.com\/maps\/embed\?/.test(place.embedUrl) || !/^https:\/\/www\.google\.com\/maps\/search\//.test(place.mapsUrl))return '';
+    return `<section class="location-section" aria-label="Localização do TUCA"><div class="location-details"><div><h2>Nosso endereço</h2><address><strong>${escape(place.street)}</strong><span>${escape(place.neighborhood)}</span><span>${escape(place.city)} — ${escape(place.state)}</span></address></div><a class="button map-open" href="${escape(place.mapsUrl)}" target="_blank" rel="noopener noreferrer" aria-label="Abrir endereço do TUCA no Google Maps (nova aba)">Abrir no Google Maps <span aria-hidden="true">↗</span></a></div><div class="location-map"><iframe title="Mapa do TUCA — Avenida Sapopemba, 633, São Paulo" src="${escape(place.embedUrl)}" width="600" height="450" style="border:0" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe></div><p class="map-credit">Mapa interativo do Google Maps.</p></section>`;
+  }
+  function blocks(list=[]) {
+    return list.map(b=>b.type==='location'?locationBlock():b.type==='heading'?`<h2>${escape(b.text)}</h2>`:b.type==='paragraph'?`<p>${escape(b.text)}</p>`:b.type==='list'?`<ul>${b.items.map(t=>`<li>${escape(t)}</li>`).join('')}</ul>`:'').join('');
+  }
+  function calendar() {
+    const year=calendarDate.getFullYear(),month=calendarDate.getMonth();
+    const label=new Intl.DateTimeFormat('pt-BR',{month:'long',year:'numeric'}).format(calendarDate);
+    const offset=new Date(year,month,1).getDay(),days=new Date(year,month+1,0).getDate();
+    const today=new Date();
+    const cells=Array.from({length:Math.ceil((offset+days)/7)*7},(_,i)=>{
+      const day=i-offset+1;
+      if(day<1||day>days)return '<td class="empty-day"></td>';
+      const isToday=today.getFullYear()===year&&today.getMonth()===month&&today.getDate()===day;
+      return `<td><span ${isToday?'aria-current="date" class="today"':''}>${day}</span></td>`;
+    });
+    const kind=calendarFilter==='all'?'atividades':calendarFilter==='giras'?'giras':'eventos especiais';
+    return `<section class="calendar" aria-label="Calendário demonstrativo"><div class="calendar-toolbar"><button class="icon-button" data-month="-1" aria-label="Mês anterior">←</button><h2 id="month-label" aria-live="polite">${escape(label)}</h2><button class="icon-button" data-month="1" aria-label="Próximo mês">→</button><button class="today-button">Mês atual</button></div><label class="filter-label">Exibir <select id="calendar-filter"><option value="all" ${calendarFilter==='all'?'selected':''}>Todas as atividades</option><option value="giras" ${calendarFilter==='giras'?'selected':''}>Giras</option><option value="eventos" ${calendarFilter==='eventos'?'selected':''}>Eventos especiais</option></select></label><div class="calendar-table-wrap"><table aria-labelledby="month-label"><thead><tr>${['Dom','Seg','Ter','Qua','Qui','Sex','Sáb'].map(d=>`<th scope="col">${d}</th>`).join('')}</tr></thead><tbody>${Array.from({length:cells.length/7},(_,i)=>`<tr>${cells.slice(i*7,i*7+7).join('')}</tr>`).join('')}</tbody></table></div><p class="calendar-legend"><span class="today-sample" aria-hidden="true"></span> Hoje · Destaque apenas da data atual</p><div class="empty-state" role="status"><span class="eyebrow">Agenda demonstrativa</span><h3>Programação em preparação</h3><p>Não há registros de ${kind} para ${escape(label)}. Nenhuma data de gira, evento ou horário foi confirmada neste protótipo.</p></div></section>`;
+  }
+  function gallery() {
+    return `<figure class="content-photo"><img src="${escape(data.site.photo)}" alt="Fotografia original do congá do TUCA, com atabaque em primeiro plano" width="813" height="1314"><figcaption>Fotografia original fornecida para o projeto. A galeria definitiva poderá receber novos registros aprovados pela casa.</figcaption></figure>`;
+  }
+  function contentPage() {
+    const parents=ancestors(current),section=parents[0]||current,sub=children(current.id),siblings=children(section.id);
+    return `<div class="wrap"><nav class="breadcrumbs" aria-label="Caminho da página"><ol><li><a href="#/">Início</a></li>${parents.map(p=>`<li>${link(p)}</li>`).join('')}<li aria-current="page">${escape(current.title)}</li></ol></nav><div class="content-layout${parents.length?'':' content-layout--overview'}">${parents.length?`<aside class="section-nav"><h2>${link(section)}</h2><nav aria-label="Páginas de ${escape(section.title)}"><ul>${siblings.map(p=>`<li>${link(p)}</li>`).join('')}</ul></nav></aside>`:''}<article class="page-content"><header class="page-heading"><h1>${escape(current.title)}</h1><p class="page-summary">${escape(current.summary)}</p></header>
+      ${current.id==='orixas'||current.id==='linhas'?'<div class="editorial-note"><strong>Uma estrutura para conhecer os temas.</strong><p>Os assuntos abaixo são propostas de organização. Não representam uma lista oficial dos fundamentos ou das práticas do TUCA. A seleção e os textos dependem da aprovação do dirigente.</p></div>':''}
+      ${current.template==='calendar'?`<div id="calendar-region">${calendar()}</div>`:''}
+      ${current.template==='gallery'?gallery():''}
+      ${sub.length?`<section class="subtopics" aria-label="Páginas desta seção"><h2>${current.id==='orixas'?'Conheça os temas':current.id==='linhas'?'Explore as linhas propostas':'Explore esta seção'}</h2>${cards(sub)}</section>`:''}
+      ${(current.template==='article'||current.template==='gallery')&&current.blocks?.length?`<div class="prose">${blocks(current.blocks)}</div>`:''}
+      ${current.template==='visit'?'<div class="editorial-note"><strong>Planeje sua primeira visita.</strong><p>Nosso endereço: Av. Sapopemba, 633 — Vila Regente Feijó, São Paulo — SP. Acesse Como chegar para consultar o mapa. Horários, contatos e recomendações de visita serão apresentados após confirmação da casa.</p></div>':''}
+      </article></div></div>`;
+  }
+  function footer() {
+    return `<footer class="site-footer"><div class="wrap footer-main"><div><p class="footer-wordmark">TUCA</p><p>Templo de Umbanda<br>Caminhos de Aruanda</p></div><div><p class="eyebrow">Explore o portal</p><nav aria-label="Navegação do rodapé">${roots.filter(p=>p.id!=='inicio').map(p=>link(p)).join('')}</nav></div><div>${isSite ? `<p class="eyebrow">Sua visita</p><a href="${href(find('visite'))}">Informações para sua visita ↗</a>` : `<p class="eyebrow">Projeto em estudo</p><p>Protótipo navegável para avaliação<br>e aprovação do dirigente.</p><a href="propostas.html">Ver as três propostas ↗</a>`}</div></div><div class="wrap footer-bottom"><span>${isSite ? 'TUCA · Portal em preparação' : `Proposta ${theme.number} · ${theme.name}`}</span></div></footer>`;
+  }
+  function render(focus=false) {
+    let path;
+    try { path=decodeURIComponent(location.hash.slice(1)||'/').replace(/\/$/,'')||'/'; } catch { path='invalid'; }
+    current=routeMap.get(path);
+    document.title=`${current?.title||'Página não encontrada'} — TUCA${isSite ? '' : ` · Proposta ${theme.number}`}`;
+    document.getElementById('app').innerHTML=header()+`<main id="conteudo" tabindex="-1">${current?(current.template==='home'?home():contentPage()):'<section class="wrap not-found"><p class="eyebrow">Este caminho não foi encontrado</p><h1>Vamos encontrar<br>outro caminho?</h1><p>Esta página não faz parte do protótipo.</p><a class="button" href="#/">Voltar ao início →</a></section>'}</main>`+footer();
+    document.querySelectorAll('.submenu-toggle').forEach(btn=>setSubmenu(btn,false));
+    bindNavigation();
+    bindCalendar();
+    if(focus) { document.getElementById('conteudo').focus({preventScroll:true});window.scrollTo({top:0,behavior:'instant'}); }
+  }
+  function bindNavigation() {
+    document.querySelector('.mobile-toggle').addEventListener('click',event=>{
+      const btn=event.currentTarget,open=btn.getAttribute('aria-expanded')!=='true';
+      btn.setAttribute('aria-expanded',String(open));btn.setAttribute('aria-label',`${open?'Fechar':'Abrir'} menu principal`);
+      document.querySelector('.site-nav').classList.toggle('mobile-open',open);
+    });
+    document.querySelectorAll('.submenu-toggle').forEach(btn=>{
+      btn.addEventListener('click',()=>{const open=btn.getAttribute('aria-expanded')!=='true';closeSubmenus(btn);setSubmenu(btn,open);});
+      btn.addEventListener('keydown',e=>{if(e.key==='ArrowDown'){e.preventDefault();closeSubmenus(btn);setSubmenu(btn,true);document.getElementById(btn.getAttribute('aria-controls')).querySelector('a').focus();}});
+    });
+    document.querySelector('.site-nav').addEventListener('focusout',e=>{if(!e.currentTarget.contains(e.relatedTarget))closeSubmenus();});
+    document.querySelector('.skip-link').addEventListener('click',e=>{e.preventDefault();document.getElementById('conteudo').focus();document.getElementById('conteudo').scrollIntoView();});
+    document.querySelector('.site-nav').addEventListener('click',e=>{if(e.target.closest('a')){closeSubmenus();closeMobile();}});
+  }
+  function bindCalendar() {
+    const region=document.getElementById('calendar-region');if(!region)return;
+    const update=target=>{region.innerHTML=calendar();bindCalendar();region.querySelector(target)?.focus({preventScroll:true});};
+    region.querySelectorAll('[data-month]').forEach(btn=>btn.addEventListener('click',()=>{calendarDate=new Date(calendarDate.getFullYear(),calendarDate.getMonth()+Number(btn.dataset.month),1);update(`[data-month="${btn.dataset.month}"]`);}));
+    region.querySelector('.today-button').addEventListener('click',()=>{calendarDate=new Date(new Date().getFullYear(),new Date().getMonth(),1);update('.today-button');});
+    region.querySelector('select').addEventListener('change',e=>{calendarFilter=e.target.value;update('select');});
+  }
+  document.addEventListener('keydown',e=>{
+    if(e.key!=='Escape')return;
+    const sub=e.target.closest('.submenu');
+    if(sub){const btn=document.querySelector(`[aria-controls="${sub.id}"]`);setSubmenu(btn,false);btn.focus();return;}
+    const own=e.target.closest('.submenu-toggle');
+    if(own&&own.getAttribute('aria-expanded')==='true'){setSubmenu(own,false);return;}
+    const open=document.querySelector('.submenu-toggle[aria-expanded="true"]');
+    if(open){closeSubmenus();open.focus();return;}
+    if(document.querySelector('.mobile-toggle')?.getAttribute('aria-expanded')==='true')closeMobile(true);
+  });
+  document.addEventListener('click',e=>{
+    const internal=e.target.closest('a[href^="#/"]');
+    if(internal&&internal.getAttribute('href')===location.hash){e.preventDefault();render(true);return;}
+    if(!e.target.closest('.site-nav'))closeSubmenus();
+    if(!e.target.closest('.site-header'))closeMobile();
+  });
+  addEventListener('hashchange',()=>render(true));
+  matchMedia('(min-width:1100px)').addEventListener('change',()=>{closeSubmenus();closeMobile();});
+  repository.load().then(content=>{
+    data=content;pages=data.pages;roots=children(null);routeMap=new Map(pages.map(p=>[route(p),p]));render();
+  }).catch(()=>{document.getElementById('app').innerHTML='<main class="wrap"><h1>Não foi possível abrir o protótipo.</h1><p>Gere os arquivos com npm run build e tente novamente.</p><a href="index.html">Voltar às propostas</a></main>';});
+})();

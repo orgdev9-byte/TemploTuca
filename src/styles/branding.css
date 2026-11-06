@@ -1,0 +1,13 @@
+/* Supplied artwork displayed intact: no circular crop, padding, or added border. */
+.brand{align-items:center;gap:20px;min-width:0}
+.brand img{display:block;width:112px;height:auto;aspect-ratio:auto;object-fit:contain;object-position:center;flex:0 0 auto;padding:0;border:0;border-radius:0;background:transparent;filter:none;transform:none}
+.brand-row{min-height:146px;gap:24px;padding-block:16px}
+.mini-nav{min-height:76px;align-items:center;gap:12px;padding-block:10px}
+.mini-nav>.mini-brand{display:flex;align-items:center;gap:9px;font:inherit;letter-spacing:inherit;flex-shrink:0}
+.mini-brand img{display:block;width:48px;height:auto;aspect-ratio:auto;flex:0 0 auto;object-fit:contain;object-position:center;padding:0;border:0;border-radius:0;background:transparent;filter:none;transform:none}
+.mini-brand b{font-weight:400}
+.mini-body{height:190px}
+@media(min-width:1500px){.mini-body{height:240px}}
+@media(max-width:1099px){.brand img{width:96px;height:auto}.brand-row{min-height:124px}.mini-brand img{width:42px;height:auto}.mini-nav>.mini-brand{gap:7px}}
+@media(max-width:720px){.brand img{width:88px;height:auto}.brand-row{min-height:116px;gap:12px;padding-block:14px}.brand{gap:10px}.brand small{font-size:7px}.mobile-toggle{flex-shrink:0}.mini-brand img{width:52px;height:auto}.mini-nav>.mini-brand{gap:10px}.mini-body{height:204px}}
+@media(max-width:360px){.brand-row{gap:8px}.site-header .brand{gap:8px}.site-header .brand>span{font-size:24px}.site-header .brand small{font-size:6px}.mobile-toggle{padding-inline:10px}}
