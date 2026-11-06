@@ -12,6 +12,14 @@
       "eyebrow": "Bem-vindo(a) ao TUCA",
       "title": "Templo de Umbanda Caminhos de Aruanda",
       "description": "Um espaço de acolhimento, espiritualidade e amor. Onde todos os caminhos se encontram."
+    },
+    "location": {
+      "street": "Av. Sapopemba, 633",
+      "neighborhood": "Vila Regente Feijó",
+      "city": "São Paulo",
+      "state": "SP",
+      "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Avenida%20Sapopemba%2C%20633%2C%20Vila%20Regente%20Feij%C3%B3%2C%20S%C3%A3o%20Paulo%20-%20SP",
+      "embedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.178716915373!2d-46.573799699999995!3d-23.562023999999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5e9f63fab23b%3A0x2ac527e19cc96e96!2sAv.%20Sapopemba%2C%20633%20-%20Vila%20Reg.%20Feij%C3%B3%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2003345-001!5e0!3m2!1spt-BR!2sbr!4v1793990954497!5m2!1spt-BR!2sbr"
     }
   },
   "events": [],
@@ -1275,28 +1283,11 @@
       "template": "article",
       "order": 0,
       "showInNavigation": true,
-      "status": "demo",
-      "summary": "Endereço e orientações de acesso serão confirmados pela casa antes da publicação.",
+      "status": "provided",
+      "summary": "Av. Sapopemba, 633 — Vila Regente Feijó, São Paulo — SP.",
       "blocks": [
         {
-          "type": "heading",
-          "text": "Sobre este espaço"
-        },
-        {
-          "type": "paragraph",
-          "text": "Endereço e orientações de acesso serão confirmados pela casa antes da publicação."
-        },
-        {
-          "type": "paragraph",
-          "text": "Texto provisório de demonstração. Esta página apresenta a organização do portal e não contém ensinamentos, relatos históricos ou informações institucionais aprovados."
-        },
-        {
-          "type": "heading",
-          "text": "Conteúdo em preparação"
-        },
-        {
-          "type": "paragraph",
-          "text": "A versão definitiva poderá reunir introdução, texto principal, imagens autorizadas e assuntos relacionados. A seleção dos temas e a redação dependem da aprovação do dirigente."
+          "type": "location"
         }
       ]
     },
