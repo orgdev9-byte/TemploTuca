@@ -1284,7 +1284,7 @@ window.TUCA_CONTENT = {
       "order": 0,
       "showInNavigation": true,
       "status": "provided",
-      "summary": "Av. Sapopemba, 633 — Vila Regente Feijó, São Paulo — SP.",
+      "summary": "Veja nossa localização e trace seu caminho até o TUCA.",
       "blocks": [
         {
           "type": "location"
