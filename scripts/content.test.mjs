@@ -12,7 +12,7 @@ test('assuntos de Orixás e Linhas têm introdução, páginas próprias e statu
     assert.equal(data.pages.find(p=>p.id===id).template,'collection');
     const topics=data.pages.filter(p=>p.parentId===id);
     assert.ok(topics.length>1);
-    assert.ok(topics.every(p=>p.template==='article'&&p.status==='demo'&&p.blocks.length));
+    assert.ok(topics.every(p=>p.template==='article'&&p.status==='demo'&&p.summary.length));
   }
   assert.equal(data.events.length,0,'Não incluir datas de gira sem aprovação');
 });
@@ -29,4 +29,12 @@ test('impede ciclos, pais ausentes e caminhos ambíguos no futuro catálogo',()=
   assert.throws(()=>validate(missing),/pai ausente/);
   const duplicate=structuredClone(data);duplicate.pages.push({...duplicate.pages[0],id:'outra'});
   assert.throws(()=>validate(duplicate),/Caminho duplicado/);
+});
+
+
+test('resumos aparecem uma vez e blocos genéricos não ocupam páginas',()=>{
+  for(const page of data.pages){
+    assert.ok(!page.blocks.some(b=>b.type==='paragraph'&&b.text===page.summary),page.id+' repete o resumo');
+    assert.ok(!page.blocks.some(b=>['Sobre este espaço','Conteúdo em preparação'].includes(b.text)),page.id+' contém estrutura genérica');
+  }
 });

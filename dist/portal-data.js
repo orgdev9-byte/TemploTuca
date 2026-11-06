@@ -58,28 +58,7 @@ window.TUCA_CONTENT = {
       "showInNavigation": true,
       "status": "demo",
       "summary": "Espaço reservado para a trajetória do TUCA. Datas, acontecimentos e relatos serão definidos pela casa.",
-      "blocks": [
-        {
-          "type": "heading",
-          "text": "Sobre este espaço"
-        },
-        {
-          "type": "paragraph",
-          "text": "Espaço reservado para a trajetória do TUCA. Datas, acontecimentos e relatos serão definidos pela casa."
-        },
-        {
-          "type": "paragraph",
-          "text": "Texto provisório de demonstração. Esta página apresenta a organização do portal e não contém ensinamentos, relatos históricos ou informações institucionais aprovados."
-        },
-        {
-          "type": "heading",
-          "text": "Conteúdo em preparação"
-        },
-        {
-          "type": "paragraph",
-          "text": "A versão definitiva poderá reunir introdução, texto principal, imagens autorizadas e assuntos relacionados. A seleção dos temas e a redação dependem da aprovação do dirigente."
-        }
-      ]
+      "blocks": []
     },
     {
       "id": "tuca-nossa-missao",
@@ -91,28 +70,7 @@ window.TUCA_CONTENT = {
       "showInNavigation": true,
       "status": "demo",
       "summary": "Espaço reservado para a missão e os valores institucionais, com redação a ser aprovada pelo dirigente.",
-      "blocks": [
-        {
-          "type": "heading",
-          "text": "Sobre este espaço"
-        },
-        {
-          "type": "paragraph",
-          "text": "Espaço reservado para a missão e os valores institucionais, com redação a ser aprovada pelo dirigente."
-        },
-        {
-          "type": "paragraph",
-          "text": "Texto provisório de demonstração. Esta página apresenta a organização do portal e não contém ensinamentos, relatos históricos ou informações institucionais aprovados."
-        },
-        {
-          "type": "heading",
-          "text": "Conteúdo em preparação"
-        },
-        {
-          "type": "paragraph",
-          "text": "A versão definitiva poderá reunir introdução, texto principal, imagens autorizadas e assuntos relacionados. A seleção dos temas e a redação dependem da aprovação do dirigente."
-        }
-      ]
+      "blocks": []
     },
     {
       "id": "tuca-nossa-casa-e-o-conga",
@@ -124,28 +82,7 @@ window.TUCA_CONTENT = {
       "showInNavigation": true,
       "status": "demo",
       "summary": "Conheça o espaço reservado à apresentação da casa e à fotografia original do congá.",
-      "blocks": [
-        {
-          "type": "heading",
-          "text": "Sobre este espaço"
-        },
-        {
-          "type": "paragraph",
-          "text": "Conheça o espaço reservado à apresentação da casa e à fotografia original do congá."
-        },
-        {
-          "type": "paragraph",
-          "text": "Texto provisório de demonstração. Esta página apresenta a organização do portal e não contém ensinamentos, relatos históricos ou informações institucionais aprovados."
-        },
-        {
-          "type": "heading",
-          "text": "Conteúdo em preparação"
-        },
-        {
-          "type": "paragraph",
-          "text": "A versão definitiva poderá reunir introdução, texto principal, imagens autorizadas e assuntos relacionados. A seleção dos temas e a redação dependem da aprovação do dirigente."
-        }
-      ]
+      "blocks": []
     },
     {
       "id": "tuca-como-funcionam-as-giras",
@@ -157,28 +94,7 @@ window.TUCA_CONTENT = {
       "showInNavigation": true,
       "status": "demo",
       "summary": "As orientações sobre as giras serão fornecidas e aprovadas pelo TUCA.",
-      "blocks": [
-        {
-          "type": "heading",
-          "text": "Sobre este espaço"
-        },
-        {
-          "type": "paragraph",
-          "text": "As orientações sobre as giras serão fornecidas e aprovadas pelo TUCA."
-        },
-        {
-          "type": "paragraph",
-          "text": "Texto provisório de demonstração. Esta página apresenta a organização do portal e não contém ensinamentos, relatos históricos ou informações institucionais aprovados."
-        },
-        {
-          "type": "heading",
-          "text": "Conteúdo em preparação"
-        },
-        {
-          "type": "paragraph",
-          "text": "A versão definitiva poderá reunir introdução, texto principal, imagens autorizadas e assuntos relacionados. A seleção dos temas e a redação dependem da aprovação do dirigente."
-        }
-      ]
+      "blocks": []
     },
     {
       "id": "tuca-dirigentes-da-casa",
@@ -190,28 +106,7 @@ window.TUCA_CONTENT = {
       "showInNavigation": true,
       "status": "demo",
       "summary": "Apresentações e biografias serão incluídas após definição e aprovação da direção.",
-      "blocks": [
-        {
-          "type": "heading",
-          "text": "Sobre este espaço"
-        },
-        {
-          "type": "paragraph",
-          "text": "Apresentações e biografias serão incluídas após definição e aprovação da direção."
-        },
-        {
-          "type": "paragraph",
-          "text": "Texto provisório de demonstração. Esta página apresenta a organização do portal e não contém ensinamentos, relatos históricos ou informações institucionais aprovados."
-        },
-        {
-          "type": "heading",
-          "text": "Conteúdo em preparação"
-        },
-        {
-          "type": "paragraph",
-          "text": "A versão definitiva poderá reunir introdução, texto principal, imagens autorizadas e assuntos relacionados. A seleção dos temas e a redação dependem da aprovação do dirigente."
-        }
-      ]
+      "blocks": []
     },
     {
       "id": "umbanda",
@@ -235,28 +130,7 @@ window.TUCA_CONTENT = {
       "showInNavigation": true,
       "status": "demo",
       "summary": "Espaço reservado para uma introdução aprovada pela casa.",
-      "blocks": [
-        {
-          "type": "heading",
-          "text": "Sobre este espaço"
-        },
-        {
-          "type": "paragraph",
-          "text": "Espaço reservado para uma introdução aprovada pela casa."
-        },
-        {
-          "type": "paragraph",
-          "text": "Texto provisório de demonstração. Esta página apresenta a organização do portal e não contém ensinamentos, relatos históricos ou informações institucionais aprovados."
-        },
-        {
-          "type": "heading",
-          "text": "Conteúdo em preparação"
-        },
-        {
-          "type": "paragraph",
-          "text": "A versão definitiva poderá reunir introdução, texto principal, imagens autorizadas e assuntos relacionados. A seleção dos temas e a redação dependem da aprovação do dirigente."
-        }
-      ]
+      "blocks": []
     },
     {
       "id": "umbanda-historia-da-umbanda",
@@ -268,28 +142,7 @@ window.TUCA_CONTENT = {
       "showInNavigation": true,
       "status": "demo",
       "summary": "A abordagem histórica e as fontes de estudo serão selecionadas pela casa.",
-      "blocks": [
-        {
-          "type": "heading",
-          "text": "Sobre este espaço"
-        },
-        {
-          "type": "paragraph",
-          "text": "A abordagem histórica e as fontes de estudo serão selecionadas pela casa."
-        },
-        {
-          "type": "paragraph",
-          "text": "Texto provisório de demonstração. Esta página apresenta a organização do portal e não contém ensinamentos, relatos históricos ou informações institucionais aprovados."
-        },
-        {
-          "type": "heading",
-          "text": "Conteúdo em preparação"
-        },
-        {
-          "type": "paragraph",
-          "text": "A versão definitiva poderá reunir introdução, texto principal, imagens autorizadas e assuntos relacionados. A seleção dos temas e a redação dependem da aprovação do dirigente."
-        }
-      ]
+      "blocks": []
     },
     {
       "id": "umbanda-fundamentos",
@@ -301,28 +154,7 @@ window.TUCA_CONTENT = {
       "showInNavigation": true,
       "status": "demo",
       "summary": "Os temas e os textos desta seção serão definidos pelo dirigente.",
-      "blocks": [
-        {
-          "type": "heading",
-          "text": "Sobre este espaço"
-        },
-        {
-          "type": "paragraph",
-          "text": "Os temas e os textos desta seção serão definidos pelo dirigente."
-        },
-        {
-          "type": "paragraph",
-          "text": "Texto provisório de demonstração. Esta página apresenta a organização do portal e não contém ensinamentos, relatos históricos ou informações institucionais aprovados."
-        },
-        {
-          "type": "heading",
-          "text": "Conteúdo em preparação"
-        },
-        {
-          "type": "paragraph",
-          "text": "A versão definitiva poderá reunir introdução, texto principal, imagens autorizadas e assuntos relacionados. A seleção dos temas e a redação dependem da aprovação do dirigente."
-        }
-      ]
+      "blocks": []
     },
     {
       "id": "umbanda-mediunidade",
@@ -334,28 +166,7 @@ window.TUCA_CONTENT = {
       "showInNavigation": true,
       "status": "demo",
       "summary": "Espaço reservado para conteúdo educativo revisado pela casa.",
-      "blocks": [
-        {
-          "type": "heading",
-          "text": "Sobre este espaço"
-        },
-        {
-          "type": "paragraph",
-          "text": "Espaço reservado para conteúdo educativo revisado pela casa."
-        },
-        {
-          "type": "paragraph",
-          "text": "Texto provisório de demonstração. Esta página apresenta a organização do portal e não contém ensinamentos, relatos históricos ou informações institucionais aprovados."
-        },
-        {
-          "type": "heading",
-          "text": "Conteúdo em preparação"
-        },
-        {
-          "type": "paragraph",
-          "text": "A versão definitiva poderá reunir introdução, texto principal, imagens autorizadas e assuntos relacionados. A seleção dos temas e a redação dependem da aprovação do dirigente."
-        }
-      ]
+      "blocks": []
     },
     {
       "id": "umbanda-pontos-cantados",
@@ -367,28 +178,7 @@ window.TUCA_CONTENT = {
       "showInNavigation": true,
       "status": "demo",
       "summary": "Letras, referências e autorizações serão avaliadas antes da inclusão de materiais.",
-      "blocks": [
-        {
-          "type": "heading",
-          "text": "Sobre este espaço"
-        },
-        {
-          "type": "paragraph",
-          "text": "Letras, referências e autorizações serão avaliadas antes da inclusão de materiais."
-        },
-        {
-          "type": "paragraph",
-          "text": "Texto provisório de demonstração. Esta página apresenta a organização do portal e não contém ensinamentos, relatos históricos ou informações institucionais aprovados."
-        },
-        {
-          "type": "heading",
-          "text": "Conteúdo em preparação"
-        },
-        {
-          "type": "paragraph",
-          "text": "A versão definitiva poderá reunir introdução, texto principal, imagens autorizadas e assuntos relacionados. A seleção dos temas e a redação dependem da aprovação do dirigente."
-        }
-      ]
+      "blocks": []
     },
     {
       "id": "umbanda-glossario",
@@ -400,28 +190,7 @@ window.TUCA_CONTENT = {
       "showInNavigation": true,
       "status": "demo",
       "summary": "Espaço reservado para termos e explicações revisados pelo TUCA.",
-      "blocks": [
-        {
-          "type": "heading",
-          "text": "Sobre este espaço"
-        },
-        {
-          "type": "paragraph",
-          "text": "Espaço reservado para termos e explicações revisados pelo TUCA."
-        },
-        {
-          "type": "paragraph",
-          "text": "Texto provisório de demonstração. Esta página apresenta a organização do portal e não contém ensinamentos, relatos históricos ou informações institucionais aprovados."
-        },
-        {
-          "type": "heading",
-          "text": "Conteúdo em preparação"
-        },
-        {
-          "type": "paragraph",
-          "text": "A versão definitiva poderá reunir introdução, texto principal, imagens autorizadas e assuntos relacionados. A seleção dos temas e a redação dependem da aprovação do dirigente."
-        }
-      ]
+      "blocks": []
     },
     {
       "id": "orixas",
@@ -445,28 +214,7 @@ window.TUCA_CONTENT = {
       "showInNavigation": true,
       "status": "demo",
       "summary": "Página demonstrativa dedicada ao tema Oxalá. O conteúdo será fornecido e revisado pelo TUCA.",
-      "blocks": [
-        {
-          "type": "heading",
-          "text": "Sobre este espaço"
-        },
-        {
-          "type": "paragraph",
-          "text": "Página demonstrativa dedicada ao tema Oxalá. O conteúdo será fornecido e revisado pelo TUCA."
-        },
-        {
-          "type": "paragraph",
-          "text": "Texto provisório de demonstração. Esta página apresenta a organização do portal e não contém ensinamentos, relatos históricos ou informações institucionais aprovados."
-        },
-        {
-          "type": "heading",
-          "text": "Conteúdo em preparação"
-        },
-        {
-          "type": "paragraph",
-          "text": "A versão definitiva poderá reunir introdução, texto principal, imagens autorizadas e assuntos relacionados. A seleção dos temas e a redação dependem da aprovação do dirigente."
-        }
-      ]
+      "blocks": []
     },
     {
       "id": "orixas-ogum",
@@ -478,28 +226,7 @@ window.TUCA_CONTENT = {
       "showInNavigation": true,
       "status": "demo",
       "summary": "Página demonstrativa dedicada ao tema Ogum. O conteúdo será fornecido e revisado pelo TUCA.",
-      "blocks": [
-        {
-          "type": "heading",
-          "text": "Sobre este espaço"
-        },
-        {
-          "type": "paragraph",
-          "text": "Página demonstrativa dedicada ao tema Ogum. O conteúdo será fornecido e revisado pelo TUCA."
-        },
-        {
-          "type": "paragraph",
-          "text": "Texto provisório de demonstração. Esta página apresenta a organização do portal e não contém ensinamentos, relatos históricos ou informações institucionais aprovados."
-        },
-        {
-          "type": "heading",
-          "text": "Conteúdo em preparação"
-        },
-        {
-          "type": "paragraph",
-          "text": "A versão definitiva poderá reunir introdução, texto principal, imagens autorizadas e assuntos relacionados. A seleção dos temas e a redação dependem da aprovação do dirigente."
-        }
-      ]
+      "blocks": []
     },
     {
       "id": "orixas-oxossi",
@@ -511,28 +238,7 @@ window.TUCA_CONTENT = {
       "showInNavigation": true,
       "status": "demo",
       "summary": "Página demonstrativa dedicada ao tema Oxóssi. O conteúdo será fornecido e revisado pelo TUCA.",
-      "blocks": [
-        {
-          "type": "heading",
-          "text": "Sobre este espaço"
-        },
-        {
-          "type": "paragraph",
-          "text": "Página demonstrativa dedicada ao tema Oxóssi. O conteúdo será fornecido e revisado pelo TUCA."
-        },
-        {
-          "type": "paragraph",
-          "text": "Texto provisório de demonstração. Esta página apresenta a organização do portal e não contém ensinamentos, relatos históricos ou informações institucionais aprovados."
-        },
-        {
-          "type": "heading",
-          "text": "Conteúdo em preparação"
-        },
-        {
-          "type": "paragraph",
-          "text": "A versão definitiva poderá reunir introdução, texto principal, imagens autorizadas e assuntos relacionados. A seleção dos temas e a redação dependem da aprovação do dirigente."
-        }
-      ]
+      "blocks": []
     },
     {
       "id": "orixas-xango",
@@ -544,28 +250,7 @@ window.TUCA_CONTENT = {
       "showInNavigation": true,
       "status": "demo",
       "summary": "Página demonstrativa dedicada ao tema Xangô. O conteúdo será fornecido e revisado pelo TUCA.",
-      "blocks": [
-        {
-          "type": "heading",
-          "text": "Sobre este espaço"
-        },
-        {
-          "type": "paragraph",
-          "text": "Página demonstrativa dedicada ao tema Xangô. O conteúdo será fornecido e revisado pelo TUCA."
-        },
-        {
-          "type": "paragraph",
-          "text": "Texto provisório de demonstração. Esta página apresenta a organização do portal e não contém ensinamentos, relatos históricos ou informações institucionais aprovados."
-        },
-        {
-          "type": "heading",
-          "text": "Conteúdo em preparação"
-        },
-        {
-          "type": "paragraph",
-          "text": "A versão definitiva poderá reunir introdução, texto principal, imagens autorizadas e assuntos relacionados. A seleção dos temas e a redação dependem da aprovação do dirigente."
-        }
-      ]
+      "blocks": []
     },
     {
       "id": "orixas-oxum",
@@ -577,28 +262,7 @@ window.TUCA_CONTENT = {
       "showInNavigation": true,
       "status": "demo",
       "summary": "Página demonstrativa dedicada ao tema Oxum. O conteúdo será fornecido e revisado pelo TUCA.",
-      "blocks": [
-        {
-          "type": "heading",
-          "text": "Sobre este espaço"
-        },
-        {
-          "type": "paragraph",
-          "text": "Página demonstrativa dedicada ao tema Oxum. O conteúdo será fornecido e revisado pelo TUCA."
-        },
-        {
-          "type": "paragraph",
-          "text": "Texto provisório de demonstração. Esta página apresenta a organização do portal e não contém ensinamentos, relatos históricos ou informações institucionais aprovados."
-        },
-        {
-          "type": "heading",
-          "text": "Conteúdo em preparação"
-        },
-        {
-          "type": "paragraph",
-          "text": "A versão definitiva poderá reunir introdução, texto principal, imagens autorizadas e assuntos relacionados. A seleção dos temas e a redação dependem da aprovação do dirigente."
-        }
-      ]
+      "blocks": []
     },
     {
       "id": "orixas-iemanja",
@@ -610,28 +274,7 @@ window.TUCA_CONTENT = {
       "showInNavigation": true,
       "status": "demo",
       "summary": "Página demonstrativa dedicada ao tema Iemanjá. O conteúdo será fornecido e revisado pelo TUCA.",
-      "blocks": [
-        {
-          "type": "heading",
-          "text": "Sobre este espaço"
-        },
-        {
-          "type": "paragraph",
-          "text": "Página demonstrativa dedicada ao tema Iemanjá. O conteúdo será fornecido e revisado pelo TUCA."
-        },
-        {
-          "type": "paragraph",
-          "text": "Texto provisório de demonstração. Esta página apresenta a organização do portal e não contém ensinamentos, relatos históricos ou informações institucionais aprovados."
-        },
-        {
-          "type": "heading",
-          "text": "Conteúdo em preparação"
-        },
-        {
-          "type": "paragraph",
-          "text": "A versão definitiva poderá reunir introdução, texto principal, imagens autorizadas e assuntos relacionados. A seleção dos temas e a redação dependem da aprovação do dirigente."
-        }
-      ]
+      "blocks": []
     },
     {
       "id": "orixas-iansa",
@@ -643,28 +286,7 @@ window.TUCA_CONTENT = {
       "showInNavigation": true,
       "status": "demo",
       "summary": "Página demonstrativa dedicada ao tema Iansã. O conteúdo será fornecido e revisado pelo TUCA.",
-      "blocks": [
-        {
-          "type": "heading",
-          "text": "Sobre este espaço"
-        },
-        {
-          "type": "paragraph",
-          "text": "Página demonstrativa dedicada ao tema Iansã. O conteúdo será fornecido e revisado pelo TUCA."
-        },
-        {
-          "type": "paragraph",
-          "text": "Texto provisório de demonstração. Esta página apresenta a organização do portal e não contém ensinamentos, relatos históricos ou informações institucionais aprovados."
-        },
-        {
-          "type": "heading",
-          "text": "Conteúdo em preparação"
-        },
-        {
-          "type": "paragraph",
-          "text": "A versão definitiva poderá reunir introdução, texto principal, imagens autorizadas e assuntos relacionados. A seleção dos temas e a redação dependem da aprovação do dirigente."
-        }
-      ]
+      "blocks": []
     },
     {
       "id": "orixas-outros-orixas",
@@ -676,28 +298,7 @@ window.TUCA_CONTENT = {
       "showInNavigation": true,
       "status": "demo",
       "summary": "Página demonstrativa dedicada ao tema Outros Orixás. O conteúdo será fornecido e revisado pelo TUCA.",
-      "blocks": [
-        {
-          "type": "heading",
-          "text": "Sobre este espaço"
-        },
-        {
-          "type": "paragraph",
-          "text": "Página demonstrativa dedicada ao tema Outros Orixás. O conteúdo será fornecido e revisado pelo TUCA."
-        },
-        {
-          "type": "paragraph",
-          "text": "Texto provisório de demonstração. Esta página apresenta a organização do portal e não contém ensinamentos, relatos históricos ou informações institucionais aprovados."
-        },
-        {
-          "type": "heading",
-          "text": "Conteúdo em preparação"
-        },
-        {
-          "type": "paragraph",
-          "text": "A versão definitiva poderá reunir introdução, texto principal, imagens autorizadas e assuntos relacionados. A seleção dos temas e a redação dependem da aprovação do dirigente."
-        }
-      ]
+      "blocks": []
     },
     {
       "id": "linhas",
@@ -721,28 +322,7 @@ window.TUCA_CONTENT = {
       "showInNavigation": true,
       "status": "demo",
       "summary": "Página demonstrativa dedicada ao tema Caboclos. O conteúdo será fornecido e revisado pelo TUCA.",
-      "blocks": [
-        {
-          "type": "heading",
-          "text": "Sobre este espaço"
-        },
-        {
-          "type": "paragraph",
-          "text": "Página demonstrativa dedicada ao tema Caboclos. O conteúdo será fornecido e revisado pelo TUCA."
-        },
-        {
-          "type": "paragraph",
-          "text": "Texto provisório de demonstração. Esta página apresenta a organização do portal e não contém ensinamentos, relatos históricos ou informações institucionais aprovados."
-        },
-        {
-          "type": "heading",
-          "text": "Conteúdo em preparação"
-        },
-        {
-          "type": "paragraph",
-          "text": "A versão definitiva poderá reunir introdução, texto principal, imagens autorizadas e assuntos relacionados. A seleção dos temas e a redação dependem da aprovação do dirigente."
-        }
-      ]
+      "blocks": []
     },
     {
       "id": "linhas-pretos-velhos",
@@ -754,28 +334,7 @@ window.TUCA_CONTENT = {
       "showInNavigation": true,
       "status": "demo",
       "summary": "Página demonstrativa dedicada ao tema Pretos-Velhos. O conteúdo será fornecido e revisado pelo TUCA.",
-      "blocks": [
-        {
-          "type": "heading",
-          "text": "Sobre este espaço"
-        },
-        {
-          "type": "paragraph",
-          "text": "Página demonstrativa dedicada ao tema Pretos-Velhos. O conteúdo será fornecido e revisado pelo TUCA."
-        },
-        {
-          "type": "paragraph",
-          "text": "Texto provisório de demonstração. Esta página apresenta a organização do portal e não contém ensinamentos, relatos históricos ou informações institucionais aprovados."
-        },
-        {
-          "type": "heading",
-          "text": "Conteúdo em preparação"
-        },
-        {
-          "type": "paragraph",
-          "text": "A versão definitiva poderá reunir introdução, texto principal, imagens autorizadas e assuntos relacionados. A seleção dos temas e a redação dependem da aprovação do dirigente."
-        }
-      ]
+      "blocks": []
     },
     {
       "id": "linhas-eres",
@@ -787,28 +346,7 @@ window.TUCA_CONTENT = {
       "showInNavigation": true,
       "status": "demo",
       "summary": "Página demonstrativa dedicada ao tema Erês. O conteúdo será fornecido e revisado pelo TUCA.",
-      "blocks": [
-        {
-          "type": "heading",
-          "text": "Sobre este espaço"
-        },
-        {
-          "type": "paragraph",
-          "text": "Página demonstrativa dedicada ao tema Erês. O conteúdo será fornecido e revisado pelo TUCA."
-        },
-        {
-          "type": "paragraph",
-          "text": "Texto provisório de demonstração. Esta página apresenta a organização do portal e não contém ensinamentos, relatos históricos ou informações institucionais aprovados."
-        },
-        {
-          "type": "heading",
-          "text": "Conteúdo em preparação"
-        },
-        {
-          "type": "paragraph",
-          "text": "A versão definitiva poderá reunir introdução, texto principal, imagens autorizadas e assuntos relacionados. A seleção dos temas e a redação dependem da aprovação do dirigente."
-        }
-      ]
+      "blocks": []
     },
     {
       "id": "linhas-baianos",
@@ -820,28 +358,7 @@ window.TUCA_CONTENT = {
       "showInNavigation": true,
       "status": "demo",
       "summary": "Página demonstrativa dedicada ao tema Baianos. O conteúdo será fornecido e revisado pelo TUCA.",
-      "blocks": [
-        {
-          "type": "heading",
-          "text": "Sobre este espaço"
-        },
-        {
-          "type": "paragraph",
-          "text": "Página demonstrativa dedicada ao tema Baianos. O conteúdo será fornecido e revisado pelo TUCA."
-        },
-        {
-          "type": "paragraph",
-          "text": "Texto provisório de demonstração. Esta página apresenta a organização do portal e não contém ensinamentos, relatos históricos ou informações institucionais aprovados."
-        },
-        {
-          "type": "heading",
-          "text": "Conteúdo em preparação"
-        },
-        {
-          "type": "paragraph",
-          "text": "A versão definitiva poderá reunir introdução, texto principal, imagens autorizadas e assuntos relacionados. A seleção dos temas e a redação dependem da aprovação do dirigente."
-        }
-      ]
+      "blocks": []
     },
     {
       "id": "linhas-marinheiros",
@@ -853,28 +370,7 @@ window.TUCA_CONTENT = {
       "showInNavigation": true,
       "status": "demo",
       "summary": "Página demonstrativa dedicada ao tema Marinheiros. O conteúdo será fornecido e revisado pelo TUCA.",
-      "blocks": [
-        {
-          "type": "heading",
-          "text": "Sobre este espaço"
-        },
-        {
-          "type": "paragraph",
-          "text": "Página demonstrativa dedicada ao tema Marinheiros. O conteúdo será fornecido e revisado pelo TUCA."
-        },
-        {
-          "type": "paragraph",
-          "text": "Texto provisório de demonstração. Esta página apresenta a organização do portal e não contém ensinamentos, relatos históricos ou informações institucionais aprovados."
-        },
-        {
-          "type": "heading",
-          "text": "Conteúdo em preparação"
-        },
-        {
-          "type": "paragraph",
-          "text": "A versão definitiva poderá reunir introdução, texto principal, imagens autorizadas e assuntos relacionados. A seleção dos temas e a redação dependem da aprovação do dirigente."
-        }
-      ]
+      "blocks": []
     },
     {
       "id": "linhas-ciganos",
@@ -886,28 +382,7 @@ window.TUCA_CONTENT = {
       "showInNavigation": true,
       "status": "demo",
       "summary": "Página demonstrativa dedicada ao tema Ciganos. O conteúdo será fornecido e revisado pelo TUCA.",
-      "blocks": [
-        {
-          "type": "heading",
-          "text": "Sobre este espaço"
-        },
-        {
-          "type": "paragraph",
-          "text": "Página demonstrativa dedicada ao tema Ciganos. O conteúdo será fornecido e revisado pelo TUCA."
-        },
-        {
-          "type": "paragraph",
-          "text": "Texto provisório de demonstração. Esta página apresenta a organização do portal e não contém ensinamentos, relatos históricos ou informações institucionais aprovados."
-        },
-        {
-          "type": "heading",
-          "text": "Conteúdo em preparação"
-        },
-        {
-          "type": "paragraph",
-          "text": "A versão definitiva poderá reunir introdução, texto principal, imagens autorizadas e assuntos relacionados. A seleção dos temas e a redação dependem da aprovação do dirigente."
-        }
-      ]
+      "blocks": []
     },
     {
       "id": "linhas-boiadeiros",
@@ -919,28 +394,7 @@ window.TUCA_CONTENT = {
       "showInNavigation": true,
       "status": "demo",
       "summary": "Página demonstrativa dedicada ao tema Boiadeiros. O conteúdo será fornecido e revisado pelo TUCA.",
-      "blocks": [
-        {
-          "type": "heading",
-          "text": "Sobre este espaço"
-        },
-        {
-          "type": "paragraph",
-          "text": "Página demonstrativa dedicada ao tema Boiadeiros. O conteúdo será fornecido e revisado pelo TUCA."
-        },
-        {
-          "type": "paragraph",
-          "text": "Texto provisório de demonstração. Esta página apresenta a organização do portal e não contém ensinamentos, relatos históricos ou informações institucionais aprovados."
-        },
-        {
-          "type": "heading",
-          "text": "Conteúdo em preparação"
-        },
-        {
-          "type": "paragraph",
-          "text": "A versão definitiva poderá reunir introdução, texto principal, imagens autorizadas e assuntos relacionados. A seleção dos temas e a redação dependem da aprovação do dirigente."
-        }
-      ]
+      "blocks": []
     },
     {
       "id": "linhas-exus-e-pombagiras",
@@ -952,28 +406,7 @@ window.TUCA_CONTENT = {
       "showInNavigation": true,
       "status": "demo",
       "summary": "Página demonstrativa dedicada ao tema Exus e Pombagiras. O conteúdo será fornecido e revisado pelo TUCA.",
-      "blocks": [
-        {
-          "type": "heading",
-          "text": "Sobre este espaço"
-        },
-        {
-          "type": "paragraph",
-          "text": "Página demonstrativa dedicada ao tema Exus e Pombagiras. O conteúdo será fornecido e revisado pelo TUCA."
-        },
-        {
-          "type": "paragraph",
-          "text": "Texto provisório de demonstração. Esta página apresenta a organização do portal e não contém ensinamentos, relatos históricos ou informações institucionais aprovados."
-        },
-        {
-          "type": "heading",
-          "text": "Conteúdo em preparação"
-        },
-        {
-          "type": "paragraph",
-          "text": "A versão definitiva poderá reunir introdução, texto principal, imagens autorizadas e assuntos relacionados. A seleção dos temas e a redação dependem da aprovação do dirigente."
-        }
-      ]
+      "blocks": []
     },
     {
       "id": "linhas-outras-linhas",
@@ -985,28 +418,7 @@ window.TUCA_CONTENT = {
       "showInNavigation": true,
       "status": "demo",
       "summary": "Página demonstrativa dedicada ao tema Outras Linhas. O conteúdo será fornecido e revisado pelo TUCA.",
-      "blocks": [
-        {
-          "type": "heading",
-          "text": "Sobre este espaço"
-        },
-        {
-          "type": "paragraph",
-          "text": "Página demonstrativa dedicada ao tema Outras Linhas. O conteúdo será fornecido e revisado pelo TUCA."
-        },
-        {
-          "type": "paragraph",
-          "text": "Texto provisório de demonstração. Esta página apresenta a organização do portal e não contém ensinamentos, relatos históricos ou informações institucionais aprovados."
-        },
-        {
-          "type": "heading",
-          "text": "Conteúdo em preparação"
-        },
-        {
-          "type": "paragraph",
-          "text": "A versão definitiva poderá reunir introdução, texto principal, imagens autorizadas e assuntos relacionados. A seleção dos temas e a redação dependem da aprovação do dirigente."
-        }
-      ]
+      "blocks": []
     },
     {
       "id": "calendario",
@@ -1030,28 +442,7 @@ window.TUCA_CONTENT = {
       "showInNavigation": true,
       "status": "demo",
       "summary": "Espaço para a próxima programação oficial. Nenhuma data ou horário foi cadastrado.",
-      "blocks": [
-        {
-          "type": "heading",
-          "text": "Sobre este espaço"
-        },
-        {
-          "type": "paragraph",
-          "text": "Espaço para a próxima programação oficial. Nenhuma data ou horário foi cadastrado."
-        },
-        {
-          "type": "paragraph",
-          "text": "Texto provisório de demonstração. Esta página apresenta a organização do portal e não contém ensinamentos, relatos históricos ou informações institucionais aprovados."
-        },
-        {
-          "type": "heading",
-          "text": "Conteúdo em preparação"
-        },
-        {
-          "type": "paragraph",
-          "text": "A versão definitiva poderá reunir introdução, texto principal, imagens autorizadas e assuntos relacionados. A seleção dos temas e a redação dependem da aprovação do dirigente."
-        }
-      ]
+      "blocks": []
     },
     {
       "id": "calendario-calendario-completo",
@@ -1063,28 +454,7 @@ window.TUCA_CONTENT = {
       "showInNavigation": true,
       "status": "demo",
       "summary": "Navegue pelos meses para avaliar a apresentação da futura agenda.",
-      "blocks": [
-        {
-          "type": "heading",
-          "text": "Sobre este espaço"
-        },
-        {
-          "type": "paragraph",
-          "text": "Navegue pelos meses para avaliar a apresentação da futura agenda."
-        },
-        {
-          "type": "paragraph",
-          "text": "Texto provisório de demonstração. Esta página apresenta a organização do portal e não contém ensinamentos, relatos históricos ou informações institucionais aprovados."
-        },
-        {
-          "type": "heading",
-          "text": "Conteúdo em preparação"
-        },
-        {
-          "type": "paragraph",
-          "text": "A versão definitiva poderá reunir introdução, texto principal, imagens autorizadas e assuntos relacionados. A seleção dos temas e a redação dependem da aprovação do dirigente."
-        }
-      ]
+      "blocks": []
     },
     {
       "id": "calendario-eventos-especiais",
@@ -1096,28 +466,7 @@ window.TUCA_CONTENT = {
       "showInNavigation": true,
       "status": "demo",
       "summary": "Espaço reservado para eventos aprovados pela direção.",
-      "blocks": [
-        {
-          "type": "heading",
-          "text": "Sobre este espaço"
-        },
-        {
-          "type": "paragraph",
-          "text": "Espaço reservado para eventos aprovados pela direção."
-        },
-        {
-          "type": "paragraph",
-          "text": "Texto provisório de demonstração. Esta página apresenta a organização do portal e não contém ensinamentos, relatos históricos ou informações institucionais aprovados."
-        },
-        {
-          "type": "heading",
-          "text": "Conteúdo em preparação"
-        },
-        {
-          "type": "paragraph",
-          "text": "A versão definitiva poderá reunir introdução, texto principal, imagens autorizadas e assuntos relacionados. A seleção dos temas e a redação dependem da aprovação do dirigente."
-        }
-      ]
+      "blocks": []
     },
     {
       "id": "conteudos",
@@ -1141,28 +490,7 @@ window.TUCA_CONTENT = {
       "showInNavigation": true,
       "status": "demo",
       "summary": "Os avisos oficiais do TUCA serão apresentados nesta seção.",
-      "blocks": [
-        {
-          "type": "heading",
-          "text": "Sobre este espaço"
-        },
-        {
-          "type": "paragraph",
-          "text": "Os avisos oficiais do TUCA serão apresentados nesta seção."
-        },
-        {
-          "type": "paragraph",
-          "text": "Texto provisório de demonstração. Esta página apresenta a organização do portal e não contém ensinamentos, relatos históricos ou informações institucionais aprovados."
-        },
-        {
-          "type": "heading",
-          "text": "Conteúdo em preparação"
-        },
-        {
-          "type": "paragraph",
-          "text": "A versão definitiva poderá reunir introdução, texto principal, imagens autorizadas e assuntos relacionados. A seleção dos temas e a redação dependem da aprovação do dirigente."
-        }
-      ]
+      "blocks": []
     },
     {
       "id": "conteudos-artigos",
@@ -1174,28 +502,7 @@ window.TUCA_CONTENT = {
       "showInNavigation": true,
       "status": "demo",
       "summary": "Espaço reservado para artigos educativos revisados pela casa.",
-      "blocks": [
-        {
-          "type": "heading",
-          "text": "Sobre este espaço"
-        },
-        {
-          "type": "paragraph",
-          "text": "Espaço reservado para artigos educativos revisados pela casa."
-        },
-        {
-          "type": "paragraph",
-          "text": "Texto provisório de demonstração. Esta página apresenta a organização do portal e não contém ensinamentos, relatos históricos ou informações institucionais aprovados."
-        },
-        {
-          "type": "heading",
-          "text": "Conteúdo em preparação"
-        },
-        {
-          "type": "paragraph",
-          "text": "A versão definitiva poderá reunir introdução, texto principal, imagens autorizadas e assuntos relacionados. A seleção dos temas e a redação dependem da aprovação do dirigente."
-        }
-      ]
+      "blocks": []
     },
     {
       "id": "conteudos-galeria-de-fotos",
@@ -1207,28 +514,7 @@ window.TUCA_CONTENT = {
       "showInNavigation": true,
       "status": "demo",
       "summary": "Demonstração da galeria com a fotografia original fornecida para o projeto.",
-      "blocks": [
-        {
-          "type": "heading",
-          "text": "Sobre este espaço"
-        },
-        {
-          "type": "paragraph",
-          "text": "Demonstração da galeria com a fotografia original fornecida para o projeto."
-        },
-        {
-          "type": "paragraph",
-          "text": "Texto provisório de demonstração. Esta página apresenta a organização do portal e não contém ensinamentos, relatos históricos ou informações institucionais aprovados."
-        },
-        {
-          "type": "heading",
-          "text": "Conteúdo em preparação"
-        },
-        {
-          "type": "paragraph",
-          "text": "A versão definitiva poderá reunir introdução, texto principal, imagens autorizadas e assuntos relacionados. A seleção dos temas e a redação dependem da aprovação do dirigente."
-        }
-      ]
+      "blocks": []
     },
     {
       "id": "conteudos-eventos-realizados",
@@ -1240,28 +526,7 @@ window.TUCA_CONTENT = {
       "showInNavigation": true,
       "status": "demo",
       "summary": "Os registros dos eventos serão incluídos após seleção e aprovação dos materiais.",
-      "blocks": [
-        {
-          "type": "heading",
-          "text": "Sobre este espaço"
-        },
-        {
-          "type": "paragraph",
-          "text": "Os registros dos eventos serão incluídos após seleção e aprovação dos materiais."
-        },
-        {
-          "type": "paragraph",
-          "text": "Texto provisório de demonstração. Esta página apresenta a organização do portal e não contém ensinamentos, relatos históricos ou informações institucionais aprovados."
-        },
-        {
-          "type": "heading",
-          "text": "Conteúdo em preparação"
-        },
-        {
-          "type": "paragraph",
-          "text": "A versão definitiva poderá reunir introdução, texto principal, imagens autorizadas e assuntos relacionados. A seleção dos temas e a redação dependem da aprovação do dirigente."
-        }
-      ]
+      "blocks": []
     },
     {
       "id": "visite",
@@ -1301,28 +566,7 @@ window.TUCA_CONTENT = {
       "showInNavigation": true,
       "status": "demo",
       "summary": "As recomendações aos visitantes serão definidas e aprovadas pela casa.",
-      "blocks": [
-        {
-          "type": "heading",
-          "text": "Sobre este espaço"
-        },
-        {
-          "type": "paragraph",
-          "text": "As recomendações aos visitantes serão definidas e aprovadas pela casa."
-        },
-        {
-          "type": "paragraph",
-          "text": "Texto provisório de demonstração. Esta página apresenta a organização do portal e não contém ensinamentos, relatos históricos ou informações institucionais aprovados."
-        },
-        {
-          "type": "heading",
-          "text": "Conteúdo em preparação"
-        },
-        {
-          "type": "paragraph",
-          "text": "A versão definitiva poderá reunir introdução, texto principal, imagens autorizadas e assuntos relacionados. A seleção dos temas e a redação dependem da aprovação do dirigente."
-        }
-      ]
+      "blocks": []
     },
     {
       "id": "visite-duvidas-frequentes",
@@ -1334,28 +578,7 @@ window.TUCA_CONTENT = {
       "showInNavigation": true,
       "status": "demo",
       "summary": "As perguntas e respostas serão preparadas a partir das orientações oficiais do TUCA.",
-      "blocks": [
-        {
-          "type": "heading",
-          "text": "Sobre este espaço"
-        },
-        {
-          "type": "paragraph",
-          "text": "As perguntas e respostas serão preparadas a partir das orientações oficiais do TUCA."
-        },
-        {
-          "type": "paragraph",
-          "text": "Texto provisório de demonstração. Esta página apresenta a organização do portal e não contém ensinamentos, relatos históricos ou informações institucionais aprovados."
-        },
-        {
-          "type": "heading",
-          "text": "Conteúdo em preparação"
-        },
-        {
-          "type": "paragraph",
-          "text": "A versão definitiva poderá reunir introdução, texto principal, imagens autorizadas e assuntos relacionados. A seleção dos temas e a redação dependem da aprovação do dirigente."
-        }
-      ]
+      "blocks": []
     },
     {
       "id": "visite-contatos",
@@ -1367,28 +590,7 @@ window.TUCA_CONTENT = {
       "showInNavigation": true,
       "status": "demo",
       "summary": "Os canais de contato serão confirmados pela casa antes da publicação.",
-      "blocks": [
-        {
-          "type": "heading",
-          "text": "Sobre este espaço"
-        },
-        {
-          "type": "paragraph",
-          "text": "Os canais de contato serão confirmados pela casa antes da publicação."
-        },
-        {
-          "type": "paragraph",
-          "text": "Texto provisório de demonstração. Esta página apresenta a organização do portal e não contém ensinamentos, relatos históricos ou informações institucionais aprovados."
-        },
-        {
-          "type": "heading",
-          "text": "Conteúdo em preparação"
-        },
-        {
-          "type": "paragraph",
-          "text": "A versão definitiva poderá reunir introdução, texto principal, imagens autorizadas e assuntos relacionados. A seleção dos temas e a redação dependem da aprovação do dirigente."
-        }
-      ]
+      "blocks": []
     }
   ]
 };
