@@ -1,6 +1,6 @@
 # TUCA — Portal em desenvolvimento
 
-A proposta 3, em areia e palha, foi escolhida como base visual. A página `dist/index.html` abre diretamente o portal; a comparação anterior permanece em `dist/propostas.html`. As propostas 1 e 2 foram preservadas como referências.
+A proposta 3, em areia e palha, foi escolhida como base visual. A direção editorial acolhedora aprovada usa Lora nos títulos e Manrope nos textos e interfaces, carregadas pelo Google Fonts com fontes de sistema como alternativas. A página `dist/index.html` abre diretamente o portal; a comparação anterior permanece em `dist/propostas.html`. As propostas 1 e 2 foram preservadas como referências.
 
 
 Três propostas navegáveis para avaliação do dirigente do Templo de Umbanda Caminhos de Aruanda. Este material é um protótipo local, não o site definitivo.
@@ -119,7 +119,7 @@ O logotipo e a fotografia foram copiados dos anexos originais sem edição dos a
 
 A referência https://www.machadodaluzdourada.com.br/index.php foi consultada exclusivamente para compreender a organização por menus, submenus e páginas. Código, textos, fotografias e identidade visual não foram reproduzidos.
 
-Não há painel, banco de dados, analytics, mapas incorporados, fontes remotas, chamadas a APIs externas, configuração de domínio ou publicação automática.
+O portal carrega as famílias Lora e Manrope pelo Google Fonts, com alternativas locais de sistema. A publicação usa a branch conectada ao Netlify. Não há painel, banco de dados, analytics, mapas incorporados ou cadastro de eventos.
 
 ## Verificação desta entrega
 
