@@ -60,3 +60,15 @@ body[data-mode="site"]{font-family:"Manrope",Arial,Helvetica,sans-serif;font-siz
 @media(max-width:1099px){[data-mode="site"] .hero h1.hero-title-name{font-size:46px}[data-mode="site"] .mobile-toggle{margin-left:auto}}
 @media(max-width:720px){[data-mode="site"] .brand small{font-size:8px;line-height:1.6;max-width:125px}[data-mode="site"] .hero h1.hero-title-name{font-size:clamp(39px,10.7vw,51px);line-height:1.2}[data-mode="site"] .hero-intro{font-size:17px;line-height:1.85}}
 @media(max-width:360px){[data-mode="site"] .brand small{font-size:7px;max-width:110px}[data-mode="site"] .hero h1.hero-title-name{font-size:39px}}
+
+/* Readability revision: clear tagline, natural sentence case and calmer type. */
+[data-mode="site"] .brand small{font-family:"Manrope",Arial,sans-serif;font-size:16px;font-weight:500;line-height:1.5;letter-spacing:0;color:#3c362c;max-width:320px;margin-top:8px;text-transform:none}
+[data-mode="site"] .brand>span{letter-spacing:.045em}
+[data-mode="site"] .hero-copy .eyebrow{font-family:"Manrope",Arial,sans-serif;font-size:19px;font-weight:500;line-height:1.5;letter-spacing:0;text-transform:none;color:#514632;margin-bottom:18px}
+[data-mode="site"] .hero h1.hero-title-name{font-size:clamp(40px,3.9vw,53px);line-height:1.25;letter-spacing:-.02em;font-weight:400;text-wrap:pretty}
+[data-mode="site"] .hero-intro{font-size:18px;line-height:1.75;margin-top:25px;color:#514b3f}
+[data-mode="site"] .header-visit{border-radius:7px}
+[data-mode="site"] .hero .button{box-shadow:none}
+@media(max-width:1099px){[data-mode="site"] .brand small{font-size:16px;max-width:310px}[data-mode="site"] .hero h1.hero-title-name{font-size:44px}}
+@media(max-width:720px){[data-mode="site"] .brand-row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:12px;min-height:120px;padding-block:15px}[data-mode="site"] .brand{display:flex;gap:12px;min-width:0}[data-mode="site"] .brand img{width:68px}[data-mode="site"] .brand>span{font-size:25px;min-width:0;letter-spacing:.03em}[data-mode="site"] .brand small{font-size:14px;max-width:none;font-weight:500;line-height:1.45;margin-top:7px;letter-spacing:0;white-space:normal}[data-mode="site"] .mobile-toggle{margin-left:0;min-width:44px}[data-mode="site"] .hero-copy .eyebrow{font-size:18px;line-height:1.5;margin-bottom:16px}[data-mode="site"] .hero h1.hero-title-name{font-size:39px;line-height:1.25}[data-mode="site"] .hero-intro{font-size:17px;line-height:1.8;margin-top:23px}}
+@media(max-width:360px){[data-mode="site"] .brand-row{gap:10px}[data-mode="site"] .brand{gap:9px}[data-mode="site"] .brand img{width:60px}[data-mode="site"] .brand>span{font-size:23px}[data-mode="site"] .brand small{font-size:14px;max-width:none}[data-mode="site"] .hero h1.hero-title-name{font-size:36px}}

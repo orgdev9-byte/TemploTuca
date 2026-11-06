@@ -9,7 +9,7 @@ window.TUCA_CONTENT = {
     "logoDark": "assets/logo-tuca-original.png",
     "tagline": "É simples, é do bem, é Umbanda.",
     "home": {
-      "eyebrow": "Bem-vindo ao TUCA",
+      "eyebrow": "Bem-vindo(a) ao TUCA",
       "title": "Templo de Umbanda Caminhos de Aruanda",
       "description": "Um espaço de acolhimento, espiritualidade e amor. Onde todos os caminhos se encontram."
     }
