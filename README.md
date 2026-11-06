@@ -1,4 +1,7 @@
-# TUCA — Protótipos do portal
+# TUCA — Portal em desenvolvimento
+
+A proposta 3, em areia e palha, foi escolhida como base visual. A página `dist/index.html` abre diretamente o portal; a comparação anterior permanece em `dist/propostas.html`. As propostas 1 e 2 foram preservadas como referências.
+
 
 Três propostas navegáveis para avaliação do dirigente do Templo de Umbanda Caminhos de Aruanda. Este material é um protótipo local, não o site definitivo.
 

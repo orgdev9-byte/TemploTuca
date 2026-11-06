@@ -9,6 +9,7 @@
     blue:{ number:'03',name:'Contemporâneo e institucional',eyebrow:'Conhecer é se aproximar',heading:'O TUCA,<br>mais perto<br>de você.',intro:'A casa, os conteúdos e a programação. Explore o portal do Templo de Umbanda Caminhos de Aruanda.' }
   };
   const theme = themes[document.body.dataset.theme];
+  const isSite = document.body.dataset.mode === "site";
   let data, pages, roots, current, routeMap, calendarDate = new Date(new Date().getFullYear(),new Date().getMonth(),1);
   let calendarFilter='all';
   const children = id => pages.filter(p=>p.parentId===id).sort((a,b)=>a.order-b.order);
@@ -44,8 +45,8 @@
   }
   function header() {
     return `<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
-      <div class="prototype-bar"><div class="wrap"><span>Proposta ${theme.number} <span class="prototype-name">· ${theme.name}</span></span><a href="index.html">Comparar propostas <span aria-hidden="true">↗</span></a></div></div>
-      <header class="site-header"><div class="brand-row wrap"><a class="brand" href="#/" aria-label="TUCA — Início"><img src="${escape(theme.number==='02' ? data.site.logoDark : data.site.logo)}" alt="Emblema original do TUCA" width="${theme.number==='02'?1006:759}" height="${theme.number==='02'?1024:702}"><span>TUCA<small>Templo de Umbanda<br>Caminhos de Aruanda</small></span></a><p class="brand-message">É simples, é do bem,<br><strong>é Umbanda.</strong></p><button class="mobile-toggle" aria-expanded="false" aria-controls="main-navigation" aria-label="Abrir menu principal"><span aria-hidden="true">☰</span> Menu</button></div>
+      ${isSite ? '' : `<div class="prototype-bar"><div class="wrap"><span>Proposta ${theme.number} <span class="prototype-name">· ${theme.name}</span></span><a href="propostas.html">Comparar propostas <span aria-hidden="true">↗</span></a></div></div>`}
+      <header class="site-header"><div class="brand-row wrap"><a class="brand" href="#/" aria-label="TUCA — Início"><img src="${escape(theme.number==='02' ? data.site.logoDark : data.site.logo)}" alt="Emblema original do TUCA" width="${theme.number==='02'?1006:759}" height="${theme.number==='02'?1024:702}"><span>TUCA<small>Templo de Umbanda<br>Caminhos de Aruanda</small></span></a><p class="brand-message">É simples, é do bem,<br><strong>é Umbanda.</strong></p>${isSite ? `<a class="header-visit" href="${href(find('visite'))}">Planeje sua visita <span aria-hidden="true">↗</span></a>` : ''}<button class="mobile-toggle" aria-expanded="false" aria-controls="main-navigation" aria-label="Abrir menu principal"><span aria-hidden="true">☰</span> Menu</button></div>
       <nav class="site-nav" id="main-navigation" aria-label="Navegação principal"><div class="wrap">${navItems(roots)}</div></nav></header>
       <div class="demo-bar"><div class="wrap"><span class="demo-dot" aria-hidden="true"></span>${escape(data.site.demoNotice)}</div></div>`;
   }
@@ -91,13 +92,13 @@
       </article></div></div>`;
   }
   function footer() {
-    return `<footer class="site-footer"><div class="wrap footer-main"><div><p class="footer-wordmark">TUCA</p><p>Templo de Umbanda<br>Caminhos de Aruanda</p></div><div><p class="eyebrow">Explore o portal</p><nav aria-label="Navegação do rodapé">${roots.filter(p=>p.id!=='inicio').map(p=>link(p)).join('')}</nav></div><div><p class="eyebrow">Projeto em estudo</p><p>Protótipo navegável para avaliação<br>e aprovação do dirigente.</p><a href="index.html">Ver as três propostas ↗</a></div></div><div class="wrap footer-bottom"><span>Proposta ${theme.number} · ${theme.name}</span><span>Textos demonstrativos · Materiais originais preservados</span></div></footer>`;
+    return `<footer class="site-footer"><div class="wrap footer-main"><div><p class="footer-wordmark">TUCA</p><p>Templo de Umbanda<br>Caminhos de Aruanda</p></div><div><p class="eyebrow">Explore o portal</p><nav aria-label="Navegação do rodapé">${roots.filter(p=>p.id!=='inicio').map(p=>link(p)).join('')}</nav></div><div>${isSite ? `<p class="eyebrow">Caminhos de Aruanda</p><p>É simples, é do bem, é Umbanda.</p><a href="${href(find('visite'))}">Informações para sua visita ↗</a>` : `<p class="eyebrow">Projeto em estudo</p><p>Protótipo navegável para avaliação<br>e aprovação do dirigente.</p><a href="propostas.html">Ver as três propostas ↗</a>`}</div></div><div class="wrap footer-bottom"><span>${isSite ? 'TUCA · Portal em preparação' : `Proposta ${theme.number} · ${theme.name}`}</span><span>Textos demonstrativos · Materiais originais preservados</span></div></footer>`;
   }
   function render(focus=false) {
     let path;
     try { path=decodeURIComponent(location.hash.slice(1)||'/').replace(/\/$/,'')||'/'; } catch { path='invalid'; }
     current=routeMap.get(path);
-    document.title=`${current?.title||'Página não encontrada'} — TUCA · Proposta ${theme.number}`;
+    document.title=`${current?.title||'Página não encontrada'} — TUCA${isSite ? '' : ` · Proposta ${theme.number}`}`;
     document.getElementById('app').innerHTML=header()+`<main id="conteudo" tabindex="-1">${current?(current.template==='home'?home():contentPage()):'<section class="wrap not-found"><p class="eyebrow">Este caminho não foi encontrado</p><h1>Vamos encontrar<br>outro caminho?</h1><p>Esta página não faz parte do protótipo.</p><a class="button" href="#/">Voltar ao início →</a></section>'}</main>`+footer();
     document.querySelectorAll('.submenu-toggle').forEach(btn=>setSubmenu(btn,false));
     bindNavigation();
