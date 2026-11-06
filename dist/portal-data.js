@@ -4,7 +4,7 @@ window.TUCA_CONTENT = {
     "name": "TUCA",
     "fullName": "Templo de Umbanda Caminhos de Aruanda",
     "demoNotice": "Demonstração · Conteúdos e assuntos sujeitos à aprovação do dirigente.",
-    "logo": "assets/logo-tuca-fundo-claro.png",
+    "logo": "assets/logo-tuca-original.png",
     "photo": "assets/conga-original.jpeg",
     "logoDark": "assets/logo-tuca-original.png"
   },

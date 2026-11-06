@@ -127,4 +127,4 @@ Os quatro testes automatizados do catálogo passaram. A geração estática, a v
 
 O repositório foi iniciado com uma apresentação na branch principal. Os protótipos são entregues por uma branch de revisão. Não há implantação do site ou conexão de domínio.
 
-Correção do logo (arquivos fornecidos em 05/11/2026): versão com fundo claro nos temas claros e no seletor, e transparente na proposta escura. Os arquivos são preservados sem edição. Foi removida a máscara circular, a borda e o preenchimento artificial. A largura é responsiva e a altura segue a proporção natural de cada arquivo (759 × 702 e 1006 × 1024).
+O portal principal usa o PNG original transparente (1006 × 1024), sem remover partes do emblema ou acrescentar molduras. A versão com fundo claro (759 × 702) permanece preservada como referência. O cabeçalho foi refinado em 06/11/2026, com alinhamento responsivo, menu discreto e chamada para visita.
