@@ -121,18 +121,6 @@ window.TUCA_CONTENT = {
       "blocks": []
     },
     {
-      "id": "umbanda-o-que-e-umbanda",
-      "slug": "o-que-e-umbanda",
-      "title": "O que é Umbanda?",
-      "parentId": "umbanda",
-      "template": "article",
-      "order": 0,
-      "showInNavigation": true,
-      "status": "demo",
-      "summary": "Espaço reservado para uma introdução aprovada pela casa.",
-      "blocks": []
-    },
-    {
       "id": "umbanda-historia-da-umbanda",
       "slug": "historia-da-umbanda",
       "title": "História da Umbanda",
@@ -178,18 +166,6 @@ window.TUCA_CONTENT = {
       "showInNavigation": true,
       "status": "demo",
       "summary": "Letras, referências e autorizações serão avaliadas antes da inclusão de materiais.",
-      "blocks": []
-    },
-    {
-      "id": "umbanda-glossario",
-      "slug": "glossario",
-      "title": "Glossário",
-      "parentId": "umbanda",
-      "template": "article",
-      "order": 5,
-      "showInNavigation": true,
-      "status": "demo",
-      "summary": "Espaço reservado para termos e explicações revisados pelo T.U.C.A.",
       "blocks": []
     },
     {
