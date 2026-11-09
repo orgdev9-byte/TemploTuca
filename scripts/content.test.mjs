@@ -3,9 +3,9 @@ import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import { validate } from './model.mjs';
 const data=JSON.parse(await readFile(new URL('../content/portal.json',import.meta.url),'utf8'));
-test('catálogo íntegro e oito áreas principais na ordem aprovada',()=>{
+test('catálogo íntegro e áreas principais na ordem aprovada',()=>{
   assert.equal(validate(data),true);
-  assert.deepEqual(data.pages.filter(p=>!p.parentId).sort((a,b)=>a.order-b.order).map(p=>p.title),['Início','O T.U.C.A','Umbanda','Orixás','Linhas de Trabalho','Calendário','Conteúdos','Visite o T.U.C.A']);
+  assert.deepEqual(data.pages.filter(p=>!p.parentId).sort((a,b)=>a.order-b.order).map(p=>p.title),['Início','O T.U.C.A','Umbanda','Orixás','Linhas de Trabalho','Atendimento','Conteúdos']);
 });
 test('assuntos de Orixás e Linhas têm introdução, páginas próprias e status demonstrativo',()=>{
   for(const id of ['orixas','linhas']) {

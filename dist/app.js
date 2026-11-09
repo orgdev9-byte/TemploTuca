@@ -21,7 +21,7 @@
   function navItems(items) {
     return `<ul>${items.filter(p=>p.showInNavigation).map(p=>{
       const sub=children(p.id).filter(x=>x.showInNavigation);
-      return `<li class="nav-item"><div class="nav-row">${link(p)}${sub.length?`<button class="submenu-toggle" aria-expanded="false" aria-controls="menu-${escape(p.id)}" aria-label="Abrir submenu ${escape(p.title)}" data-label="${escape(p.title)}"><span aria-hidden="true">⌄</span></button>`:''}</div>${sub.length?`<div class="submenu" id="menu-${escape(p.id)}" hidden><a class="overview-link" href="${escape(href(p))}">Ver introdução →</a>${navItems(sub)}</div>`:''}</li>`;
+      return `<li class="nav-item"><div class="nav-row">${link(p)}${sub.length?`<button class="submenu-toggle" aria-expanded="false" aria-controls="menu-${escape(p.id)}" aria-label="Abrir submenu ${escape(p.title)}" data-label="${escape(p.title)}"><span aria-hidden="true">⌄</span></button>`:''}</div>${sub.length?`<div class="submenu" id="menu-${escape(p.id)}" hidden>${p.id==='visite'?'':`<a class="overview-link" href="${escape(href(p))}">Ver introdução →</a>`}${navItems(sub)}</div>`:''}</li>`;
     }).join('')}</ul>`;
   }
   function closeSubmenus(except) {
@@ -72,8 +72,26 @@
     if(!place || !/^https:\/\/www\.google\.com\/maps\/embed\?/.test(place.embedUrl) || !/^https:\/\/www\.google\.com\/maps\/search\//.test(place.mapsUrl))return '';
     return `<section class="location-section" aria-label="Localização do T.U.C.A"><div class="location-details"><div><h2>Nosso endereço</h2><address><strong>${escape(place.street)}</strong><span>${escape(place.neighborhood)}</span><span>${escape(place.city)} — ${escape(place.state)}</span></address></div><a class="button map-open" href="${escape(place.mapsUrl)}" target="_blank" rel="noopener noreferrer" aria-label="Abrir endereço do T.U.C.A no Google Maps (nova aba)">Abrir no Google Maps <span aria-hidden="true">↗</span></a></div><div class="location-map"><iframe title="Mapa do T.U.C.A — Avenida Sapopemba, 633, São Paulo" src="${escape(place.embedUrl)}" width="600" height="450" style="border:0" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe></div><p class="map-credit">Mapa interativo do Google Maps.</p></section>`;
   }
+  function contactBlock() {
+    const enabled=data.site.contact.enabled;
+    return `<form class="contact-form" name="contato-tuca" method="POST" action="/obrigado.html" data-netlify="true" netlify-honeypot="bot-field"><input type="hidden" name="form-name" value="contato-tuca"><p hidden><label>Não preencha este campo <input name="bot-field" tabindex="-1" autocomplete="off"></label></p><label for="contact-name">Nome</label><input id="contact-name" name="nome" type="text" autocomplete="name" maxlength="150" required><label for="contact-email">E-mail</label><input id="contact-email" name="email" type="email" autocomplete="email" maxlength="254" required><label for="contact-message">Mensagem</label><textarea id="contact-message" name="mensagem" rows="6" maxlength="5000" required></textarea><button class="button" type="submit" ${enabled?'':'disabled'}>Enviar mensagem <span aria-hidden="true">↗</span></button><p class="contact-status" role="status" aria-live="polite">${enabled?'':'O envio pelo formulário estará disponível em breve.'}</p><p class="contact-direct">Você também pode escrever para <a href="mailto:${escape(data.site.contact.email)}">${escape(data.site.contact.email)}</a>.</p></form>`;
+  }
+  function bindContact() {
+    const form=document.querySelector('.contact-form');if(!form)return;
+    form.addEventListener('submit',async event=>{
+      event.preventDefault();if(!data.site.contact.enabled||!form.reportValidity())return;
+      const button=form.querySelector('button'),status=form.querySelector('.contact-status');
+      button.disabled=true;status.textContent='Enviando sua mensagem…';
+      try {
+        const response=await fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(new FormData(form)).toString()});
+        if(!response.ok)throw Error('Falha no envio');
+        form.reset();status.textContent='Mensagem enviada. Obrigado por entrar em contato com o T.U.C.A.';
+      } catch {status.textContent='Não foi possível enviar agora. Tente novamente ou escreva para '+data.site.contact.email+'.';}
+      finally {button.disabled=false;}
+    });
+  }
   function blocks(list=[]) {
-    return list.map(b=>b.type==='location'?locationBlock():b.type==='heading'?`<h2>${escape(b.text)}</h2>`:b.type==='paragraph'?`<p>${escape(b.text)}</p>`:b.type==='list'?`<ul>${b.items.map(t=>`<li>${escape(t)}</li>`).join('')}</ul>`:'').join('');
+    return list.map(b=>b.type==='page-link'&&find(b.pageId)?`<a class="text-link" href="${escape(href(find(b.pageId)))}">${escape(b.text)} →</a>`:b.type==='contact'?contactBlock():b.type==='location'?locationBlock():b.type==='heading'?`<h2>${escape(b.text)}</h2>`:b.type==='paragraph'?`<p>${escape(b.text)}</p>`:b.type==='list'?`<ul>${b.items.map(t=>`<li>${escape(t)}</li>`).join('')}</ul>`:'').join('');
   }
   function calendar() {
     const year=calendarDate.getFullYear(),month=calendarDate.getMonth();
@@ -113,12 +131,15 @@
   function render(focus=false) {
     let path;
     try { path=decodeURIComponent(location.hash.slice(1)||'/').replace(/\/$/,'')||'/'; } catch { path='invalid'; }
+    const aliases={'/calendario':'/atendimento/calendario','/calendario/proximas-giras':'/atendimento/calendario','/calendario/calendario-completo':'/atendimento/calendario','/calendario/eventos-especiais':'/atendimento/calendario','/visite-o-tuca':'/atendimento','/visite-o-tuca/como-chegar':'/atendimento/como-chegar','/visite-o-tuca/contatos':'/atendimento/contatos'};
+    if(aliases[path]){path=aliases[path];history.replaceState(null,'','#'+path);}
     current=routeMap.get(path);
     document.title=`${current?.title||'Página não encontrada'} — T.U.C.A${isSite ? '' : ` · Proposta ${theme.number}`}`;
     document.getElementById('app').innerHTML=header()+`<main id="conteudo" tabindex="-1">${current?(current.template==='home'?home():contentPage()):'<section class="wrap not-found"><p class="eyebrow">Este caminho não foi encontrado</p><h1>Vamos encontrar<br>outro caminho?</h1><p>Esta página não faz parte do protótipo.</p><a class="button" href="#/">Voltar ao início →</a></section>'}</main>`+footer();
     document.querySelectorAll('.submenu-toggle').forEach(btn=>setSubmenu(btn,false));
     bindNavigation();
     bindCalendar();
+    bindContact();
     if(focus) { document.getElementById('conteudo').focus({preventScroll:true});window.scrollTo({top:0,behavior:'instant'}); }
   }
   function bindNavigation() {

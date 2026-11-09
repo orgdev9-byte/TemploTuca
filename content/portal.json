@@ -20,6 +20,10 @@
       "state": "SP",
       "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Avenida%20Sapopemba%2C%20633%2C%20Vila%20Regente%20Feij%C3%B3%2C%20S%C3%A3o%20Paulo%20-%20SP",
       "embedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.178716915373!2d-46.573799699999995!3d-23.562023999999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5e9f63fab23b%3A0x2ac527e19cc96e96!2sAv.%20Sapopemba%2C%20633%20-%20Vila%20Reg.%20Feij%C3%B3%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2003345-001!5e0!3m2!1spt-BR!2sbr!4v1793990954497!5m2!1spt-BR!2sbr"
+    },
+    "contact": {
+      "email": "templotucaoficial7@gmail.com",
+      "enabled": false
     }
   },
   "events": [
@@ -428,48 +432,12 @@
       "id": "calendario",
       "slug": "calendario",
       "title": "Calendário",
-      "parentId": null,
-      "template": "calendar",
-      "order": 5,
-      "showInNavigation": true,
-      "status": "provided",
-      "summary": "Confira as datas e os horários das giras do T.U.C.A.",
-      "blocks": []
-    },
-    {
-      "id": "calendario-proximas-giras",
-      "slug": "proximas-giras",
-      "title": "Próximas giras",
-      "parentId": "calendario",
-      "template": "calendar",
-      "order": 0,
-      "showInNavigation": true,
-      "status": "provided",
-      "summary": "Acompanhe as próximas giras da casa.",
-      "blocks": []
-    },
-    {
-      "id": "calendario-calendario-completo",
-      "slug": "calendario-completo",
-      "title": "Calendário completo",
-      "parentId": "calendario",
+      "parentId": "visite",
       "template": "calendar",
       "order": 1,
       "showInNavigation": true,
       "status": "provided",
-      "summary": "Consulte a programação mês a mês.",
-      "blocks": []
-    },
-    {
-      "id": "calendario-eventos-especiais",
-      "slug": "eventos-especiais",
-      "title": "Eventos especiais",
-      "parentId": "calendario",
-      "template": "calendar",
-      "order": 2,
-      "showInNavigation": true,
-      "status": "provided",
-      "summary": "Consulte os eventos especiais da casa.",
+      "summary": "Confira as datas e os horários das giras do T.U.C.A.",
       "blocks": []
     },
     {
@@ -534,14 +502,14 @@
     },
     {
       "id": "visite",
-      "slug": "visite-o-tuca",
-      "title": "Visite o T.U.C.A",
+      "slug": "atendimento",
+      "title": "Atendimento",
       "parentId": null,
-      "template": "visit",
-      "order": 7,
+      "template": "collection",
+      "order": 5,
       "showInNavigation": true,
       "status": "demo",
-      "summary": "Organização das informações que ajudarão o visitante a planejar sua ida à casa.",
+      "summary": "Informações para sua visita, programação e contato com o T.U.C.A.",
       "blocks": []
     },
     {
@@ -550,7 +518,7 @@
       "title": "Como chegar",
       "parentId": "visite",
       "template": "article",
-      "order": 0,
+      "order": 2,
       "showInNavigation": true,
       "status": "provided",
       "summary": "Veja nossa localização e trace seu caminho até o T.U.C.A.",
@@ -561,39 +529,77 @@
       ]
     },
     {
-      "id": "visite-primeira-visita",
-      "slug": "primeira-visita",
-      "title": "Primeira visita",
-      "parentId": "visite",
-      "template": "article",
-      "order": 1,
-      "showInNavigation": true,
-      "status": "demo",
-      "summary": "As recomendações aos visitantes serão definidas e aprovadas pela casa.",
-      "blocks": []
-    },
-    {
-      "id": "visite-duvidas-frequentes",
-      "slug": "duvidas-frequentes",
-      "title": "Dúvidas frequentes",
-      "parentId": "visite",
-      "template": "article",
-      "order": 2,
-      "showInNavigation": true,
-      "status": "demo",
-      "summary": "As perguntas e respostas serão preparadas a partir das orientações oficiais do T.U.C.A.",
-      "blocks": []
-    },
-    {
       "id": "visite-contatos",
       "slug": "contatos",
       "title": "Contatos",
       "parentId": "visite",
       "template": "article",
-      "order": 3,
+      "order": 4,
       "showInNavigation": true,
+      "status": "provided",
+      "summary": "Envie sua mensagem para a equipe do T.U.C.A.",
+      "blocks": [
+        {
+          "type": "contact"
+        }
+      ]
+    },
+    {
+      "id": "atendimento-orientacoes",
+      "title": "Atendimento",
+      "slug": "atendimentos",
+      "parentId": "visite",
+      "order": 0,
+      "template": "article",
+      "status": "provided",
+      "showInNavigation": true,
+      "summary": "Confira como são organizados os atendimentos ao público.",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Os atendimentos, eventos, cursos e festas seguem a programação publicada no calendário da casa. Nas giras, os portões abrem às 18h e os trabalhos começam às 19h."
+        },
+        {
+          "type": "page-link",
+          "pageId": "calendario",
+          "text": "Consultar o calendário"
+        },
+        {
+          "type": "heading",
+          "text": "Atendimento gratuito"
+        },
+        {
+          "type": "paragraph",
+          "text": "Os serviços da casa são gratuitos. Os elementos fornecidos pelos guias durante as consultas, como velas, pedras ou símbolos, também não são cobrados."
+        },
+        {
+          "type": "heading",
+          "text": "Senhas por ordem de chegada"
+        },
+        {
+          "type": "paragraph",
+          "text": "As senhas para atendimento são distribuídas por ordem de chegada."
+        },
+        {
+          "type": "heading",
+          "text": "Orientação dos guias"
+        },
+        {
+          "type": "paragraph",
+          "text": "Cada médium e guia tem suas particularidades e está preparado para acolher e orientar conforme a necessidade de cada pessoa. Os assistidos não escolhem o guia com quem serão atendidos, exceto quando houver orientação prévia dos próprios guias ou dos dirigentes. Essa organização permite que a espiritualidade conduza cada pessoa à orientação de que precisa."
+        }
+      ]
+    },
+    {
+      "id": "atendimento-o-que-trazer",
+      "title": "O que trazer",
+      "slug": "o-que-trazer",
+      "parentId": "visite",
+      "order": 3,
+      "template": "article",
       "status": "demo",
-      "summary": "Os canais de contato serão confirmados pela casa antes da publicação.",
+      "showInNavigation": true,
+      "summary": "As orientações sobre o que trazer serão publicadas em breve.",
       "blocks": []
     }
   ]
