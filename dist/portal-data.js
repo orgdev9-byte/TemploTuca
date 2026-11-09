@@ -1,7 +1,7 @@
 window.TUCA_CONTENT = {
   "schemaVersion": 1,
   "site": {
-    "name": "TUCA",
+    "name": "T.U.C.A",
     "fullName": "Templo de Umbanda Caminhos de Aruanda",
     "demoNotice": "Demonstração · Conteúdos e assuntos sujeitos à aprovação do dirigente.",
     "logo": "assets/logo-tuca-original.png",
@@ -9,7 +9,7 @@ window.TUCA_CONTENT = {
     "logoDark": "assets/logo-tuca-original.png",
     "tagline": "É simples, é do bem, é Umbanda.",
     "home": {
-      "eyebrow": "Bem-vindo(a) ao TUCA",
+      "eyebrow": "Bem-vindo(a) ao T.U.C.A",
       "title": "Templo de Umbanda Caminhos de Aruanda",
       "description": "Um espaço de acolhimento, espiritualidade e amor. Onde todos os caminhos se encontram."
     },
@@ -39,7 +39,7 @@ window.TUCA_CONTENT = {
     {
       "id": "tuca",
       "slug": "o-tuca",
-      "title": "O TUCA",
+      "title": "O T.U.C.A",
       "parentId": null,
       "template": "collection",
       "order": 1,
@@ -57,7 +57,7 @@ window.TUCA_CONTENT = {
       "order": 0,
       "showInNavigation": true,
       "status": "demo",
-      "summary": "Espaço reservado para a trajetória do TUCA. Datas, acontecimentos e relatos serão definidos pela casa.",
+      "summary": "Espaço reservado para a trajetória do T.U.C.A. Datas, acontecimentos e relatos serão definidos pela casa.",
       "blocks": []
     },
     {
@@ -93,7 +93,7 @@ window.TUCA_CONTENT = {
       "order": 3,
       "showInNavigation": true,
       "status": "demo",
-      "summary": "As orientações sobre as giras serão fornecidas e aprovadas pelo TUCA.",
+      "summary": "As orientações sobre as giras serão fornecidas e aprovadas pelo T.U.C.A.",
       "blocks": []
     },
     {
@@ -189,7 +189,7 @@ window.TUCA_CONTENT = {
       "order": 5,
       "showInNavigation": true,
       "status": "demo",
-      "summary": "Espaço reservado para termos e explicações revisados pelo TUCA.",
+      "summary": "Espaço reservado para termos e explicações revisados pelo T.U.C.A.",
       "blocks": []
     },
     {
@@ -213,7 +213,7 @@ window.TUCA_CONTENT = {
       "order": 0,
       "showInNavigation": true,
       "status": "demo",
-      "summary": "Página demonstrativa dedicada ao tema Oxalá. O conteúdo será fornecido e revisado pelo TUCA.",
+      "summary": "Página demonstrativa dedicada ao tema Oxalá. O conteúdo será fornecido e revisado pelo T.U.C.A.",
       "blocks": []
     },
     {
@@ -225,7 +225,7 @@ window.TUCA_CONTENT = {
       "order": 1,
       "showInNavigation": true,
       "status": "demo",
-      "summary": "Página demonstrativa dedicada ao tema Ogum. O conteúdo será fornecido e revisado pelo TUCA.",
+      "summary": "Página demonstrativa dedicada ao tema Ogum. O conteúdo será fornecido e revisado pelo T.U.C.A.",
       "blocks": []
     },
     {
@@ -237,7 +237,7 @@ window.TUCA_CONTENT = {
       "order": 2,
       "showInNavigation": true,
       "status": "demo",
-      "summary": "Página demonstrativa dedicada ao tema Oxóssi. O conteúdo será fornecido e revisado pelo TUCA.",
+      "summary": "Página demonstrativa dedicada ao tema Oxóssi. O conteúdo será fornecido e revisado pelo T.U.C.A.",
       "blocks": []
     },
     {
@@ -249,7 +249,7 @@ window.TUCA_CONTENT = {
       "order": 3,
       "showInNavigation": true,
       "status": "demo",
-      "summary": "Página demonstrativa dedicada ao tema Xangô. O conteúdo será fornecido e revisado pelo TUCA.",
+      "summary": "Página demonstrativa dedicada ao tema Xangô. O conteúdo será fornecido e revisado pelo T.U.C.A.",
       "blocks": []
     },
     {
@@ -261,7 +261,7 @@ window.TUCA_CONTENT = {
       "order": 4,
       "showInNavigation": true,
       "status": "demo",
-      "summary": "Página demonstrativa dedicada ao tema Oxum. O conteúdo será fornecido e revisado pelo TUCA.",
+      "summary": "Página demonstrativa dedicada ao tema Oxum. O conteúdo será fornecido e revisado pelo T.U.C.A.",
       "blocks": []
     },
     {
@@ -273,7 +273,7 @@ window.TUCA_CONTENT = {
       "order": 5,
       "showInNavigation": true,
       "status": "demo",
-      "summary": "Página demonstrativa dedicada ao tema Iemanjá. O conteúdo será fornecido e revisado pelo TUCA.",
+      "summary": "Página demonstrativa dedicada ao tema Iemanjá. O conteúdo será fornecido e revisado pelo T.U.C.A.",
       "blocks": []
     },
     {
@@ -285,7 +285,7 @@ window.TUCA_CONTENT = {
       "order": 6,
       "showInNavigation": true,
       "status": "demo",
-      "summary": "Página demonstrativa dedicada ao tema Iansã. O conteúdo será fornecido e revisado pelo TUCA.",
+      "summary": "Página demonstrativa dedicada ao tema Iansã. O conteúdo será fornecido e revisado pelo T.U.C.A.",
       "blocks": []
     },
     {
@@ -297,7 +297,7 @@ window.TUCA_CONTENT = {
       "order": 7,
       "showInNavigation": true,
       "status": "demo",
-      "summary": "Página demonstrativa dedicada ao tema Outros Orixás. O conteúdo será fornecido e revisado pelo TUCA.",
+      "summary": "Página demonstrativa dedicada ao tema Outros Orixás. O conteúdo será fornecido e revisado pelo T.U.C.A.",
       "blocks": []
     },
     {
@@ -321,7 +321,7 @@ window.TUCA_CONTENT = {
       "order": 0,
       "showInNavigation": true,
       "status": "demo",
-      "summary": "Página demonstrativa dedicada ao tema Caboclos. O conteúdo será fornecido e revisado pelo TUCA.",
+      "summary": "Página demonstrativa dedicada ao tema Caboclos. O conteúdo será fornecido e revisado pelo T.U.C.A.",
       "blocks": []
     },
     {
@@ -333,7 +333,7 @@ window.TUCA_CONTENT = {
       "order": 1,
       "showInNavigation": true,
       "status": "demo",
-      "summary": "Página demonstrativa dedicada ao tema Pretos-Velhos. O conteúdo será fornecido e revisado pelo TUCA.",
+      "summary": "Página demonstrativa dedicada ao tema Pretos-Velhos. O conteúdo será fornecido e revisado pelo T.U.C.A.",
       "blocks": []
     },
     {
@@ -345,7 +345,7 @@ window.TUCA_CONTENT = {
       "order": 2,
       "showInNavigation": true,
       "status": "demo",
-      "summary": "Página demonstrativa dedicada ao tema Erês. O conteúdo será fornecido e revisado pelo TUCA.",
+      "summary": "Página demonstrativa dedicada ao tema Erês. O conteúdo será fornecido e revisado pelo T.U.C.A.",
       "blocks": []
     },
     {
@@ -357,7 +357,7 @@ window.TUCA_CONTENT = {
       "order": 3,
       "showInNavigation": true,
       "status": "demo",
-      "summary": "Página demonstrativa dedicada ao tema Baianos. O conteúdo será fornecido e revisado pelo TUCA.",
+      "summary": "Página demonstrativa dedicada ao tema Baianos. O conteúdo será fornecido e revisado pelo T.U.C.A.",
       "blocks": []
     },
     {
@@ -369,7 +369,7 @@ window.TUCA_CONTENT = {
       "order": 4,
       "showInNavigation": true,
       "status": "demo",
-      "summary": "Página demonstrativa dedicada ao tema Marinheiros. O conteúdo será fornecido e revisado pelo TUCA.",
+      "summary": "Página demonstrativa dedicada ao tema Marinheiros. O conteúdo será fornecido e revisado pelo T.U.C.A.",
       "blocks": []
     },
     {
@@ -381,7 +381,7 @@ window.TUCA_CONTENT = {
       "order": 5,
       "showInNavigation": true,
       "status": "demo",
-      "summary": "Página demonstrativa dedicada ao tema Ciganos. O conteúdo será fornecido e revisado pelo TUCA.",
+      "summary": "Página demonstrativa dedicada ao tema Ciganos. O conteúdo será fornecido e revisado pelo T.U.C.A.",
       "blocks": []
     },
     {
@@ -393,7 +393,7 @@ window.TUCA_CONTENT = {
       "order": 6,
       "showInNavigation": true,
       "status": "demo",
-      "summary": "Página demonstrativa dedicada ao tema Boiadeiros. O conteúdo será fornecido e revisado pelo TUCA.",
+      "summary": "Página demonstrativa dedicada ao tema Boiadeiros. O conteúdo será fornecido e revisado pelo T.U.C.A.",
       "blocks": []
     },
     {
@@ -405,7 +405,7 @@ window.TUCA_CONTENT = {
       "order": 7,
       "showInNavigation": true,
       "status": "demo",
-      "summary": "Página demonstrativa dedicada ao tema Exus e Pombagiras. O conteúdo será fornecido e revisado pelo TUCA.",
+      "summary": "Página demonstrativa dedicada ao tema Exus e Pombagiras. O conteúdo será fornecido e revisado pelo T.U.C.A.",
       "blocks": []
     },
     {
@@ -417,7 +417,7 @@ window.TUCA_CONTENT = {
       "order": 8,
       "showInNavigation": true,
       "status": "demo",
-      "summary": "Página demonstrativa dedicada ao tema Outras Linhas. O conteúdo será fornecido e revisado pelo TUCA.",
+      "summary": "Página demonstrativa dedicada ao tema Outras Linhas. O conteúdo será fornecido e revisado pelo T.U.C.A.",
       "blocks": []
     },
     {
@@ -489,7 +489,7 @@ window.TUCA_CONTENT = {
       "order": 0,
       "showInNavigation": true,
       "status": "demo",
-      "summary": "Os avisos oficiais do TUCA serão apresentados nesta seção.",
+      "summary": "Os avisos oficiais do T.U.C.A serão apresentados nesta seção.",
       "blocks": []
     },
     {
@@ -531,7 +531,7 @@ window.TUCA_CONTENT = {
     {
       "id": "visite",
       "slug": "visite-o-tuca",
-      "title": "Visite o TUCA",
+      "title": "Visite o T.U.C.A",
       "parentId": null,
       "template": "visit",
       "order": 7,
@@ -549,7 +549,7 @@ window.TUCA_CONTENT = {
       "order": 0,
       "showInNavigation": true,
       "status": "provided",
-      "summary": "Veja nossa localização e trace seu caminho até o TUCA.",
+      "summary": "Veja nossa localização e trace seu caminho até o T.U.C.A.",
       "blocks": [
         {
           "type": "location"
@@ -577,7 +577,7 @@ window.TUCA_CONTENT = {
       "order": 2,
       "showInNavigation": true,
       "status": "demo",
-      "summary": "As perguntas e respostas serão preparadas a partir das orientações oficiais do TUCA.",
+      "summary": "As perguntas e respostas serão preparadas a partir das orientações oficiais do T.U.C.A.",
       "blocks": []
     },
     {

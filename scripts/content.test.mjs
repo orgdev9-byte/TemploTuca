@@ -5,7 +5,7 @@ import { validate } from './model.mjs';
 const data=JSON.parse(await readFile(new URL('../content/portal.json',import.meta.url),'utf8'));
 test('catálogo íntegro e oito áreas principais na ordem aprovada',()=>{
   assert.equal(validate(data),true);
-  assert.deepEqual(data.pages.filter(p=>!p.parentId).sort((a,b)=>a.order-b.order).map(p=>p.title),['Início','O TUCA','Umbanda','Orixás','Linhas de Trabalho','Calendário','Conteúdos','Visite o TUCA']);
+  assert.deepEqual(data.pages.filter(p=>!p.parentId).sort((a,b)=>a.order-b.order).map(p=>p.title),['Início','O T.U.C.A','Umbanda','Orixás','Linhas de Trabalho','Calendário','Conteúdos','Visite o T.U.C.A']);
 });
 test('assuntos de Orixás e Linhas têm introdução, páginas próprias e status demonstrativo',()=>{
   for(const id of ['orixas','linhas']) {
