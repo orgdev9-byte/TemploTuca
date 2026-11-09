@@ -14,7 +14,7 @@ test('assuntos de Orixás e Linhas têm introdução, páginas próprias e statu
     assert.ok(topics.length>1);
     assert.ok(topics.every(p=>p.template==='article'&&p.status==='demo'&&p.summary.length));
   }
-  assert.equal(data.events.length,0,'Não incluir datas de gira sem aprovação');
+  assert.ok(data.events.every(e=>e.status==='confirmed'),'Publicar apenas atividades confirmadas');
 });
 test('novo tópico e submenu aninhado entram apenas por dados',()=>{
   const copy=structuredClone(data);

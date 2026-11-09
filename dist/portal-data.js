@@ -3,7 +3,7 @@ window.TUCA_CONTENT = {
   "site": {
     "name": "T.U.C.A",
     "fullName": "Templo de Umbanda Caminhos de Aruanda",
-    "demoNotice": "Demonstração · Conteúdos e assuntos sujeitos à aprovação do dirigente.",
+    "demoNotice": "Portal em preparação · Textos educativos demonstrativos. Programação informada pela casa.",
     "logo": "assets/logo-tuca-original.png",
     "photo": "assets/conga-original.jpeg",
     "logoDark": "assets/logo-tuca-original.png",
@@ -22,7 +22,35 @@ window.TUCA_CONTENT = {
       "embedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.178716915373!2d-46.573799699999995!3d-23.562023999999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5e9f63fab23b%3A0x2ac527e19cc96e96!2sAv.%20Sapopemba%2C%20633%20-%20Vila%20Reg.%20Feij%C3%B3%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2003345-001!5e0!3m2!1spt-BR!2sbr!4v1793990954497!5m2!1spt-BR!2sbr"
     }
   },
-  "events": [],
+  "events": [
+    {
+      "id": "gira-pombogira-2026-11-11",
+      "title": "Pombogira",
+      "date": "2026-11-11",
+      "type": "giras",
+      "doors": "18:00",
+      "start": "19:00",
+      "status": "confirmed"
+    },
+    {
+      "id": "gira-preto-velho-2026-11-18",
+      "title": "Preto-Velho",
+      "date": "2026-11-18",
+      "type": "giras",
+      "doors": "18:00",
+      "start": "19:00",
+      "status": "confirmed"
+    },
+    {
+      "id": "gira-exu-2026-11-25",
+      "title": "Exu",
+      "date": "2026-11-25",
+      "type": "giras",
+      "doors": "18:00",
+      "start": "19:00",
+      "status": "confirmed"
+    }
+  ],
   "pages": [
     {
       "id": "inicio",
@@ -404,8 +432,8 @@ window.TUCA_CONTENT = {
       "template": "calendar",
       "order": 5,
       "showInNavigation": true,
-      "status": "demo",
-      "summary": "Consulte a estrutura da agenda. Ainda não há programação aprovada neste protótipo.",
+      "status": "provided",
+      "summary": "Confira as datas e os horários das giras do T.U.C.A.",
       "blocks": []
     },
     {
@@ -416,8 +444,8 @@ window.TUCA_CONTENT = {
       "template": "calendar",
       "order": 0,
       "showInNavigation": true,
-      "status": "demo",
-      "summary": "Espaço para a próxima programação oficial. Nenhuma data ou horário foi cadastrado.",
+      "status": "provided",
+      "summary": "Acompanhe as próximas giras da casa.",
       "blocks": []
     },
     {
@@ -428,8 +456,8 @@ window.TUCA_CONTENT = {
       "template": "calendar",
       "order": 1,
       "showInNavigation": true,
-      "status": "demo",
-      "summary": "Navegue pelos meses para avaliar a apresentação da futura agenda.",
+      "status": "provided",
+      "summary": "Consulte a programação mês a mês.",
       "blocks": []
     },
     {
@@ -440,8 +468,8 @@ window.TUCA_CONTENT = {
       "template": "calendar",
       "order": 2,
       "showInNavigation": true,
-      "status": "demo",
-      "summary": "Espaço reservado para eventos aprovados pela direção.",
+      "status": "provided",
+      "summary": "Consulte os eventos especiais da casa.",
       "blocks": []
     },
     {
