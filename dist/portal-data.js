@@ -51,7 +51,7 @@ window.TUCA_CONTENT = {
     {
       "id": "tuca-nossa-historia",
       "slug": "nossa-historia",
-      "title": "Nossa história",
+      "title": "História",
       "parentId": "tuca",
       "template": "article",
       "order": 0,
@@ -63,7 +63,7 @@ window.TUCA_CONTENT = {
     {
       "id": "tuca-nossa-missao",
       "slug": "nossa-missao",
-      "title": "Nossa missão",
+      "title": "Missão",
       "parentId": "tuca",
       "template": "article",
       "order": 1,
@@ -75,7 +75,7 @@ window.TUCA_CONTENT = {
     {
       "id": "tuca-nossa-casa-e-o-conga",
       "slug": "nossa-casa-e-o-conga",
-      "title": "Nossa casa e o congá",
+      "title": "Casa e congá",
       "parentId": "tuca",
       "template": "gallery",
       "order": 2,
@@ -99,7 +99,7 @@ window.TUCA_CONTENT = {
     {
       "id": "tuca-dirigentes-da-casa",
       "slug": "dirigentes-da-casa",
-      "title": "Dirigentes da casa",
+      "title": "Dirigentes",
       "parentId": "tuca",
       "template": "article",
       "order": 4,
