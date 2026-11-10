@@ -562,10 +562,35 @@ window.TUCA_CONTENT = {
       "parentId": "visite",
       "order": 3,
       "template": "article",
-      "status": "demo",
+      "status": "provided",
       "showInNavigation": true,
-      "summary": "As orientações sobre o que trazer serão publicadas em breve.",
-      "blocks": []
+      "summary": "Um convite à abertura, ao autoconhecimento e à transformação.",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Este tópico tem como objetivo reforçar a necessidade de estarmos receptivos e de sempre buscarmos a melhoria contínua por meio do autoconhecimento. Existem muitas casas, pessoas e religiões dispostas a oferecer ajuda, mas poucos estão realmente aptos a recebê-la."
+        },
+        {
+          "type": "paragraph",
+          "text": "Quando afirmamos isso, gostaríamos que entendessem que a real força de mudança e evolução está em cada um de nós, em cada atitude cotidiana, em cada pensamento e em cada experiência."
+        },
+        {
+          "type": "paragraph",
+          "text": "Devemos enxergar nossas deficiências e nossos acertos de um novo ângulo e entender que precisamos caminhar ao lado de quem nos oferece auxílio, nunca atrás."
+        },
+        {
+          "type": "heading",
+          "text": "Para os trabalhos"
+        },
+        {
+          "type": "paragraph",
+          "text": "Tragam o coração e a mente abertos. Tragam muita fé e esperança de que todos os caminhos possuem uma saída, uma surpresa agradável ou um segundo ângulo de visão."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tragam roupas claras e com decotes discretos. Tragam o silêncio e a reflexão. Tragam o amor!"
+        }
+      ]
     },
     {
       "id": "orixas-oxala",
