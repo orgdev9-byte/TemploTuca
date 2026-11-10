@@ -634,7 +634,12 @@ window.TUCA_CONTENT = {
           "type": "paragraph",
           "text": "A verdadeira fé ilumina nossos pensamentos e nos conduz por caminhos de paz, humildade e amor."
         }
-      ]
+      ],
+      "image": {
+        "src": "assets/orixas/oxala.jpg",
+        "alt": "Representação artística de Oxalá",
+        "caption": "Representação artística de Oxalá."
+      }
     },
     {
       "id": "orixas-oya-tempo-logunan",
@@ -678,7 +683,12 @@ window.TUCA_CONTENT = {
           "type": "paragraph",
           "text": "Tudo possui seu tempo. A fé precisa caminhar ao lado da consciência, da paciência e do respeito."
         }
-      ]
+      ],
+      "image": {
+        "src": "assets/orixas/oya-tempo-logunan.jpg",
+        "alt": "Representação artística de Oyá-Tempo (Logunan)",
+        "caption": "Representação artística de Oyá-Tempo (Logunan)."
+      }
     },
     {
       "id": "orixas-oxum",
@@ -722,7 +732,12 @@ window.TUCA_CONTENT = {
           "type": "paragraph",
           "text": "Amar é acolher, compreender e cultivar relações com respeito, carinho e responsabilidade."
         }
-      ]
+      ],
+      "image": {
+        "src": "assets/orixas/oxum.jpg",
+        "alt": "Representação artística de Oxum",
+        "caption": "Representação artística de Oxum."
+      }
     },
     {
       "id": "orixas-oxumare",
@@ -766,7 +781,12 @@ window.TUCA_CONTENT = {
           "type": "paragraph",
           "text": "A vida está em constante transformação. Renovar pensamentos e sentimentos é essencial para nossa evolução."
         }
-      ]
+      ],
+      "image": {
+        "src": "assets/orixas/oxumare.jpg",
+        "alt": "Representação artística de Oxumarê",
+        "caption": "Representação artística de Oxumarê."
+      }
     },
     {
       "id": "orixas-oxossi",
@@ -810,7 +830,12 @@ window.TUCA_CONTENT = {
           "type": "paragraph",
           "text": "O conhecimento é um caminho de crescimento. Aprender com humildade nos permite evoluir e compreender melhor a vida."
         }
-      ]
+      ],
+      "image": {
+        "src": "assets/orixas/oxossi.jpg",
+        "alt": "Representação artística de Oxóssi",
+        "caption": "Representação artística de Oxóssi."
+      }
     },
     {
       "id": "orixas-oba",
@@ -854,7 +879,12 @@ window.TUCA_CONTENT = {
           "type": "paragraph",
           "text": "Não basta adquirir conhecimento. É necessário compreender, refletir e saber utilizá-lo."
         }
-      ]
+      ],
+      "image": {
+        "src": "assets/orixas/oba.jpg",
+        "alt": "Representação artística de Obá",
+        "caption": "Representação artística de Obá."
+      }
     },
     {
       "id": "orixas-xango",
@@ -902,7 +932,12 @@ window.TUCA_CONTENT = {
           "type": "paragraph",
           "text": "Ser justo é reconhecer nossos deveres, respeitar o próximo e agir com equilíbrio."
         }
-      ]
+      ],
+      "image": {
+        "src": "assets/orixas/xango.jpg",
+        "alt": "Representação artística de Xangô",
+        "caption": "Representação artística de Xangô."
+      }
     },
     {
       "id": "orixas-egunita",
@@ -946,7 +981,12 @@ window.TUCA_CONTENT = {
           "type": "paragraph",
           "text": "A transformação começa quando reconhecemos aquilo que precisa ser corrigido dentro de nós."
         }
-      ]
+      ],
+      "image": {
+        "src": "assets/orixas/egunita.jpg",
+        "alt": "Representação artística de Egunitá",
+        "caption": "Representação artística de Egunitá."
+      }
     },
     {
       "id": "orixas-ogum",
@@ -990,7 +1030,12 @@ window.TUCA_CONTENT = {
           "type": "paragraph",
           "text": "A verdadeira coragem está em agir com disciplina, responsabilidade e respeito."
         }
-      ]
+      ],
+      "image": {
+        "src": "assets/orixas/ogum.jpg",
+        "alt": "Representação artística de Ogum",
+        "caption": "Representação artística de Ogum."
+      }
     },
     {
       "id": "orixas-iansa",
@@ -1034,7 +1079,12 @@ window.TUCA_CONTENT = {
           "type": "paragraph",
           "text": "Mudar exige coragem. É preciso aprender a deixar para trás aquilo que impede nossa evolução."
         }
-      ]
+      ],
+      "image": {
+        "src": "assets/orixas/iansa.jpg",
+        "alt": "Representação artística de Iansã",
+        "caption": "Representação artística de Iansã."
+      }
     },
     {
       "id": "orixas-obaluaie",
@@ -1078,7 +1128,12 @@ window.TUCA_CONTENT = {
           "type": "paragraph",
           "text": "Não existe evolução sem transformação. Cada experiência pode se tornar uma oportunidade de aprendizado."
         }
-      ]
+      ],
+      "image": {
+        "src": "assets/orixas/obaluaie.jpg",
+        "alt": "Representação artística de Obaluaiê",
+        "caption": "Representação artística de Obaluaiê."
+      }
     },
     {
       "id": "orixas-nana-buruque",
@@ -1122,7 +1177,12 @@ window.TUCA_CONTENT = {
           "type": "paragraph",
           "text": "A sabedoria nasce das experiências e da capacidade de compreender que cada transformação possui seu próprio tempo."
         }
-      ]
+      ],
+      "image": {
+        "src": "assets/orixas/nana-buruque.jpg",
+        "alt": "Representação artística de Nanã Buruquê",
+        "caption": "Representação artística de Nanã Buruquê."
+      }
     },
     {
       "id": "orixas-iemanja",
@@ -1166,7 +1226,12 @@ window.TUCA_CONTENT = {
           "type": "paragraph",
           "text": "Gerar também é cuidar, acolher e oferecer condições para que a vida floresça."
         }
-      ]
+      ],
+      "image": {
+        "src": "assets/orixas/iemanja.jpg",
+        "alt": "Representação artística de Iemanjá",
+        "caption": "Representação artística de Iemanjá."
+      }
     },
     {
       "id": "orixas-omolu",
@@ -1210,7 +1275,12 @@ window.TUCA_CONTENT = {
           "type": "paragraph",
           "text": "A vida é sagrada em todas as suas etapas, e cada ciclo deve ser compreendido com respeito e consciência."
         }
-      ]
+      ],
+      "image": {
+        "src": "assets/orixas/omolu.jpg",
+        "alt": "Representação artística de Omolu",
+        "caption": "Representação artística de Omolu."
+      }
     }
   ]
 };

@@ -125,6 +125,7 @@
       ${(current.id==='orixas'||current.id==='linhas')&&current.status==='demo'?'<div class="editorial-note"><strong>Uma estrutura para conhecer os temas.</strong><p>Os assuntos abaixo são propostas de organização. Não representam uma lista oficial dos fundamentos ou das práticas do T.U.C.A. A seleção e os textos dependem da aprovação do dirigente.</p></div>':''}
       ${current.template==='calendar'?`<div id="calendar-region">${calendar()}</div>`:''}
       ${current.template==='gallery'?gallery():''}
+      ${current.image?`<figure class="orixa-image"><img src="${escape(current.image.src)}" alt="${escape(current.image.alt)}" width="1024" height="1024" loading="lazy" decoding="async">${current.image.caption?`<figcaption>${escape(current.image.caption)}</figcaption>`:''}</figure>`:''}
       ${current.blocks?.length?`<div class="prose">${blocks(current.blocks)}</div>`:''}
       ${sub.length?`<section class="subtopics" aria-label="Páginas desta seção"><h2>${current.id==='orixas'?'Conheça os temas':current.id==='linhas'?'Explore as linhas propostas':'Explore esta seção'}</h2>${sectionCards(sub)}</section>`:''}
       ${current.template==='visit'?'<div class="editorial-note"><strong>Planeje sua primeira visita.</strong><p>Nosso endereço: Av. Sapopemba, 633 — Vila Regente Feijó, São Paulo — SP. Acesse Como chegar para consultar o mapa. Horários, contatos e recomendações de visita serão apresentados após confirmação da casa.</p></div>':''}
