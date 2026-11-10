@@ -281,117 +281,23 @@ window.TUCA_CONTENT = {
       "template": "collection",
       "order": 4,
       "showInNavigation": true,
-      "status": "demo",
-      "summary": "Uma introdução e páginas individuais para os assuntos a serem validados pelo dirigente.",
-      "blocks": []
-    },
-    {
-      "id": "linhas-caboclos",
-      "slug": "caboclos",
-      "title": "Caboclos",
-      "parentId": "linhas",
-      "template": "article",
-      "order": 0,
-      "showInNavigation": true,
-      "status": "demo",
-      "summary": "Página demonstrativa dedicada ao tema Caboclos. O conteúdo será fornecido e revisado pelo T.U.C.A.",
-      "blocks": []
-    },
-    {
-      "id": "linhas-pretos-velhos",
-      "slug": "pretos-velhos",
-      "title": "Pretos-Velhos",
-      "parentId": "linhas",
-      "template": "article",
-      "order": 1,
-      "showInNavigation": true,
-      "status": "demo",
-      "summary": "Página demonstrativa dedicada ao tema Pretos-Velhos. O conteúdo será fornecido e revisado pelo T.U.C.A.",
-      "blocks": []
-    },
-    {
-      "id": "linhas-eres",
-      "slug": "eres",
-      "title": "Erês",
-      "parentId": "linhas",
-      "template": "article",
-      "order": 2,
-      "showInNavigation": true,
-      "status": "demo",
-      "summary": "Página demonstrativa dedicada ao tema Erês. O conteúdo será fornecido e revisado pelo T.U.C.A.",
-      "blocks": []
-    },
-    {
-      "id": "linhas-baianos",
-      "slug": "baianos",
-      "title": "Baianos",
-      "parentId": "linhas",
-      "template": "article",
-      "order": 3,
-      "showInNavigation": true,
-      "status": "demo",
-      "summary": "Página demonstrativa dedicada ao tema Baianos. O conteúdo será fornecido e revisado pelo T.U.C.A.",
-      "blocks": []
-    },
-    {
-      "id": "linhas-marinheiros",
-      "slug": "marinheiros",
-      "title": "Marinheiros",
-      "parentId": "linhas",
-      "template": "article",
-      "order": 4,
-      "showInNavigation": true,
-      "status": "demo",
-      "summary": "Página demonstrativa dedicada ao tema Marinheiros. O conteúdo será fornecido e revisado pelo T.U.C.A.",
-      "blocks": []
-    },
-    {
-      "id": "linhas-ciganos",
-      "slug": "ciganos",
-      "title": "Ciganos",
-      "parentId": "linhas",
-      "template": "article",
-      "order": 5,
-      "showInNavigation": true,
-      "status": "demo",
-      "summary": "Página demonstrativa dedicada ao tema Ciganos. O conteúdo será fornecido e revisado pelo T.U.C.A.",
-      "blocks": []
-    },
-    {
-      "id": "linhas-boiadeiros",
-      "slug": "boiadeiros",
-      "title": "Boiadeiros",
-      "parentId": "linhas",
-      "template": "article",
-      "order": 6,
-      "showInNavigation": true,
-      "status": "demo",
-      "summary": "Página demonstrativa dedicada ao tema Boiadeiros. O conteúdo será fornecido e revisado pelo T.U.C.A.",
-      "blocks": []
-    },
-    {
-      "id": "linhas-exus-e-pombagiras",
-      "slug": "exus-e-pombagiras",
-      "title": "Exus e Pombagiras",
-      "parentId": "linhas",
-      "template": "article",
-      "order": 7,
-      "showInNavigation": true,
-      "status": "demo",
-      "summary": "Página demonstrativa dedicada ao tema Exus e Pombagiras. O conteúdo será fornecido e revisado pelo T.U.C.A.",
-      "blocks": []
-    },
-    {
-      "id": "linhas-outras-linhas",
-      "slug": "outras-linhas",
-      "title": "Outras Linhas",
-      "parentId": "linhas",
-      "template": "article",
-      "order": 8,
-      "showInNavigation": true,
-      "status": "demo",
-      "summary": "Página demonstrativa dedicada ao tema Outras Linhas. O conteúdo será fornecido e revisado pelo T.U.C.A.",
-      "blocks": []
+      "status": "provided",
+      "summary": "Quem são os Guias Espirituais?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Os Guias Espirituais são entidades que atuam nos trabalhos de Umbanda, oferecendo acolhimento, aconselhamento, proteção e orientação espiritual."
+        },
+        {
+          "type": "paragraph",
+          "text": "Por meio da mediunidade, manifestam-se nos terreiros para auxiliar aqueles que buscam conforto, esclarecimento e fortalecimento da fé."
+        },
+        {
+          "type": "paragraph",
+          "text": "Cada linha de trabalho possui características próprias, mas todas compartilham a importância da caridade, do respeito e da evolução espiritual."
+        }
+      ],
+      "heading": "Guias Espirituais da Umbanda"
     },
     {
       "id": "calendario",
@@ -1280,6 +1186,458 @@ window.TUCA_CONTENT = {
         "src": "assets/orixas/omolu.jpg",
         "alt": "Representação artística de Omolu",
         "caption": "Representação artística de Omolu."
+      }
+    },
+    {
+      "id": "linhas-exus",
+      "slug": "exus",
+      "title": "Exus",
+      "summary": "Os Guardiões Espirituais",
+      "parentId": "linhas",
+      "order": 0,
+      "template": "article",
+      "showInNavigation": true,
+      "status": "provided",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Os Exus são entidades que atuam na guarda, na proteção e na defesa espiritual dos terreiros e de seus frequentadores."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sua atuação está associada à Lei Divina, à disciplina, à responsabilidade e ao direcionamento dos caminhos."
+        },
+        {
+          "type": "paragraph",
+          "text": "Com firmeza e sabedoria, ensinam sobre as consequências de nossas escolhas e a importância de agir com consciência."
+        },
+        {
+          "type": "heading",
+          "text": "Ensinamento"
+        },
+        {
+          "type": "paragraph",
+          "text": "Nossas atitudes constroem nossos caminhos. A proteção espiritual também exige responsabilidade."
+        }
+      ],
+      "image": {
+        "src": "assets/guias/exus.jpg",
+        "alt": "Representação artística de Exus",
+        "caption": "Representação artística de Exus."
+      }
+    },
+    {
+      "id": "linhas-pombagiras",
+      "slug": "pombagiras",
+      "title": "Pombagiras",
+      "summary": "As Guardiãs da Força e da Liberdade",
+      "parentId": "linhas",
+      "order": 1,
+      "template": "article",
+      "showInNavigation": true,
+      "status": "provided",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "As Pombagiras são entidades ligadas à proteção, ao autoconhecimento, à valorização pessoal e ao equilíbrio dos sentimentos."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sua força representa a determinação, a independência e o respeito aos próprios limites."
+        },
+        {
+          "type": "paragraph",
+          "text": "Por meio de suas orientações, ensinam sobre amor-próprio, responsabilidade afetiva e liberdade de escolha."
+        },
+        {
+          "type": "heading",
+          "text": "Ensinamento"
+        },
+        {
+          "type": "paragraph",
+          "text": "O verdadeiro amor começa pelo respeito a si mesmo e ao próximo."
+        }
+      ],
+      "image": {
+        "src": "assets/guias/pombagiras.jpg",
+        "alt": "Representação artística de Pombagiras",
+        "caption": "Representação artística de Pombagiras."
+      }
+    },
+    {
+      "id": "linhas-exus-mirins",
+      "slug": "exus-mirins",
+      "title": "Exus Mirins",
+      "summary": "A Força da Transformação",
+      "parentId": "linhas",
+      "order": 2,
+      "template": "article",
+      "showInNavigation": true,
+      "status": "provided",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Os Exus Mirins são entidades que, em determinadas tradições, atuam em trabalhos de proteção, limpeza e transformação espiritual."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sua manifestação pode apresentar características irreverentes e dinâmicas, utilizadas como formas de orientação e aprendizado."
+        },
+        {
+          "type": "paragraph",
+          "text": "Apesar dessa maneira descontraída de se apresentar, sua atuação possui fundamentos espirituais próprios."
+        },
+        {
+          "type": "heading",
+          "text": "Ensinamento"
+        },
+        {
+          "type": "paragraph",
+          "text": "Reconhecer nossas falhas e modificar comportamentos faz parte da evolução."
+        }
+      ],
+      "image": {
+        "src": "assets/guias/exus-mirins.jpg",
+        "alt": "Representação artística de Exus Mirins",
+        "caption": "Representação artística de Exus Mirins."
+      }
+    },
+    {
+      "id": "linhas-pombagiras-mirins",
+      "slug": "pombagiras-mirins",
+      "title": "Pombagiras Mirins",
+      "summary": "A Força do Autoconhecimento",
+      "parentId": "linhas",
+      "order": 3,
+      "template": "article",
+      "showInNavigation": true,
+      "status": "provided",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "As Pombagiras Mirins são entidades reconhecidas em determinadas tradições da Umbanda, com atuação relacionada à proteção e à transformação de comportamentos."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sua manifestação pode transmitir espontaneidade e firmeza, contribuindo para reflexões sobre sentimentos, atitudes e escolhas."
+        },
+        {
+          "type": "heading",
+          "text": "Ensinamento"
+        },
+        {
+          "type": "paragraph",
+          "text": "Conhecer nossos sentimentos é fundamental para desenvolver equilíbrio e maturidade espiritual."
+        }
+      ],
+      "image": {
+        "src": "assets/guias/pombagiras-mirins.jpg",
+        "alt": "Representação artística de Pombagiras Mirins",
+        "caption": "Representação artística de Pombagiras Mirins."
+      }
+    },
+    {
+      "id": "linhas-caboclos",
+      "slug": "caboclos",
+      "title": "Caboclos",
+      "summary": "A Sabedoria das Matas",
+      "parentId": "linhas",
+      "order": 4,
+      "template": "article",
+      "showInNavigation": true,
+      "status": "provided",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Os Caboclos são entidades associadas à ancestralidade indígena, à força da natureza e ao conhecimento espiritual."
+        },
+        {
+          "type": "paragraph",
+          "text": "Suas manifestações transmitem coragem, firmeza, sabedoria e respeito às forças naturais."
+        },
+        {
+          "type": "paragraph",
+          "text": "Atuam em trabalhos de orientação, fortalecimento, passes e harmonização espiritual."
+        },
+        {
+          "type": "heading",
+          "text": "Ensinamento"
+        },
+        {
+          "type": "paragraph",
+          "text": "A verdadeira força está na união entre coragem, conhecimento e humildade."
+        }
+      ],
+      "image": {
+        "src": "assets/guias/caboclos.jpg",
+        "alt": "Representação artística de Caboclos",
+        "caption": "Representação artística de Caboclos."
+      }
+    },
+    {
+      "id": "linhas-pretos-velhos",
+      "slug": "pretos-velhos",
+      "title": "Pretos-Velhos e Pretas-Velhas",
+      "summary": "A Sabedoria da Ancestralidade",
+      "parentId": "linhas",
+      "order": 5,
+      "template": "article",
+      "showInNavigation": true,
+      "status": "provided",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Os Pretos-Velhos e as Pretas-Velhas representam uma linha profundamente ligada à ancestralidade africana e afro-brasileira."
+        },
+        {
+          "type": "paragraph",
+          "text": "Com serenidade, paciência e acolhimento, transmitem ensinamentos sobre fé, perseverança, dignidade e amor ao próximo."
+        },
+        {
+          "type": "paragraph",
+          "text": "Seus conselhos valorizam a humildade, a caridade e a importância de enfrentar a vida com sabedoria."
+        },
+        {
+          "type": "heading",
+          "text": "Ensinamento"
+        },
+        {
+          "type": "paragraph",
+          "text": "A verdadeira sabedoria se manifesta na humildade, na paciência e no respeito."
+        }
+      ],
+      "image": {
+        "src": "assets/guias/pretos-velhos.jpg",
+        "alt": "Representação artística de Pretos-Velhos e Pretas-Velhas",
+        "caption": "Representação artística de Pretos-Velhos e Pretas-Velhas."
+      }
+    },
+    {
+      "id": "linhas-eres",
+      "slug": "eres",
+      "title": "Crianças e Erês",
+      "summary": "A Alegria e a Pureza",
+      "parentId": "linhas",
+      "order": 6,
+      "template": "article",
+      "showInNavigation": true,
+      "status": "provided",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A Linha das Crianças é conhecida por suas manifestações alegres, espontâneas e acolhedoras."
+        },
+        {
+          "type": "paragraph",
+          "text": "Por meio da simplicidade e da alegria, essas entidades transmitem ensinamentos sobre a fé, a esperança e o amor."
+        },
+        {
+          "type": "paragraph",
+          "text": "Apesar da aparência infantil de suas manifestações, seus trabalhos possuem grande importância espiritual."
+        },
+        {
+          "type": "heading",
+          "text": "Ensinamento"
+        },
+        {
+          "type": "paragraph",
+          "text": "A alegria, a simplicidade e a pureza das intenções também são caminhos de evolução."
+        }
+      ],
+      "image": {
+        "src": "assets/guias/eres.jpg",
+        "alt": "Representação artística de Crianças e Erês",
+        "caption": "Representação artística de Crianças e Erês."
+      }
+    },
+    {
+      "id": "linhas-baianos",
+      "slug": "baianos",
+      "title": "Baianos e Baianas",
+      "summary": "A Força da Alegria",
+      "parentId": "linhas",
+      "order": 7,
+      "template": "article",
+      "showInNavigation": true,
+      "status": "provided",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Os Baianos e as Baianas são entidades associadas à força, à sabedoria popular e à capacidade de superar dificuldades."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sua maneira acolhedora e descontraída de trabalhar transmite coragem, esperança e determinação."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ensinam que é possível enfrentar os desafios da vida sem perder a fé e a alegria."
+        },
+        {
+          "type": "heading",
+          "text": "Ensinamento"
+        },
+        {
+          "type": "paragraph",
+          "text": "A alegria e a determinação nos ajudam a atravessar os momentos difíceis."
+        }
+      ],
+      "image": {
+        "src": "assets/guias/baianos.jpg",
+        "alt": "Representação artística de Baianos e Baianas",
+        "caption": "Representação artística de Baianos e Baianas."
+      }
+    },
+    {
+      "id": "linhas-boiadeiros",
+      "slug": "boiadeiros",
+      "title": "Boiadeiros",
+      "summary": "Os Condutores de Caminhos",
+      "parentId": "linhas",
+      "order": 8,
+      "template": "article",
+      "showInNavigation": true,
+      "status": "provided",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Os Boiadeiros são entidades relacionadas à força do campo, à disciplina e à proteção espiritual."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sua atuação simboliza a capacidade de conduzir, organizar e direcionar energias e situações."
+        },
+        {
+          "type": "paragraph",
+          "text": "Representam coragem, perseverança e firmeza diante dos desafios."
+        },
+        {
+          "type": "heading",
+          "text": "Ensinamento"
+        },
+        {
+          "type": "paragraph",
+          "text": "A disciplina e a determinação nos ajudam a superar obstáculos e seguir nossos caminhos."
+        }
+      ],
+      "image": {
+        "src": "assets/guias/boiadeiros.jpg",
+        "alt": "Representação artística de Boiadeiros",
+        "caption": "Representação artística de Boiadeiros."
+      }
+    },
+    {
+      "id": "linhas-marinheiros",
+      "slug": "marinheiros",
+      "title": "Marinheiros",
+      "summary": "A Sabedoria das Águas",
+      "parentId": "linhas",
+      "order": 9,
+      "template": "article",
+      "showInNavigation": true,
+      "status": "provided",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Os Marinheiros são entidades associadas às águas, ao movimento e à capacidade de adaptação."
+        },
+        {
+          "type": "paragraph",
+          "text": "Suas manifestações representam a busca pelo equilíbrio diante das mudanças e das dificuldades."
+        },
+        {
+          "type": "paragraph",
+          "text": "Por meio de seus ensinamentos, incentivam a serenidade, a renovação e a confiança."
+        },
+        {
+          "type": "heading",
+          "text": "Ensinamento"
+        },
+        {
+          "type": "paragraph",
+          "text": "Assim como o mar possui calmarias e tempestades, a vida exige equilíbrio para enfrentar cada momento."
+        }
+      ],
+      "image": {
+        "src": "assets/guias/marinheiros.jpg",
+        "alt": "Representação artística de Marinheiros",
+        "caption": "Representação artística de Marinheiros."
+      }
+    },
+    {
+      "id": "linhas-ciganos",
+      "slug": "ciganos",
+      "title": "Ciganos e Ciganas",
+      "summary": "Os Caminhos da Liberdade",
+      "parentId": "linhas",
+      "order": 10,
+      "template": "article",
+      "showInNavigation": true,
+      "status": "provided",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Os Ciganos e as Ciganas são entidades associadas à liberdade, à intuição, à prosperidade e ao movimento da vida."
+        },
+        {
+          "type": "paragraph",
+          "text": "Seus trabalhos espirituais podem envolver orientação, autoconhecimento e fortalecimento da confiança."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sua simbologia representa a importância de caminhar com coragem, sabedoria e responsabilidade."
+        },
+        {
+          "type": "heading",
+          "text": "Ensinamento"
+        },
+        {
+          "type": "paragraph",
+          "text": "A verdadeira liberdade está em fazer escolhas conscientes e respeitar os caminhos de cada ser."
+        }
+      ],
+      "image": {
+        "src": "assets/guias/ciganos.jpg",
+        "alt": "Representação artística de Ciganos e Ciganas",
+        "caption": "Representação artística de Ciganos e Ciganas."
+      }
+    },
+    {
+      "id": "linhas-malandros",
+      "slug": "malandros",
+      "title": "Malandros e Malandras",
+      "summary": "A Sabedoria da Vida",
+      "parentId": "linhas",
+      "order": 11,
+      "template": "article",
+      "showInNavigation": true,
+      "status": "provided",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Os Malandros e as Malandras são entidades associadas à inteligência, à perspicácia e à capacidade de enfrentar as dificuldades."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sua maneira descontraída de se manifestar transmite ensinamentos sobre escolhas, dignidade e respeito."
+        },
+        {
+          "type": "paragraph",
+          "text": "A malandragem espiritual, nesse contexto, representa a sabedoria para lidar com os desafios sem prejudicar o próximo."
+        },
+        {
+          "type": "heading",
+          "text": "Ensinamento"
+        },
+        {
+          "type": "paragraph",
+          "text": "A inteligência deve caminhar ao lado da honestidade e da responsabilidade."
+        }
+      ],
+      "image": {
+        "src": "assets/guias/malandros.jpg",
+        "alt": "Representação artística de Malandros e Malandras",
+        "caption": "Representação artística de Malandros e Malandras."
       }
     }
   ]
