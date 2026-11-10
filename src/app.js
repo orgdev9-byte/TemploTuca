@@ -96,7 +96,7 @@
     });
   }
   function blocks(list=[]) {
-    return list.map(b=>b.type==='page-link'&&find(b.pageId)?`<a class="text-link" href="${escape(href(find(b.pageId)))}">${escape(b.text)} →</a>`:b.type==='contact'?contactBlock():b.type==='location'?locationBlock():b.type==='heading'?`<h2>${escape(b.text)}</h2>`:b.type==='paragraph'?`<p>${escape(b.text)}</p>`:b.type==='list'?`<ul>${b.items.map(t=>`<li>${escape(t)}</li>`).join('')}</ul>`:'').join('');
+    return list.map(b=>b.type==='page-link'&&find(b.pageId)?`<a class="text-link" href="${escape(href(find(b.pageId)))}">${escape(b.text)} →</a>`:b.type==='contact'?contactBlock():b.type==='location'?locationBlock():b.type==='heading'?`<h2>${escape(b.text)}</h2>`:b.type==='paragraph'?`<p>${b.strong?`<strong>${escape(b.text)}</strong>`:escape(b.text)}</p>`:b.type==='list'?`<ul>${b.items.map(t=>`<li>${escape(t)}</li>`).join('')}</ul>`:'').join('');
   }
   function calendar() {
     const year=calendarDate.getFullYear(),month=calendarDate.getMonth();

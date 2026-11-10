@@ -211,9 +211,120 @@
       "template": "article",
       "order": 2,
       "showInNavigation": true,
-      "status": "demo",
-      "summary": "Os temas e os textos desta seção serão definidos pelo dirigente.",
-      "blocks": []
+      "status": "provided",
+      "summary": "O espaço sagrado, a natureza, a caridade e a caminhada espiritual.",
+      "blocks": [
+        {
+          "type": "heading",
+          "text": "O Terreiro: Um Espaço Sagrado"
+        },
+        {
+          "type": "paragraph",
+          "text": "O terreiro é um espaço dedicado à fé, ao culto dos Orixás, à manifestação dos Guias Espirituais e à prática da caridade."
+        },
+        {
+          "type": "paragraph",
+          "text": "Dentro dele, cada elemento possui importância religiosa e simbólica."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ao entrar em um terreiro, somos convidados a deixar de lado as preocupações cotidianas e a nos conectar com nossa espiritualidade, mantendo uma postura de respeito, concentração e humildade."
+        },
+        {
+          "type": "heading",
+          "text": "O Congá"
+        },
+        {
+          "type": "paragraph",
+          "text": "O Congá é o altar sagrado do terreiro, espaço de reverência aos Orixás e às forças divinas."
+        },
+        {
+          "type": "paragraph",
+          "text": "Nele podem estar presentes imagens, símbolos e elementos religiosos que expressam os fundamentos espirituais da casa."
+        },
+        {
+          "type": "paragraph",
+          "text": "É um espaço de oração, concentração e fortalecimento da fé, devendo ser tratado com respeito e cuidado."
+        },
+        {
+          "type": "heading",
+          "text": "A Trunqueira"
+        },
+        {
+          "type": "paragraph",
+          "text": "A Trunqueira é um espaço de proteção e guarda espiritual, associado à atuação dos guardiões da casa."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sua importância está relacionada à defesa energética do terreiro e à sustentação de determinados fundamentos espirituais."
+        },
+        {
+          "type": "paragraph",
+          "text": "Os trabalhos realizados nesse espaço seguem a orientação e os fundamentos próprios de cada casa religiosa."
+        },
+        {
+          "type": "heading",
+          "text": "Os Pontos de Força da Natureza"
+        },
+        {
+          "type": "paragraph",
+          "text": "Na Umbanda, a natureza possui profunda importância espiritual."
+        },
+        {
+          "type": "paragraph",
+          "text": "Matas, rios, cachoeiras, mares, pedreiras, campos e outros ambientes naturais são reconhecidos como pontos de força associados às irradiações dos Orixás."
+        },
+        {
+          "type": "paragraph",
+          "text": "Esses lugares simbolizam a presença das forças divinas na criação e representam espaços de conexão, contemplação e fortalecimento da fé."
+        },
+        {
+          "type": "paragraph",
+          "text": "O respeito à natureza também faz parte da espiritualidade umbandista. Preservar o meio ambiente é uma forma de honrar a criação e os mistérios dos Orixás."
+        },
+        {
+          "type": "heading",
+          "text": "A Caridade como Fundamento"
+        },
+        {
+          "type": "paragraph",
+          "text": "A caridade é um dos princípios centrais da Umbanda."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ela está presente no acolhimento, na orientação espiritual, no respeito às diferenças e na disposição de ajudar o próximo."
+        },
+        {
+          "type": "paragraph",
+          "text": "Praticar a caridade não significa apenas participar dos trabalhos de um terreiro. Significa também cultivar atitudes de compreensão, solidariedade e responsabilidade em nosso cotidiano."
+        },
+        {
+          "type": "paragraph",
+          "text": "A espiritualidade se fortalece quando aquilo que aprendemos dentro do templo é colocado em prática fora dele."
+        },
+        {
+          "type": "heading",
+          "text": "Nossa Caminhada Espiritual"
+        },
+        {
+          "type": "paragraph",
+          "text": "A Umbanda nos ensina que a evolução espiritual é construída diariamente, por meio da fé, do conhecimento, das experiências e das escolhas que fazemos."
+        },
+        {
+          "type": "paragraph",
+          "text": "Os Orixás representam as forças divinas que sustentam nossa existência, enquanto os Guias Espirituais nos auxiliam com seus ensinamentos e orientações."
+        },
+        {
+          "type": "paragraph",
+          "text": "Cada aprendizado é uma oportunidade de desenvolver a consciência, a humildade e o amor."
+        },
+        {
+          "type": "paragraph",
+          "text": "Que a fé nos fortaleça, que a sabedoria nos oriente e que a caridade esteja sempre presente em nossos caminhos.",
+          "strong": true
+        }
+      ],
+      "heading": "Fundamentos da Umbanda"
     },
     {
       "id": "umbanda-mediunidade",
