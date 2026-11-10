@@ -148,9 +148,27 @@ window.TUCA_CONTENT = {
       "template": "collection",
       "order": 2,
       "showInNavigation": true,
-      "status": "demo",
-      "summary": "Uma área educativa para reunir os conteúdos selecionados e revisados pela casa.",
-      "blocks": []
+      "status": "provided",
+      "summary": "Uma religião de fé, amor e caridade",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A Umbanda é uma religião brasileira que reúne espiritualidade, ancestralidade, respeito à natureza e prática da caridade. Sua riqueza está no encontro de diferentes influências religiosas e culturais, especialmente africanas, indígenas, espíritas e populares brasileiras."
+        },
+        {
+          "type": "paragraph",
+          "text": "A religião reconhece a existência de um Deus único, chamado de Olorum, e cultua os sagrados Orixás como manifestações dos poderes divinos que sustentam toda a criação."
+        },
+        {
+          "type": "paragraph",
+          "text": "Por meio dos trabalhos espirituais, os guias de Umbanda oferecem orientação, acolhimento e auxílio àqueles que procuram fortalecimento espiritual."
+        },
+        {
+          "type": "paragraph",
+          "text": "Mais do que uma religião de rituais, a Umbanda nos convida a desenvolver a fé, a humildade, o amor ao próximo e a responsabilidade por nossas atitudes."
+        }
+      ],
+      "heading": "Conheça a Umbanda"
     },
     {
       "id": "umbanda-historia-da-umbanda",
@@ -160,9 +178,30 @@ window.TUCA_CONTENT = {
       "template": "article",
       "order": 1,
       "showInNavigation": true,
-      "status": "demo",
-      "summary": "A abordagem histórica e as fontes de estudo serão selecionadas pela casa.",
-      "blocks": []
+      "status": "provided",
+      "summary": "A formação da religião e uma de suas narrativas mais conhecidas.",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Uma das narrativas mais conhecidas sobre a formação da Umbanda moderna remonta ao dia 15 de novembro de 1908, em Niterói, no Rio de Janeiro."
+        },
+        {
+          "type": "paragraph",
+          "text": "Segundo essa tradição, o jovem Zélio Fernandino de Moraes manifestou o Caboclo das Sete Encruzilhadas, entidade que anunciou uma religião fundamentada na caridade e no acolhimento, sem distinção de origem social ou condição espiritual."
+        },
+        {
+          "type": "paragraph",
+          "text": "No dia seguinte, teria sido realizado o primeiro trabalho religioso dessa nova organização, com a manifestação do Caboclo das Sete Encruzilhadas e do Preto-Velho Pai Antônio."
+        },
+        {
+          "type": "paragraph",
+          "text": "Essa narrativa ocupa um lugar importante na memória de muitas casas de Umbanda. Entretanto, a formação histórica da religião é mais ampla, envolvendo práticas e tradições afro-brasileiras que já existiam antes de 1908."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ao longo do tempo, a Umbanda desenvolveu diferentes formas de culto, preservando como princípios fundamentais a fé, a caridade, o respeito e a busca pela evolução espiritual."
+        }
+      ]
     },
     {
       "id": "umbanda-fundamentos",

@@ -116,12 +116,12 @@
   }
   function contentPage() {
     const parents=ancestors(current),section=parents[0]||current,sub=children(current.id),siblings=children(section.id);
-    return `<div class="wrap"><nav class="breadcrumbs" aria-label="Caminho da página"><ol><li><a href="#/">Início</a></li>${parents.map(p=>`<li>${link(p)}</li>`).join('')}<li aria-current="page">${escape(current.title)}</li></ol></nav><div class="content-layout${parents.length?'':' content-layout--overview'}">${parents.length?`<aside class="section-nav"><h2>${link(section)}</h2><nav aria-label="Páginas de ${escape(section.title)}"><ul>${siblings.map(p=>`<li>${link(p)}</li>`).join('')}</ul></nav></aside>`:''}<article class="page-content"><header class="page-heading"><h1>${escape(current.title)}</h1><p class="page-summary">${escape(current.summary)}</p></header>
+    return `<div class="wrap"><nav class="breadcrumbs" aria-label="Caminho da página"><ol><li><a href="#/">Início</a></li>${parents.map(p=>`<li>${link(p)}</li>`).join('')}<li aria-current="page">${escape(current.title)}</li></ol></nav><div class="content-layout${parents.length?'':' content-layout--overview'}">${parents.length?`<aside class="section-nav"><h2>${link(section)}</h2><nav aria-label="Páginas de ${escape(section.title)}"><ul>${siblings.map(p=>`<li>${link(p)}</li>`).join('')}</ul></nav></aside>`:''}<article class="page-content"><header class="page-heading"><h1>${escape(current.heading||current.title)}</h1><p class="page-summary">${escape(current.summary)}</p></header>
       ${current.id==='orixas'||current.id==='linhas'?'<div class="editorial-note"><strong>Uma estrutura para conhecer os temas.</strong><p>Os assuntos abaixo são propostas de organização. Não representam uma lista oficial dos fundamentos ou das práticas do T.U.C.A. A seleção e os textos dependem da aprovação do dirigente.</p></div>':''}
       ${current.template==='calendar'?`<div id="calendar-region">${calendar()}</div>`:''}
       ${current.template==='gallery'?gallery():''}
+      ${current.blocks?.length?`<div class="prose">${blocks(current.blocks)}</div>`:''}
       ${sub.length?`<section class="subtopics" aria-label="Páginas desta seção"><h2>${current.id==='orixas'?'Conheça os temas':current.id==='linhas'?'Explore as linhas propostas':'Explore esta seção'}</h2>${cards(sub)}</section>`:''}
-      ${(current.template==='article'||current.template==='gallery')&&current.blocks?.length?`<div class="prose">${blocks(current.blocks)}</div>`:''}
       ${current.template==='visit'?'<div class="editorial-note"><strong>Planeje sua primeira visita.</strong><p>Nosso endereço: Av. Sapopemba, 633 — Vila Regente Feijó, São Paulo — SP. Acesse Como chegar para consultar o mapa. Horários, contatos e recomendações de visita serão apresentados após confirmação da casa.</p></div>':''}
       </article></div></div>`;
   }
