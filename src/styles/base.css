@@ -19,3 +19,5 @@
 @media(max-width:720px){.calendar td .day-event{font-size:10px}.event-list li{gap:15px}.event-list time{font-size:20px}.event-list p{font-size:13px}}
 
 .contact-form{max-width:650px;display:flex;flex-direction:column;gap:10px;margin-bottom:40px}.contact-form label{font-size:15px;font-weight:600;margin-top:10px}.contact-form input,.contact-form textarea{width:100%;padding:13px 15px;background:var(--surface);border:1px solid var(--line);border-radius:5px;color:var(--ink);font:inherit}.contact-form textarea{resize:vertical}.contact-form button{align-self:flex-start;margin-top:15px}.contact-form button:disabled{opacity:.65}.contact-form .contact-status{font-size:14px;margin:5px 0;line-height:1.6}.contact-form .contact-direct{font-size:14px;overflow-wrap:anywhere}.contact-direct a{text-decoration:underline;text-underline-offset:3px}
+
+.topic-group{margin-top:36px}.topic-group>h3{font-family:inherit;font-size:19px;font-weight:500;letter-spacing:0;margin-bottom:18px}.topic-group .topic-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.topic-group .topic-card h3{font-size:27px}@media(max-width:720px){.topic-group .topic-grid{grid-template-columns:1fr}}

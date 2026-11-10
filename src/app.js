@@ -53,6 +53,11 @@
   function cards(items) {
     return `<div class="topic-grid">${items.map((p,i)=>`<a class="topic-card" href="${escape(href(p))}"><span class="card-index">${String(i+1).padStart(2,'0')}</span><h3>${escape(p.title)}</h3><p>${escape(p.summary)}</p><span class="card-bottom">Explorar página <span aria-hidden="true">↗</span></span></a>`).join('')}</div>`;
   }
+  function sectionCards(items) {
+    if(!items.length)return '';
+    if(!items.every(p=>p.group))return cards(items);
+    return [...new Set(items.map(p=>p.group))].map(group=>`<section class="topic-group" aria-label="${escape(group)}"><h3>${escape(group)}</h3>${cards(items.filter(p=>p.group===group))}</section>`).join('');
+  }
   const localDate = date => new Date(date+'T12:00:00');
   const dayKey = date => new Intl.DateTimeFormat('sv-SE',{timeZone:'America/Sao_Paulo',year:'numeric',month:'2-digit',day:'2-digit'}).format(date);
   const confirmedEvents = () => data.events.filter(e=>e.status==='confirmed').sort((a,b)=>a.date.localeCompare(b.date));
@@ -117,11 +122,11 @@
   function contentPage() {
     const parents=ancestors(current),section=parents[0]||current,sub=children(current.id),siblings=children(section.id);
     return `<div class="wrap"><nav class="breadcrumbs" aria-label="Caminho da página"><ol><li><a href="#/">Início</a></li>${parents.map(p=>`<li>${link(p)}</li>`).join('')}<li aria-current="page">${escape(current.title)}</li></ol></nav><div class="content-layout${parents.length?'':' content-layout--overview'}">${parents.length?`<aside class="section-nav"><h2>${link(section)}</h2><nav aria-label="Páginas de ${escape(section.title)}"><ul>${siblings.map(p=>`<li>${link(p)}</li>`).join('')}</ul></nav></aside>`:''}<article class="page-content"><header class="page-heading"><h1>${escape(current.heading||current.title)}</h1><p class="page-summary">${escape(current.summary)}</p></header>
-      ${current.id==='orixas'||current.id==='linhas'?'<div class="editorial-note"><strong>Uma estrutura para conhecer os temas.</strong><p>Os assuntos abaixo são propostas de organização. Não representam uma lista oficial dos fundamentos ou das práticas do T.U.C.A. A seleção e os textos dependem da aprovação do dirigente.</p></div>':''}
+      ${(current.id==='orixas'||current.id==='linhas')&&current.status==='demo'?'<div class="editorial-note"><strong>Uma estrutura para conhecer os temas.</strong><p>Os assuntos abaixo são propostas de organização. Não representam uma lista oficial dos fundamentos ou das práticas do T.U.C.A. A seleção e os textos dependem da aprovação do dirigente.</p></div>':''}
       ${current.template==='calendar'?`<div id="calendar-region">${calendar()}</div>`:''}
       ${current.template==='gallery'?gallery():''}
       ${current.blocks?.length?`<div class="prose">${blocks(current.blocks)}</div>`:''}
-      ${sub.length?`<section class="subtopics" aria-label="Páginas desta seção"><h2>${current.id==='orixas'?'Conheça os temas':current.id==='linhas'?'Explore as linhas propostas':'Explore esta seção'}</h2>${cards(sub)}</section>`:''}
+      ${sub.length?`<section class="subtopics" aria-label="Páginas desta seção"><h2>${current.id==='orixas'?'Conheça os temas':current.id==='linhas'?'Explore as linhas propostas':'Explore esta seção'}</h2>${sectionCards(sub)}</section>`:''}
       ${current.template==='visit'?'<div class="editorial-note"><strong>Planeje sua primeira visita.</strong><p>Nosso endereço: Av. Sapopemba, 633 — Vila Regente Feijó, São Paulo — SP. Acesse Como chegar para consultar o mapa. Horários, contatos e recomendações de visita serão apresentados após confirmação da casa.</p></div>':''}
       </article></div></div>`;
   }
@@ -131,7 +136,7 @@
   function render(focus=false) {
     let path;
     try { path=decodeURIComponent(location.hash.slice(1)||'/').replace(/\/$/,'')||'/'; } catch { path='invalid'; }
-    const aliases={'/calendario':'/atendimento/calendario','/calendario/proximas-giras':'/atendimento/calendario','/calendario/calendario-completo':'/atendimento/calendario','/calendario/eventos-especiais':'/atendimento/calendario','/visite-o-tuca':'/atendimento','/visite-o-tuca/como-chegar':'/atendimento/como-chegar','/visite-o-tuca/contatos':'/atendimento/contatos'};
+    const aliases={'/orixas/outros-orixas':'/orixas','/calendario':'/atendimento/calendario','/calendario/proximas-giras':'/atendimento/calendario','/calendario/calendario-completo':'/atendimento/calendario','/calendario/eventos-especiais':'/atendimento/calendario','/visite-o-tuca':'/atendimento','/visite-o-tuca/como-chegar':'/atendimento/como-chegar','/visite-o-tuca/contatos':'/atendimento/contatos'};
     if(aliases[path]){path=aliases[path];history.replaceState(null,'','#'+path);}
     current=routeMap.get(path);
     document.title=`${current?.title||'Página não encontrada'} — T.U.C.A${isSite ? '' : ` · Proposta ${theme.number}`}`;

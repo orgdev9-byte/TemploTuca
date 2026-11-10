@@ -7,12 +7,12 @@ test('catálogo íntegro e áreas principais na ordem aprovada',()=>{
   assert.equal(validate(data),true);
   assert.deepEqual(data.pages.filter(p=>!p.parentId).sort((a,b)=>a.order-b.order).map(p=>p.title),['Início','O T.U.C.A','Umbanda','Orixás','Linhas de Trabalho','Atendimento','Conteúdos']);
 });
-test('assuntos de Orixás e Linhas têm introdução, páginas próprias e status demonstrativo',()=>{
+test('assuntos de Orixás e Linhas têm introdução, páginas próprias e conteúdo identificado',()=>{
   for(const id of ['orixas','linhas']) {
     assert.equal(data.pages.find(p=>p.id===id).template,'collection');
     const topics=data.pages.filter(p=>p.parentId===id);
     assert.ok(topics.length>1);
-    assert.ok(topics.every(p=>p.template==='article'&&p.status==='demo'&&p.summary.length));
+    assert.ok(topics.every(p=>p.template==='article'&&['demo','provided'].includes(p.status)&&p.summary.length));
   }
   assert.ok(data.events.every(e=>e.status==='confirmed'),'Publicar apenas atividades confirmadas');
 });

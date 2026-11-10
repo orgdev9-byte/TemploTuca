@@ -247,105 +247,31 @@ window.TUCA_CONTENT = {
       "template": "collection",
       "order": 3,
       "showInNavigation": true,
-      "status": "demo",
-      "summary": "Uma introdução e páginas individuais para organizar os temas que a casa decidir apresentar.",
-      "blocks": []
-    },
-    {
-      "id": "orixas-oxala",
-      "slug": "oxala",
-      "title": "Oxalá",
-      "parentId": "orixas",
-      "template": "article",
-      "order": 0,
-      "showInNavigation": true,
-      "status": "demo",
-      "summary": "Página demonstrativa dedicada ao tema Oxalá. O conteúdo será fornecido e revisado pelo T.U.C.A.",
-      "blocks": []
-    },
-    {
-      "id": "orixas-ogum",
-      "slug": "ogum",
-      "title": "Ogum",
-      "parentId": "orixas",
-      "template": "article",
-      "order": 1,
-      "showInNavigation": true,
-      "status": "demo",
-      "summary": "Página demonstrativa dedicada ao tema Ogum. O conteúdo será fornecido e revisado pelo T.U.C.A.",
-      "blocks": []
-    },
-    {
-      "id": "orixas-oxossi",
-      "slug": "oxossi",
-      "title": "Oxóssi",
-      "parentId": "orixas",
-      "template": "article",
-      "order": 2,
-      "showInNavigation": true,
-      "status": "demo",
-      "summary": "Página demonstrativa dedicada ao tema Oxóssi. O conteúdo será fornecido e revisado pelo T.U.C.A.",
-      "blocks": []
-    },
-    {
-      "id": "orixas-xango",
-      "slug": "xango",
-      "title": "Xangô",
-      "parentId": "orixas",
-      "template": "article",
-      "order": 3,
-      "showInNavigation": true,
-      "status": "demo",
-      "summary": "Página demonstrativa dedicada ao tema Xangô. O conteúdo será fornecido e revisado pelo T.U.C.A.",
-      "blocks": []
-    },
-    {
-      "id": "orixas-oxum",
-      "slug": "oxum",
-      "title": "Oxum",
-      "parentId": "orixas",
-      "template": "article",
-      "order": 4,
-      "showInNavigation": true,
-      "status": "demo",
-      "summary": "Página demonstrativa dedicada ao tema Oxum. O conteúdo será fornecido e revisado pelo T.U.C.A.",
-      "blocks": []
-    },
-    {
-      "id": "orixas-iemanja",
-      "slug": "iemanja",
-      "title": "Iemanjá",
-      "parentId": "orixas",
-      "template": "article",
-      "order": 5,
-      "showInNavigation": true,
-      "status": "demo",
-      "summary": "Página demonstrativa dedicada ao tema Iemanjá. O conteúdo será fornecido e revisado pelo T.U.C.A.",
-      "blocks": []
-    },
-    {
-      "id": "orixas-iansa",
-      "slug": "iansa",
-      "title": "Iansã",
-      "parentId": "orixas",
-      "template": "article",
-      "order": 6,
-      "showInNavigation": true,
-      "status": "demo",
-      "summary": "Página demonstrativa dedicada ao tema Iansã. O conteúdo será fornecido e revisado pelo T.U.C.A.",
-      "blocks": []
-    },
-    {
-      "id": "orixas-outros-orixas",
-      "slug": "outros-orixas",
-      "title": "Outros Orixás",
-      "parentId": "orixas",
-      "template": "article",
-      "order": 7,
-      "showInNavigation": true,
-      "status": "demo",
-      "summary": "Página demonstrativa dedicada ao tema Outros Orixás. O conteúdo será fornecido e revisado pelo T.U.C.A.",
-      "blocks": []
+      "status": "provided",
+      "summary": "As forças divinas que sustentam a criação",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Os Orixás são divindades que manifestam os poderes, os mistérios e as qualidades de Olorum, o Criador."
+        },
+        {
+          "type": "paragraph",
+          "text": "Cada Orixá possui atributos próprios e atua em determinados aspectos da existência, contribuindo para a sustentação da vida, o equilíbrio da natureza e a evolução espiritual."
+        },
+        {
+          "type": "paragraph",
+          "text": "Na organização dos Sete Tronos Divinos, os 14 Orixás estão relacionados a sete grandes irradiações: Fé, Amor, Conhecimento, Justiça, Lei, Evolução e Geração."
+        },
+        {
+          "type": "paragraph",
+          "text": "Cada irradiação possui dois polos complementares: um universal, que irradia e estimula determinadas qualidades divinas, e outro cósmico, que atua na regulação e no equilíbrio dessas mesmas forças."
+        },
+        {
+          "type": "paragraph",
+          "text": "Essas atuações são complementares e representam diferentes expressões da harmonia divina."
+        }
+      ],
+      "heading": "Os Orixás na Umbanda"
     },
     {
       "id": "linhas",
@@ -640,6 +566,626 @@ window.TUCA_CONTENT = {
       "showInNavigation": true,
       "summary": "As orientações sobre o que trazer serão publicadas em breve.",
       "blocks": []
+    },
+    {
+      "id": "orixas-oxala",
+      "slug": "oxala",
+      "title": "Oxalá",
+      "summary": "A força da Fé Divina",
+      "parentId": "orixas",
+      "order": 0,
+      "template": "article",
+      "showInNavigation": true,
+      "status": "provided",
+      "group": "1. Trono da Fé",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Irradiação: Fé",
+            "Atuação: Universal",
+            "Fator principal: Congregador",
+            "Cor: Branco",
+            "Saudação: Êpa Babá!"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Oxalá é o Orixá que irradia a Fé Divina, fortalecendo nossa ligação com o Criador."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sua atuação desperta a confiança, a paz interior, a esperança e a capacidade de reconhecer o sagrado em nossas vidas."
+        },
+        {
+          "type": "paragraph",
+          "text": "Oxalá nos ensina que a fé vai além das palavras. Ela se manifesta em nossas atitudes, na perseverança diante das dificuldades e na confiança de que podemos transformar nossa caminhada espiritual."
+        },
+        {
+          "type": "heading",
+          "text": "Ensinamento"
+        },
+        {
+          "type": "paragraph",
+          "text": "A verdadeira fé ilumina nossos pensamentos e nos conduz por caminhos de paz, humildade e amor."
+        }
+      ]
+    },
+    {
+      "id": "orixas-oya-tempo-logunan",
+      "slug": "oya-tempo-logunan",
+      "title": "Oyá-Tempo (Logunan)",
+      "summary": "A Senhora do Tempo",
+      "parentId": "orixas",
+      "order": 1,
+      "template": "article",
+      "showInNavigation": true,
+      "status": "provided",
+      "group": "1. Trono da Fé",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Irradiação: Fé",
+            "Atuação: Cósmica",
+            "Fator principal: Cristalizador",
+            "Cores: Branco, preto e azul-escuro",
+            "Saudação: Olha o Tempo, minha Mãe!"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Oyá-Tempo é a Orixá que atua na ordenação e no equilíbrio da religiosidade."
+        },
+        {
+          "type": "paragraph",
+          "text": "Seu mistério está relacionado ao Tempo Divino, que permite o amadurecimento da fé e da consciência espiritual."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sua atuação contribui para conter os excessos e os desequilíbrios religiosos, conduzindo os seres a uma compreensão mais consciente do sagrado."
+        },
+        {
+          "type": "heading",
+          "text": "Ensinamento"
+        },
+        {
+          "type": "paragraph",
+          "text": "Tudo possui seu tempo. A fé precisa caminhar ao lado da consciência, da paciência e do respeito."
+        }
+      ]
+    },
+    {
+      "id": "orixas-oxum",
+      "slug": "oxum",
+      "title": "Oxum",
+      "summary": "O Amor que Une e Acolhe",
+      "parentId": "orixas",
+      "order": 2,
+      "template": "article",
+      "showInNavigation": true,
+      "status": "provided",
+      "group": "2. Trono do Amor",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Irradiação: Amor",
+            "Atuação: Universal",
+            "Fator principal: Concepção",
+            "Cores: Rosa e amarelo",
+            "Saudação: Ora Yê Yê Ô!"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Oxum é a Orixá do Amor Divino, da união, do acolhimento e da concepção."
+        },
+        {
+          "type": "paragraph",
+          "text": "Associada às águas doces, especialmente aos rios e às cachoeiras, sua força desperta a sensibilidade, a compaixão e a capacidade de construir relações harmoniosas."
+        },
+        {
+          "type": "paragraph",
+          "text": "Seu amor ultrapassa os relacionamentos afetivos, alcançando o cuidado com a família, o respeito ao próximo e o amor por toda a criação."
+        },
+        {
+          "type": "heading",
+          "text": "Ensinamento"
+        },
+        {
+          "type": "paragraph",
+          "text": "Amar é acolher, compreender e cultivar relações com respeito, carinho e responsabilidade."
+        }
+      ]
+    },
+    {
+      "id": "orixas-oxumare",
+      "slug": "oxumare",
+      "title": "Oxumarê",
+      "summary": "A Força da Renovação",
+      "parentId": "orixas",
+      "order": 3,
+      "template": "article",
+      "showInNavigation": true,
+      "status": "provided",
+      "group": "2. Trono do Amor",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Irradiação: Amor",
+            "Atuação: Cósmico",
+            "Fatores principais: Diluidor e Renovador",
+            "Cor: Azul-celeste",
+            "Saudação: Arroboboi!"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Oxumarê é o Orixá da renovação e da transformação."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sua atuação contribui para dissolver desequilíbrios e permitir o surgimento de novos ciclos em nossa caminhada."
+        },
+        {
+          "type": "paragraph",
+          "text": "Simbolicamente associado ao arco-íris e à serpente, Oxumarê representa o movimento contínuo da vida e a possibilidade de recomeçar."
+        },
+        {
+          "type": "heading",
+          "text": "Ensinamento"
+        },
+        {
+          "type": "paragraph",
+          "text": "A vida está em constante transformação. Renovar pensamentos e sentimentos é essencial para nossa evolução."
+        }
+      ]
+    },
+    {
+      "id": "orixas-oxossi",
+      "slug": "oxossi",
+      "title": "Oxóssi",
+      "summary": "O Guardião das Matas e do Conhecimento",
+      "parentId": "orixas",
+      "order": 4,
+      "template": "article",
+      "showInNavigation": true,
+      "status": "provided",
+      "group": "3. Trono do Conhecimento",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Irradiação: Conhecimento",
+            "Atuação: Universal",
+            "Fator principal: Expansor",
+            "Cor: Verde",
+            "Saudação: Okê Arô!"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Oxóssi é o Orixá do Conhecimento Divino, associado às matas, à natureza, à sabedoria e à prosperidade."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sua força estimula o aprendizado, a expansão da consciência e a busca pelo conhecimento."
+        },
+        {
+          "type": "paragraph",
+          "text": "Representado tradicionalmente pelo arco e pela flecha, Oxóssi também nos ensina a importância da observação, da estratégia e da determinação antes de agir."
+        },
+        {
+          "type": "heading",
+          "text": "Ensinamento"
+        },
+        {
+          "type": "paragraph",
+          "text": "O conhecimento é um caminho de crescimento. Aprender com humildade nos permite evoluir e compreender melhor a vida."
+        }
+      ]
+    },
+    {
+      "id": "orixas-oba",
+      "slug": "oba",
+      "title": "Obá",
+      "summary": "A Força da Concentração",
+      "parentId": "orixas",
+      "order": 5,
+      "template": "article",
+      "showInNavigation": true,
+      "status": "provided",
+      "group": "3. Trono do Conhecimento",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Irradiação: Conhecimento",
+            "Atuação: Cósmica",
+            "Fator principal: Concentrador",
+            "Cor: Magenta",
+            "Saudação: Akirô Obá Yê!"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Obá é a Orixá associada à concentração, ao discernimento e ao direcionamento do conhecimento."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sua atuação auxilia na organização dos pensamentos e na busca pelo equilíbrio mental."
+        },
+        {
+          "type": "paragraph",
+          "text": "Enquanto Oxóssi expande o conhecimento, Obá favorece a concentração e a capacidade de utilizar aquilo que aprendemos com sabedoria."
+        },
+        {
+          "type": "heading",
+          "text": "Ensinamento"
+        },
+        {
+          "type": "paragraph",
+          "text": "Não basta adquirir conhecimento. É necessário compreender, refletir e saber utilizá-lo."
+        }
+      ]
+    },
+    {
+      "id": "orixas-xango",
+      "slug": "xango",
+      "title": "Xangô",
+      "summary": "O Equilíbrio da Justiça Divina",
+      "parentId": "orixas",
+      "order": 6,
+      "template": "article",
+      "showInNavigation": true,
+      "status": "provided",
+      "group": "4. Trono da Justiça",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Irradiação: Justiça",
+            "Atuação: Universal",
+            "Fator principal: Equilibrador",
+            "Cor: Marrom",
+            "Saudação: Kaô Kabecilê!"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Xangô é o Orixá da Justiça Divina, da razão e do equilíbrio."
+        },
+        {
+          "type": "paragraph",
+          "text": "Associado às pedreiras, sua força representa a firmeza dos princípios e a necessidade de agir com consciência."
+        },
+        {
+          "type": "paragraph",
+          "text": "Xangô nos ensina que nossas escolhas possuem consequências e que a justiça não deve ser confundida com vingança."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sua irradiação favorece o discernimento, a responsabilidade e o equilíbrio em nossas decisões."
+        },
+        {
+          "type": "heading",
+          "text": "Ensinamento"
+        },
+        {
+          "type": "paragraph",
+          "text": "Ser justo é reconhecer nossos deveres, respeitar o próximo e agir com equilíbrio."
+        }
+      ]
+    },
+    {
+      "id": "orixas-egunita",
+      "slug": "egunita",
+      "title": "Egunitá",
+      "summary": "O Fogo da Purificação",
+      "parentId": "orixas",
+      "order": 7,
+      "template": "article",
+      "showInNavigation": true,
+      "status": "provided",
+      "group": "4. Trono da Justiça",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Irradiação: Justiça",
+            "Atuação: Cósmica",
+            "Fator principal: Energizador",
+            "Cor: Laranja",
+            "Saudação: Kali Yê!"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Egunitá é a Orixá associada ao Fogo Divino, à purificação e à transformação."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sua atuação contribui para a correção dos excessos emocionais, dos pensamentos desequilibrados e das atitudes que prejudicam nossa evolução."
+        },
+        {
+          "type": "paragraph",
+          "text": "Seu fogo representa a força espiritual que purifica e transforma, permitindo a renovação interior."
+        },
+        {
+          "type": "heading",
+          "text": "Ensinamento"
+        },
+        {
+          "type": "paragraph",
+          "text": "A transformação começa quando reconhecemos aquilo que precisa ser corrigido dentro de nós."
+        }
+      ]
+    },
+    {
+      "id": "orixas-ogum",
+      "slug": "ogum",
+      "title": "Ogum",
+      "summary": "O Senhor dos Caminhos",
+      "parentId": "orixas",
+      "order": 8,
+      "template": "article",
+      "showInNavigation": true,
+      "status": "provided",
+      "group": "5. Trono da Lei",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Irradiação: Lei",
+            "Atuação: Universal",
+            "Fator principal: Ordenador",
+            "Cor: Azul-marinho",
+            "Saudação: Ogunhê! ou Patacori Ogum!"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Ogum é o Orixá da Lei Divina, da ordem, da disciplina e dos caminhos."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sua força representa a coragem necessária para enfrentar desafios e seguir adiante com determinação."
+        },
+        {
+          "type": "paragraph",
+          "text": "Associado à espada e à figura do guerreiro, Ogum atua no direcionamento e na proteção, orientando a caminhada espiritual conforme os princípios da Lei Divina."
+        },
+        {
+          "type": "heading",
+          "text": "Ensinamento"
+        },
+        {
+          "type": "paragraph",
+          "text": "A verdadeira coragem está em agir com disciplina, responsabilidade e respeito."
+        }
+      ]
+    },
+    {
+      "id": "orixas-iansa",
+      "slug": "iansa",
+      "title": "Iansã",
+      "summary": "A Força dos Ventos e do Movimento",
+      "parentId": "orixas",
+      "order": 9,
+      "template": "article",
+      "showInNavigation": true,
+      "status": "provided",
+      "group": "5. Trono da Lei",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Irradiação: Lei",
+            "Atuação: Cósmica",
+            "Fatores principais: Direcionador e Movimentador",
+            "Cor: Amarelo",
+            "Saudação: Eparrei, Iansã!"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Iansã é a Orixá dos ventos, das tempestades e do movimento."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sua força está relacionada às mudanças necessárias para o desenvolvimento e o equilíbrio espiritual."
+        },
+        {
+          "type": "paragraph",
+          "text": "Enquanto Ogum ordena os caminhos, Iansã movimenta e direciona, auxiliando na transformação de situações e comportamentos."
+        },
+        {
+          "type": "heading",
+          "text": "Ensinamento"
+        },
+        {
+          "type": "paragraph",
+          "text": "Mudar exige coragem. É preciso aprender a deixar para trás aquilo que impede nossa evolução."
+        }
+      ]
+    },
+    {
+      "id": "orixas-obaluaie",
+      "slug": "obaluaie",
+      "title": "Obaluaiê",
+      "summary": "O Senhor da Evolução",
+      "parentId": "orixas",
+      "order": 10,
+      "template": "article",
+      "showInNavigation": true,
+      "status": "provided",
+      "group": "6. Trono da Evolução",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Irradiação: Evolução",
+            "Atuação: Universal",
+            "Fator principal: Transmutador",
+            "Cores: Violeta, preto e branco",
+            "Saudação: Atotô!"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Obaluaiê é o Orixá da evolução, da transformação e da cura espiritual."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sua atuação representa os processos de mudança e amadurecimento necessários ao desenvolvimento dos seres."
+        },
+        {
+          "type": "paragraph",
+          "text": "Associado à terra e aos mistérios da vida, Obaluaiê nos ensina que evoluir significa abandonar antigas limitações e desenvolver uma consciência mais elevada."
+        },
+        {
+          "type": "heading",
+          "text": "Ensinamento"
+        },
+        {
+          "type": "paragraph",
+          "text": "Não existe evolução sem transformação. Cada experiência pode se tornar uma oportunidade de aprendizado."
+        }
+      ]
+    },
+    {
+      "id": "orixas-nana-buruque",
+      "slug": "nana-buruque",
+      "title": "Nanã Buruquê",
+      "summary": "A Sabedoria Ancestral",
+      "parentId": "orixas",
+      "order": 11,
+      "template": "article",
+      "showInNavigation": true,
+      "status": "provided",
+      "group": "6. Trono da Evolução",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Irradiação: Evolução",
+            "Atuação: Cósmica",
+            "Fator principal: Decantador",
+            "Cor: Lilás",
+            "Saudação: Salubá, Nanã!"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Nanã Buruquê é a Orixá da sabedoria ancestral, da maturidade e da decantação."
+        },
+        {
+          "type": "paragraph",
+          "text": "Associada às águas paradas, aos lagos e ao barro, sua força contribui para o recolhimento e a transformação dos sentimentos que dificultam nossa evolução."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sua atuação nos ensina a importância da paciência, da reflexão e do amadurecimento espiritual."
+        },
+        {
+          "type": "heading",
+          "text": "Ensinamento"
+        },
+        {
+          "type": "paragraph",
+          "text": "A sabedoria nasce das experiências e da capacidade de compreender que cada transformação possui seu próprio tempo."
+        }
+      ]
+    },
+    {
+      "id": "orixas-iemanja",
+      "slug": "iemanja",
+      "title": "Iemanjá",
+      "summary": "A Mãe da Vida",
+      "parentId": "orixas",
+      "order": 12,
+      "template": "article",
+      "showInNavigation": true,
+      "status": "provided",
+      "group": "7. Trono da Geração",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Irradiação: Geração",
+            "Atuação: Universal",
+            "Fator principal: Gerador",
+            "Cor: Azul-claro",
+            "Saudação: Odoyá!"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Iemanjá é a Orixá da Geração Divina, da maternidade e da proteção da vida."
+        },
+        {
+          "type": "paragraph",
+          "text": "Associada ao mar e às águas, sua força manifesta o acolhimento, a criação e o desenvolvimento dos seres."
+        },
+        {
+          "type": "paragraph",
+          "text": "Seu amor maternal representa o cuidado com toda a existência, fortalecendo os sentimentos de proteção, união e responsabilidade."
+        },
+        {
+          "type": "heading",
+          "text": "Ensinamento"
+        },
+        {
+          "type": "paragraph",
+          "text": "Gerar também é cuidar, acolher e oferecer condições para que a vida floresça."
+        }
+      ]
+    },
+    {
+      "id": "orixas-omolu",
+      "slug": "omolu",
+      "title": "Omolu",
+      "summary": "O Guardião dos Mistérios da Vida",
+      "parentId": "orixas",
+      "order": 13,
+      "template": "article",
+      "showInNavigation": true,
+      "status": "provided",
+      "group": "7. Trono da Geração",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Irradiação: Geração",
+            "Atuação: Cósmico",
+            "Fatores principais: Estabilizador e Paralisador",
+            "Cor: Roxo",
+            "Saudação: Atotô, meu Senhor!"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Omolu é o Orixá associado à estabilidade da criação e aos mistérios da passagem entre a vida material e a espiritual."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sua atuação está relacionada à preservação do equilíbrio e aos processos de encerramento e transformação dos ciclos da existência."
+        },
+        {
+          "type": "paragraph",
+          "text": "Associado à terra e aos cemitérios, Omolu nos ensina a compreender a importância do respeito à vida, à ancestralidade e aos processos naturais da existência."
+        },
+        {
+          "type": "heading",
+          "text": "Ensinamento"
+        },
+        {
+          "type": "paragraph",
+          "text": "A vida é sagrada em todas as suas etapas, e cada ciclo deve ser compreendido com respeito e consciência."
+        }
+      ]
     }
   ]
 };
