@@ -1,0 +1,30 @@
+/* Homepage agenda: shared hours, clear dates and one link to the full calendar. */
+.home-agenda{margin-bottom:80px;padding:40px;background:#efe6d5;border:1px solid #e0d3bd;border-radius:18px}
+.home-agenda-heading{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:30px}
+.home-agenda-heading .eyebrow{font-size:11px;letter-spacing:.13em;font-weight:600;color:#715a38}
+.home-agenda-heading h2{font-size:clamp(30px,3vw,40px);line-height:1.2;margin-top:10px}
+.home-agenda-link{display:inline-flex;align-items:center;gap:22px;min-height:44px;padding-block:10px;font-size:13px;font-weight:600;border-bottom:1px solid #a28a61;flex-shrink:0;color:#59462b}
+.home-agenda-link:hover{color:#3c362c;border-bottom-color:currentColor}
+.home-agenda-events{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.home-agenda-event{position:relative;display:flex;align-items:flex-start;gap:22px;padding:28px 22px;min-width:0;min-height:174px;background:#fffcf6;border:1px solid #e2d7c5;border-radius:10px}
+.home-agenda-event--next{border-color:#a88d61;box-shadow:inset 0 3px 0 #806337}
+.home-agenda-date{display:flex;flex-direction:column;align-items:center;flex-shrink:0;min-width:66px;padding-right:18px;border-right:1px solid #e5dbc9;color:#795f36;font-variant-numeric:tabular-nums}
+.home-agenda-day{font-family:"Manrope",Arial,sans-serif;font-size:42px;font-weight:500;letter-spacing:-.06em;line-height:1.15}
+.home-agenda-month{font-size:12px;font-weight:600;line-height:1.5;text-transform:uppercase;margin-top:6px;white-space:nowrap}
+.home-agenda-month>span{display:block;font-size:10px;font-weight:400;letter-spacing:.04em;color:#70644f;text-align:center}
+.home-agenda-details{min-width:0;padding-top:3px}
+.home-agenda-weekday{font-size:12px;color:#70644f;line-height:1.5;text-transform:capitalize}
+[data-mode="site"] .home-agenda-event h3{font-family:"Manrope",Arial,sans-serif;font-size:23px;font-weight:600;line-height:1.3;letter-spacing:-.025em;margin-top:7px;overflow-wrap:anywhere}
+.home-agenda-badge{display:inline-flex;align-items:center;gap:7px;margin-top:14px;padding:4px 9px;border-radius:5px;background:#eee5d3;color:#614b2b;font-size:11px;line-height:1.5;font-weight:600}
+.home-agenda-badge::before{content:"";width:5px;height:5px;border-radius:50%;background:currentColor}
+.home-agenda-footer{display:flex;justify-content:space-between;align-items:center;gap:24px;margin-top:24px;padding-top:22px;border-top:1px solid #d9cbb2}
+.home-agenda-footer>p{font-size:13px;color:#65573f}
+.home-agenda-hours{display:flex;gap:40px;margin:0}
+.home-agenda-hours>div{display:flex;align-items:baseline;gap:12px}
+.home-agenda-hours dt{font-size:12px;color:#65573f}
+.home-agenda-hours dd{font-size:22px;font-weight:600;color:#4a3e2b;font-variant-numeric:tabular-nums;margin:0}
+.home-agenda-event-hours{font-size:12px;color:#65573f;line-height:1.7;margin-top:14px}
+.home-agenda-empty{padding-block:25px;font-size:16px;color:#65573f;max-width:50ch}
+@media(max-width:1099px){.home-agenda{padding:30px}.home-agenda-events{gap:12px}.home-agenda-event{padding:24px 16px;gap:14px}.home-agenda-date{min-width:56px;padding-right:12px}.home-agenda-day{font-size:36px}[data-mode="site"] .home-agenda-event h3{font-size:20px}.home-agenda-hours{gap:24px}.home-agenda-hours>div{gap:8px}}
+@media(max-width:850px){.home-agenda-events{grid-template-columns:1fr}.home-agenda-event{min-height:0;align-items:center;padding:22px 24px;gap:24px}.home-agenda-date{min-width:68px;padding-right:22px}.home-agenda-day{font-size:38px}.home-agenda-details{flex:1;position:relative}.home-agenda-badge{margin-top:10px}.home-agenda-footer{align-items:flex-start}.home-agenda-hours>div{display:block}.home-agenda-hours dd{margin-top:3px}}
+@media(max-width:540px){.home-agenda{padding:26px 20px;margin-bottom:50px;border-radius:12px}.home-agenda-heading{display:block;margin-bottom:24px}.home-agenda-heading h2{font-size:30px}.home-agenda-link{margin-top:14px;font-size:12px;gap:18px}.home-agenda-event{padding:22px 18px;gap:20px}.home-agenda-footer{display:block;margin-top:20px;padding-top:18px}.home-agenda-hours{justify-content:space-between;gap:16px;margin-top:12px}.home-agenda-hours dt{font-size:11px}.home-agenda-hours dd{font-size:23px}}

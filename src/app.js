@@ -66,11 +66,24 @@
     if(!events.length)return '<p class="agenda-empty">Nenhuma atividade programada para este período.</p>';
     return '<ul class="event-list">'+events.map(e=>`<li><time datetime="${escape(e.date)}">${escape(new Intl.DateTimeFormat('pt-BR',{day:'2-digit',month:'2-digit'}).format(localDate(e.date)))}</time><div><h3>${escape(e.title)}</h3><p>Portões às ${escape(e.doors.replace(':00','h'))} · Início às ${escape(e.start.replace(':00','h'))}</p></div></li>`).join('')+'</ul>';
   }
+  function homeAgenda() {
+    const events=upcomingEvents().slice(0,3);
+    const sharedHours=events.length>0&&events.every(e=>e.doors===events[0].doors&&e.start===events[0].start);
+    const hours=e=>`Portões às ${escape(e.doors.replace(':00','h'))} · Início às ${escape(e.start.replace(':00','h'))}`;
+    return `<section class="home-agenda wrap" aria-labelledby="home-agenda-title">
+      <header class="home-agenda-heading"><div><p class="eyebrow">Calendário da casa</p><h2 id="home-agenda-title">Programe sua visita.</h2></div><a class="home-agenda-link" href="${href(find('calendario'))}">Ver calendário completo <span aria-hidden="true">↗</span></a></header>
+      ${events.length?`<ol class="home-agenda-events">${events.map((e,i)=>{
+        const date=localDate(e.date),today=e.date===dayKey(new Date());
+        const month=new Intl.DateTimeFormat('pt-BR',{month:'short'}).format(date).replace('.','');
+        return `<li class="home-agenda-event${i===0?' home-agenda-event--next':''}"><time class="home-agenda-date" datetime="${escape(e.date)}" aria-label="${escape(new Intl.DateTimeFormat('pt-BR',{dateStyle:'full'}).format(date))}"><span class="home-agenda-day">${date.getDate().toString().padStart(2,'0')}</span><span class="home-agenda-month">${escape(month)} <span>${date.getFullYear()}</span></span></time><div class="home-agenda-details"><p class="home-agenda-weekday">${escape(new Intl.DateTimeFormat('pt-BR',{weekday:'long'}).format(date))}</p><h3>${escape(e.title)}</h3>${i===0?`<span class="home-agenda-badge">${today?'É hoje':'Próximo encontro'}</span>`:''}${sharedHours?'':`<p class="home-agenda-event-hours">${hours(e)}</p>`}</div></li>`;
+      }).join('')}</ol>${sharedHours?`<div class="home-agenda-footer"><p>Horários dos encontros</p><dl class="home-agenda-hours"><div><dt>Abertura dos portões</dt><dd>${escape(events[0].doors.replace(':00','h'))}</dd></div><div><dt>Início da gira</dt><dd>${escape(events[0].start.replace(':00','h'))}</dd></div></dl></div>`:''}`:'<p class="home-agenda-empty">Novas datas serão apresentadas aqui assim que forem confirmadas pela casa.</p>'}
+    </section>`;
+  }
   function home() {
     return `<section class="hero wrap"><div class="hero-copy"><p class="eyebrow">${isSite ? escape(data.site.home.eyebrow) : theme.eyebrow}</p><h1 class="${isSite ? 'hero-title-name' : ''}">${isSite ? escape(data.site.home.title) : theme.heading}</h1><p class="hero-intro">${isSite ? escape(data.site.home.description) : theme.intro}</p><div class="hero-actions"><a class="button" href="${href(find('tuca'))}">Conheça o T.U.C.A <span aria-hidden="true">↗</span></a><a class="text-link" href="${href(find('calendario'))}">Ver calendário <span aria-hidden="true">→</span></a></div></div><figure class="hero-photo"><img src="${escape(data.site.photo)}" alt="Fotografia original fornecida do congá do T.U.C.A, com atabaque em primeiro plano" width="813" height="1314"><figcaption>Um olhar para a nossa casa <span>Fotografia original · T.U.C.A</span></figcaption></figure><span class="hero-vertical" aria-hidden="true">T.U.C.A / CAMINHOS DE ARUANDA</span></section>
       <section class="quick-paths wrap" aria-label="Acessos rápidos"><a href="${href(find('visite'))}"><span class="eyebrow">01 · Sua visita</span><strong>Encontre seu caminho <span aria-hidden="true">↗</span></strong><p>Orientações e informações da casa.</p></a><a href="${href(find('orixas'))}"><span class="eyebrow">02 · Conhecimento</span><strong>Explore os assuntos <span aria-hidden="true">↗</span></strong><p>Orixás, Umbanda e Linhas de Trabalho.</p></a><a href="${href(find('calendario'))}"><span class="eyebrow">03 · Programação</span><strong>Acompanhe a agenda <span aria-hidden="true">↗</span></strong><p>Consulte as datas e os horários das giras.</p></a></section>
       <section class="portal-section wrap"><div class="section-heading"><div><p class="eyebrow">Conhecer, aprender, se aproximar</p><h2>Um portal para explorar.</h2></div><p>Escolha um assunto para navegar.</p></div>${cards([find('umbanda'),find('orixas'),find('linhas')])}</section>
-      <section class="agenda-callout wrap"><div><p class="eyebrow">Calendário da casa</p><h2>O próximo encontro<br>começa por aqui.</h2></div><div>${eventList(upcomingEvents().slice(0,3))}<a class="text-link" href="${href(find('calendario'))}">Explorar o calendário <span aria-hidden="true">→</span></a></div></section>`;
+      ${isSite?homeAgenda():`<section class="agenda-callout wrap"><div><p class="eyebrow">Calendário da casa</p><h2>O próximo encontro<br>começa por aqui.</h2></div><div>${eventList(upcomingEvents().slice(0,3))}<a class="text-link" href="${href(find('calendario'))}">Explorar o calendário <span aria-hidden="true">→</span></a></div></section>`}`;
   }
   function locationBlock() {
     const place=data.site.location;
@@ -141,7 +154,7 @@
     if(aliases[path]){path=aliases[path];history.replaceState(null,'','#'+path);}
     current=routeMap.get(path);
     document.title=`${current?.title||'Página não encontrada'} — T.U.C.A${isSite ? '' : ` · Proposta ${theme.number}`}`;
-    document.getElementById('app').innerHTML=header()+`<main id="conteudo" tabindex="-1">${current?(current.template==='home'?home():contentPage()):'<section class="wrap not-found"><p class="eyebrow">Este caminho não foi encontrado</p><h1>Vamos encontrar<br>outro caminho?</h1><p>Esta página não faz parte do protótipo.</p><a class="button" href="#/">Voltar ao início →</a></section>'}</main>`+footer();
+    document.getElementById('app').innerHTML=header()+`<main id="conteudo" tabindex="-1">${current?(current.template==='home'?home():contentPage()):'<section class="wrap not-found"><p class="eyebrow">Este caminho não foi encontrado</p><h1>Vamos encontrar<br>outro caminho?</h1><p>Esta página não foi encontrada no portal.</p><a class="button" href="#/">Voltar ao início →</a></section>'}</main>`+footer();
     document.querySelectorAll('.submenu-toggle').forEach(btn=>setSubmenu(btn,false));
     bindNavigation();
     bindCalendar();
@@ -189,5 +202,5 @@
   matchMedia('(min-width:1100px)').addEventListener('change',()=>{closeSubmenus();closeMobile();});
   repository.load().then(content=>{
     data=content;pages=data.pages;roots=children(null);routeMap=new Map(pages.map(p=>[route(p),p]));render();
-  }).catch(()=>{document.getElementById('app').innerHTML='<main class="wrap"><h1>Não foi possível abrir o protótipo.</h1><p>Gere os arquivos com npm run build e tente novamente.</p><a href="index.html">Voltar às propostas</a></main>';});
+  }).catch(()=>{document.getElementById('app').innerHTML='<main class="wrap"><h1>Não foi possível abrir o portal.</h1><p>Tente recarregar a página em alguns instantes.</p><a href="index.html">Voltar ao início</a></main>';});
 })();

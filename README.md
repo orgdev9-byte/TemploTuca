@@ -1,17 +1,12 @@
-# TUCA — Portal em desenvolvimento
+# T.U.C.A — Portal institucional e educativo
 
-A proposta 3, em areia e palha, foi escolhida como base visual. A direção editorial acolhedora aprovada usa Lora nos títulos e Manrope nos textos e interfaces, carregadas pelo Google Fonts com fontes de sistema como alternativas. A página `dist/index.html` abre diretamente o portal; a comparação anterior permanece em `dist/propostas.html`. As propostas 1 e 2 foram preservadas como referências.
+Site do Templo de Umbanda Caminhos de Aruanda. A identidade escolhida usa areia, palha e marrom, com Lora nos títulos e Manrope nos textos e interfaces.
 
+O portal abre em `dist/index.html`. A comparação visual e as três páginas antigas de propostas não fazem mais parte da publicação. Seus arquivos em `src` e o histórico Git foram preservados; o build os exclui de `dist`. Na hospedagem, os endereços antigos redirecionam para a página inicial por meio de `_redirects`.
 
-Três propostas navegáveis para avaliação do dirigente do Templo de Umbanda Caminhos de Aruanda. Este material é um protótipo local, não o site definitivo.
+## Desenvolvimento local
 
-Repositório: https://github.com/orgdev9-byte/TemploTuca. As três propostas são organizadas na branch `prototipos/portal-conteudo-navegacao`, para revisão antes da incorporação à branch principal.
-
-## Abrir os protótipos
-
-Abra `dist/index.html` diretamente no navegador. Todos os arquivos são locais, inclusive as imagens; não é necessário instalar dependências ou acessar serviços externos.
-
-Para desenvolver, use Node.js 22 ou superior:
+Use Node.js 22:
 
 ```sh
 npm test
@@ -19,112 +14,57 @@ npm run build
 npm run dev
 ```
 
-O servidor local fica em http://127.0.0.1:4173. Após editar conteúdo ou código, execute `npm run build` e recarregue a página. O servidor serve somente a pasta `dist`, não expõe os arquivos de trabalho e escuta somente na interface local.
+A prévia fica em http://127.0.0.1:4173 e funciona enquanto o servidor estiver ligado. Não há dependências de instalação. Se `npm` não estiver disponível, os comandos equivalentes são `node --test scripts/content.test.mjs`, `node scripts/build.mjs` e `node scripts/serve.mjs`.
 
-## Propostas visuais
+Após alterar os arquivos em `src` ou `content`, gere novamente `dist`. A pasta `dist` é a publicação estática, também versionada no repositório.
 
-| Arquivo | Proposta | Composição |
-| --- | --- | --- |
-| `proposta-1.html` | Moderno e acolhedor | Creme, verde discreto, tipografia serifada, fotografia em arco |
-| `proposta-2.html` | Tradicional e marcante | Preto, vermelho, tons de prata, fotografia de fundo e contraste forte |
-| `proposta-3.html` | Contemporâneo e institucional | Areia, palha e marrom suave, linhas precisas, painel editorial com fotografia |
+## Estrutura
 
-Cada proposta tem um arquivo CSS próprio. Conteúdo, navegação e componentes são compartilhados, para manter a mesma arquitetura entre as três versões. A seleção de propostas é uma tela separada.
+- `content/portal.json`: menus, páginas, textos, imagens, calendário e informações da casa.
+- `src/index.html`: entrada única do site escolhido.
+- `src/app.js`: navegação, conteúdo, calendário e componentes compartilhados.
+- `src/styles/`: apresentação responsiva e identidade visual.
+- `src/assets/`: logotipo original, fotografia do congá e ilustrações.
+- `src/_redirects`: redirecionamento dos endereços antigos de propostas para o início.
+- `scripts/model.mjs`: validação dos dados.
+- `scripts/content.test.mjs`: testes do catálogo.
+- `scripts/build.mjs`: gera o portal e exclui os estudos visuais da publicação.
+- `scripts/serve.mjs`: prévia local.
+- `docs/`: registros das ilustrações.
+- `netlify.toml`: configuração anterior, preservada durante a migração.
 
-## Estrutura de conteúdo
+Os arquivos `src/propostas.html` e `src/proposta-1.html`, `src/proposta-2.html`, `src/proposta-3.html` são estudos históricos. Não são copiados para o site público. Não é necessário apagá-los para retirar a área de protótipos.
 
-O catálogo tem 47 páginas por proposta, divididas em oito áreas principais:
+## Conteúdo e navegação
 
-- Início.
-- O TUCA: nossa história, missão, casa e congá, funcionamento das giras, dirigentes.
-- Umbanda: introdução, história, fundamentos, mediunidade, pontos cantados e glossário.
-- Orixás: introdução, Oxalá, Ogum, Oxóssi, Xangô, Oxum, Iemanjá, Iansã e outros temas.
-- Linhas de Trabalho: introdução, Caboclos, Pretos-Velhos, Erês, Baianos, Marinheiros, Ciganos, Boiadeiros, Exus e Pombagiras, outras linhas.
-- Calendário: próximos encontros, calendário completo e eventos especiais.
-- Conteúdos: comunicados, artigos, galeria e eventos realizados.
-- Visite o TUCA: como chegar, primeira visita, dúvidas frequentes e contatos.
+O catálogo atual contém 51 páginas, organizadas em Início, O T.U.C.A, Umbanda, Orixás, Linhas de Trabalho, Atendimento e Conteúdos.
 
-Os nomes religiosos são sugestões de organização retiradas do planejamento anterior; não constituem uma lista oficial dos fundamentos da casa. Todos os textos são demonstrações explícitas. Não há história institucional, doutrina, biografias, datas de gira, horários ou contatos inventados.
+As páginas usam `id`, `slug`, `parentId`, `title`, `template`, `order`, `showInNavigation`, `status`, `summary` e `blocks`. Novos assuntos podem ser adicionados aos dados sem programar rotas manualmente. O build impede IDs e caminhos duplicados, pais inexistentes e ciclos. As rotas por fragmento (`#/umbanda/fundamentos`) dispensam configuração de rotas no servidor.
 
-## Navegação orientada por dados
+Orixás e Guias Espirituais possuem introduções e páginas individuais. Os textos recebidos da casa são diferenciados de conteúdos demonstrativos ainda não aprovados. A retirada dos protótipos não aprova automaticamente conteúdos provisórios. Não há painel administrativo, CMS ou banco de dados nesta fase.
 
-`content/portal.json` é a fonte de conteúdo. Cada página tem `id`, `slug`, `parentId`, `title`, `template`, `order`, `showInNavigation`, `status`, `summary` e `blocks`.
+O calendário utiliza eventos confirmados, com data e horários. A página inicial apresenta os próximos três encontros, com horários compartilhados quando forem iguais. O calendário completo permite navegar entre meses e filtrar as atividades.
 
-- `parentId: null`: item do menu principal.
-- `parentId: "orixas"`: submenu/página da área Orixás.
-- `order`: ordem entre páginas do mesmo nível.
-- `showInNavigation`: controla a presença nos menus; a página continua acessível por seu endereço.
-- `template`: `home`, `collection`, `article`, `calendar`, `gallery` ou `visit`.
-- `blocks`: blocos de texto estruturados (`heading`, `paragraph`, `list`). Texto é escapado; não se injeta HTML do catálogo.
+## Publicação e aprovação
 
-Exemplo de um futuro tópico de demonstração, adicionado somente aos dados:
+Repositório: https://github.com/orgdev9-byte/TemploTuca.
 
-```json
-{
-  "id": "umbanda-novo-tema",
-  "slug": "novo-tema",
-  "title": "Novo tema",
-  "parentId": "umbanda",
-  "template": "article",
-  "order": 10,
-  "showInNavigation": true,
-  "status": "demo",
-  "summary": "Demonstração de novo assunto, sujeito à aprovação.",
-  "blocks": [
-    { "type": "paragraph", "text": "Texto provisório de demonstração." }
-  ]
-}
-```
+- `main`: produção, somente versões aprovadas.
+- `hml`: homologação; a branch existe, mas a prévia online separada ainda precisa ser publicada.
+- `prototipos/portal-conteudo-navegacao`: histórico do desenvolvimento inicial, preservado.
 
-Depois da inclusão e da geração com `npm run build`, a página, seu endereço e o submenu são criados automaticamente. Há suporte a hierarquias aninhadas, sem uma lista de rotas escrita manualmente. O build valida IDs/caminhos duplicados, pais inexistentes e ciclos na árvore.
+Produção atual: https://templotuca.pages.dev/. O Netlify permanece preservado. A configuração estática usa `npm test && npm run build`, saída `dist` e `NODE_VERSION=22`.
 
-## Evolução para o painel administrativo
+As publicações automáticas da Cloudflare foram desligadas pelo usuário. Não executar push, merge ou deploy sem autorização. Priorizar testes locais e publicar somente versões aprovadas.
 
-O painel **não foi implementado**. Nesta fase, os dados ficam em um JSON e o build gera `dist/portal-data.js`, para permitir até a abertura direta por arquivo. Futuramente, um painel poderá editar registros com esse contrato, e a função `repository.load()` em `src/app.js` poderá receber o catálogo de uma API ou exportação do CMS. Assim, novos assuntos usando os modelos existentes não precisarão de alterações nos componentes ou de rotas programadas individualmente.
+Uma versão presente no GitHub só deve ser declarada publicada depois da confirmação do deploy e da conferência do endereço público.
 
-Autenticação, permissões de edição, persistência, aprovação editorial, upload de arquivos e a publicação deverão ser implementados e validados na fase definitiva. O calendário atual demonstra meses, filtros e estado vazio; não é uma agenda conectada a um serviço nem um cadastro de eventos.
+## Contato e indexação
 
-## Acessibilidade e responsividade
+O formulário tem nome, e-mail e mensagem, mas o envio continua desativado por decisão do usuário. A implementação anterior depende de Netlify Forms e precisa ser adaptada antes de ser ativada na Cloudflare. O contato direto por e-mail continua disponível.
 
-- Links de seção separados dos botões de expansão dos submenus.
-- Botões nativos com `aria-expanded`, `aria-controls` e nomes descritivos.
-- Desktop: submenus suspensos acionados por clique, Enter ou Espaço; Seta para baixo abre e posiciona o foco no primeiro link.
-- Celular: menu principal expansível e submenus em acordeão.
-- Escape fecha o submenu e devolve o foco ao botão; Escape também fecha o menu móvel.
-- Clique fora fecha o menu; troca de página fecha as expansões e coloca o foco no conteúdo.
-- Link para pular navegação, trilhas de navegação, página atual indicada, textos alternativos e redução de movimento.
-- Rotas por fragmento (`#/orixas/oxala`), compatíveis com abertura local e com histórico Voltar/Avançar, sem configuração de servidor.
+O portal mantém `noindex,nofollow` enquanto está em preparação. A indexação de produção será revisada antes do lançamento definitivo.
 
-## Arquivos
+## Acessibilidade e validação
 
-```text
-content/portal.json       Catálogo compartilhado de páginas
-src/app.js               Componentes, navegação e adaptador de dados
-src/index.html           Seleção das propostas
-src/proposta-*.html       Entradas independentes
-src/styles/base.css      Componentes e regras responsivas
-src/styles/warm.css      Proposta 01
-src/styles/dark.css      Proposta 02
-src/styles/blue.css      Proposta 03
-src/styles/branding.css  Logotipo original nas miniaturas e cabeçalhos
-src/assets/              Logotipo e fotografia originais
-scripts/model.mjs        Validação do catálogo
-scripts/content.test.mjs Testes da árvore de conteúdo
-scripts/build.mjs        Geração estática sem dependências
-scripts/serve.mjs        Servidor local
-dist/                    Protótipos prontos para abrir
-```
-
-O logotipo e a fotografia foram copiados dos anexos originais sem edição dos arquivos. O enquadramento visual é feito por CSS; a galeria exibe a fotografia completa. Não foram usadas imagens geradas ou copiadas de terceiros.
-
-A referência https://www.machadodaluzdourada.com.br/index.php foi consultada exclusivamente para compreender a organização por menus, submenus e páginas. Código, textos, fotografias e identidade visual não foram reproduzidos.
-
-O portal carrega as famílias Lora e Manrope pelo Google Fonts, com alternativas locais de sistema. A publicação usa a branch conectada ao Netlify. Não há painel, banco de dados, analytics, mapas incorporados ou cadastro de eventos.
-
-## Verificação desta entrega
-
-Os quatro testes automatizados do catálogo passaram. A geração estática, a verificação de sintaxe JavaScript e a resposta HTTP da seleção também passaram. Foram exercitados em navegador os menus, abertura por teclado, Escape, página introdutória de Orixás, páginas individuais de Oxalá e Caboclos, calendário com mudança de mês e filtro, e retorno à seleção. As três propostas foram inspecionadas visualmente. Amostras em 320 e 390 pixels de largura não apresentaram rolagem horizontal. Os arquivos originais e as cópias usadas no projeto têm os mesmos hashes SHA-256.
-
-O repositório foi iniciado com uma apresentação na branch principal. Os protótipos são entregues por uma branch de revisão. Não há implantação do site ou conexão de domínio.
-
-O portal principal usa o PNG original transparente (1006 × 1024), sem remover partes do emblema ou acrescentar molduras. A versão com fundo claro (759 × 702) permanece preservada como referência. O cabeçalho foi refinado em 06/11/2026, com alinhamento responsivo, menu discreto e chamada para visita.
+Navegação responsiva, submenus com botões, suporte a teclado, Escape, foco de navegação, link para pular conteúdo, nomes acessíveis e textos alternativos. Executar os testes existentes e conferir visualmente no computador e no celular após alterações de apresentação.
