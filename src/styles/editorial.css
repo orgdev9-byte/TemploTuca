@@ -72,3 +72,49 @@ body[data-mode="site"]{font-family:"Manrope",Arial,Helvetica,sans-serif;font-siz
 @media(max-width:1099px){[data-mode="site"] .brand small{font-size:16px;max-width:310px}[data-mode="site"] .hero h1.hero-title-name{font-size:44px}}
 @media(max-width:720px){[data-mode="site"] .brand-row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:12px;min-height:120px;padding-block:15px}[data-mode="site"] .brand{display:flex;gap:12px;min-width:0}[data-mode="site"] .brand img{width:68px}[data-mode="site"] .brand>span{font-size:25px;min-width:0;letter-spacing:.03em}[data-mode="site"] .brand small{font-size:14px;max-width:none;font-weight:500;line-height:1.45;margin-top:7px;letter-spacing:0;white-space:normal}[data-mode="site"] .mobile-toggle{margin-left:0;min-width:44px}[data-mode="site"] .hero-copy .eyebrow{font-size:18px;line-height:1.5;margin-bottom:16px}[data-mode="site"] .hero h1.hero-title-name{font-size:39px;line-height:1.25}[data-mode="site"] .hero-intro{font-size:17px;line-height:1.8;margin-top:23px}}
 @media(max-width:360px){[data-mode="site"] .brand-row{gap:10px}[data-mode="site"] .brand{gap:9px}[data-mode="site"] .brand img{width:60px}[data-mode="site"] .brand>span{font-size:23px}[data-mode="site"] .brand small{font-size:14px;max-width:none}[data-mode="site"] .hero h1.hero-title-name{font-size:36px}}
+
+/* Masthead and footer: a shared signature, with clearer navigation and reading sizes. */
+[data-mode="site"] .brand>span,
+[data-mode="site"] .footer-main .footer-wordmark{
+  font-family:"Lora",Georgia,"Times New Roman",serif;
+  font-weight:500;
+  letter-spacing:.025em;
+  color:#443b2d;
+}
+[data-mode="site"] .brand>span{font-size:38px;line-height:1.12}
+[data-mode="site"] .brand small{
+  font-family:"Manrope",Arial,Helvetica,sans-serif;
+  font-size:16px;font-weight:500;line-height:1.55;
+  letter-spacing:0;color:#5c503e;margin-top:9px;max-width:340px;
+}
+[data-mode="site"] .nav-row>a{font-size:14px;font-weight:500;letter-spacing:0;line-height:1.6}
+[data-mode="site"] .submenu .nav-row>a{font-size:14px;font-weight:500}
+[data-mode="site"] .header-visit{font-size:13px;font-weight:600;letter-spacing:0}
+[data-mode="site"] .footer-main .footer-wordmark{font-size:44px;line-height:1.15;opacity:1;margin-bottom:14px}
+[data-mode="site"] .footer-main>div:first-child>p:not(.footer-wordmark){
+  font-size:16px;font-weight:500;line-height:1.7;letter-spacing:0;color:#5c503e;opacity:1;
+}
+[data-mode="site"] .footer-main .eyebrow{
+  font-family:"Manrope",Arial,Helvetica,sans-serif;
+  font-size:12px;font-weight:600;line-height:1.6;letter-spacing:.12em;color:#5c503e;opacity:1;margin-bottom:13px;
+}
+[data-mode="site"] .site-footer a{font-size:15px;font-weight:500;line-height:1.65;letter-spacing:0;color:#493e2d}
+[data-mode="site"] .footer-main nav{gap:9px 28px;margin-top:0}
+[data-mode="site"] .footer-main nav a{padding-block:3px}
+[data-mode="site"] .footer-bottom{font-size:12px;font-weight:400;line-height:1.6;letter-spacing:.015em;color:#665a48;opacity:1}
+@media(max-width:1199px) and (min-width:1100px){
+  [data-mode="site"] .nav-row>a{font-size:13px}
+}
+@media(max-width:720px){
+  [data-mode="site"] .brand>span{font-size:31px;letter-spacing:.015em}
+  [data-mode="site"] .brand small{font-size:14px;line-height:1.5;margin-top:7px;max-width:none}
+  [data-mode="site"] .nav-row>a{font-size:15px}
+  [data-mode="site"] .footer-main .footer-wordmark{font-size:39px;margin-bottom:12px}
+  [data-mode="site"] .footer-main>div:first-child>p:not(.footer-wordmark){font-size:15px}
+  [data-mode="site"] .footer-main{gap:30px}
+  [data-mode="site"] .footer-main nav{gap:8px 20px}
+}
+@media(max-width:360px){
+  [data-mode="site"] .brand>span{font-size:27px;letter-spacing:.01em}
+  [data-mode="site"] .brand small{font-size:13px}
+}
