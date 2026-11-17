@@ -212,115 +212,201 @@ window.TUCA_CONTENT = {
       "order": 2,
       "showInNavigation": true,
       "status": "provided",
-      "summary": "O espaço sagrado, a natureza, a caridade e a caminhada espiritual.",
+      "summary": "Os princípios que sustentam nossa fé",
       "blocks": [
         {
-          "type": "heading",
-          "text": "O Terreiro: Um Espaço Sagrado"
+          "type": "paragraph",
+          "text": "A Umbanda possui fundamentos religiosos, espirituais e ritualísticos que orientam suas práticas e seus ensinamentos."
         },
         {
           "type": "paragraph",
-          "text": "O terreiro é um espaço dedicado à fé, ao culto dos Orixás, à manifestação dos Guias Espirituais e à prática da caridade."
+          "text": "Esses fundamentos representam a relação entre o Criador, os Orixás, os Guias Espirituais, a natureza e os seres humanos."
         },
         {
           "type": "paragraph",
-          "text": "Dentro dele, cada elemento possui importância religiosa e simbólica."
-        },
-        {
-          "type": "paragraph",
-          "text": "Ao entrar em um terreiro, somos convidados a deixar de lado as preocupações cotidianas e a nos conectar com nossa espiritualidade, mantendo uma postura de respeito, concentração e humildade."
+          "text": "Conhecê-los é uma forma de compreender a importância da fé, da disciplina, do respeito e da responsabilidade dentro da religião."
         },
         {
           "type": "heading",
-          "text": "O Congá"
+          "level": 3,
+          "text": "Olorum — O Criador"
         },
         {
           "type": "paragraph",
-          "text": "O Congá é o altar sagrado do terreiro, espaço de reverência aos Orixás e às forças divinas."
+          "text": "A Umbanda reconhece Olorum como o Deus único, princípio maior de toda a criação."
         },
         {
           "type": "paragraph",
-          "text": "Nele podem estar presentes imagens, símbolos e elementos religiosos que expressam os fundamentos espirituais da casa."
+          "text": "Olorum é a origem da vida e das forças divinas que sustentam o universo."
         },
         {
           "type": "paragraph",
-          "text": "É um espaço de oração, concentração e fortalecimento da fé, devendo ser tratado com respeito e cuidado."
+          "text": "Sua presença manifesta-se por meio da criação e das qualidades divinas que orientam a existência."
         },
         {
           "type": "heading",
-          "text": "A Trunqueira"
+          "level": 3,
+          "text": "Os Orixás — As Divindades da Criação"
         },
         {
           "type": "paragraph",
-          "text": "A Trunqueira é um espaço de proteção e guarda espiritual, associado à atuação dos guardiões da casa."
+          "text": "Os Orixás são divindades que manifestam diferentes atributos e poderes de Olorum."
         },
         {
           "type": "paragraph",
-          "text": "Sua importância está relacionada à defesa energética do terreiro e à sustentação de determinados fundamentos espirituais."
+          "text": "Cada Orixá atua em determinados aspectos da vida, da natureza e da evolução espiritual."
         },
         {
           "type": "paragraph",
-          "text": "Os trabalhos realizados nesse espaço seguem a orientação e os fundamentos próprios de cada casa religiosa."
+          "text": "Na organização dos Sete Tronos Divinos, as principais irradiações são Fé, Amor, Conhecimento, Justiça, Lei, Evolução e Geração."
+        },
+        {
+          "type": "paragraph",
+          "text": "Essas forças se complementam e contribuem para o equilíbrio da criação."
         },
         {
           "type": "heading",
-          "text": "Os Pontos de Força da Natureza"
+          "level": 3,
+          "text": "Os Guias Espirituais — A Caridade em Ação"
         },
         {
           "type": "paragraph",
-          "text": "Na Umbanda, a natureza possui profunda importância espiritual."
+          "text": "Os Guias Espirituais são entidades que atuam nos trabalhos de Umbanda, oferecendo orientação, acolhimento e auxílio."
         },
         {
           "type": "paragraph",
-          "text": "Matas, rios, cachoeiras, mares, pedreiras, campos e outros ambientes naturais são reconhecidos como pontos de força associados às irradiações dos Orixás."
+          "text": "Por meio das manifestações mediúnicas, transmitem ensinamentos que incentivam o crescimento espiritual, o respeito e a responsabilidade."
         },
         {
           "type": "paragraph",
-          "text": "Esses lugares simbolizam a presença das forças divinas na criação e representam espaços de conexão, contemplação e fortalecimento da fé."
-        },
-        {
-          "type": "paragraph",
-          "text": "O respeito à natureza também faz parte da espiritualidade umbandista. Preservar o meio ambiente é uma forma de honrar a criação e os mistérios dos Orixás."
+          "text": "Cada linha de trabalho possui características próprias, mas todas são importantes dentro dos fundamentos religiosos de cada terreiro."
         },
         {
           "type": "heading",
-          "text": "A Caridade como Fundamento"
+          "level": 3,
+          "text": "A Mediunidade — O Trabalho Espiritual"
         },
         {
           "type": "paragraph",
-          "text": "A caridade é um dos princípios centrais da Umbanda."
+          "text": "A mediunidade é compreendida como uma faculdade que permite a interação entre o plano material e o plano espiritual."
         },
         {
           "type": "paragraph",
-          "text": "Ela está presente no acolhimento, na orientação espiritual, no respeito às diferenças e na disposição de ajudar o próximo."
+          "text": "Na Umbanda, ela está presente em diferentes formas de manifestação, especialmente na incorporação dos Guias Espirituais."
         },
         {
           "type": "paragraph",
-          "text": "Praticar a caridade não significa apenas participar dos trabalhos de um terreiro. Significa também cultivar atitudes de compreensão, solidariedade e responsabilidade em nosso cotidiano."
-        },
-        {
-          "type": "paragraph",
-          "text": "A espiritualidade se fortalece quando aquilo que aprendemos dentro do templo é colocado em prática fora dele."
+          "text": "Seu desenvolvimento deve ocorrer com responsabilidade, disciplina, estudo e orientação adequada."
         },
         {
           "type": "heading",
-          "text": "Nossa Caminhada Espiritual"
+          "level": 3,
+          "text": "A Caridade — O Princípio Fundamental"
         },
         {
           "type": "paragraph",
-          "text": "A Umbanda nos ensina que a evolução espiritual é construída diariamente, por meio da fé, do conhecimento, das experiências e das escolhas que fazemos."
+          "text": "A caridade é um dos principais fundamentos da Umbanda."
         },
         {
           "type": "paragraph",
-          "text": "Os Orixás representam as forças divinas que sustentam nossa existência, enquanto os Guias Espirituais nos auxiliam com seus ensinamentos e orientações."
+          "text": "Ela representa a disposição de ajudar o próximo, acolher aqueles que necessitam e oferecer auxílio sem discriminação."
         },
         {
           "type": "paragraph",
-          "text": "Cada aprendizado é uma oportunidade de desenvolver a consciência, a humildade e o amor."
+          "text": "A verdadeira caridade também se manifesta fora do terreiro, em nossas atitudes cotidianas, por meio da solidariedade, da compreensão e do respeito."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "A Natureza — Manifestação das Forças Divinas"
         },
         {
           "type": "paragraph",
-          "text": "Que a fé nos fortaleça, que a sabedoria nos oriente e que a caridade esteja sempre presente em nossos caminhos.",
+          "text": "A natureza possui profunda importância na Umbanda."
+        },
+        {
+          "type": "paragraph",
+          "text": "As matas, cachoeiras, rios, mares, pedreiras e outros ambientes naturais são reconhecidos como pontos de força associados aos Orixás."
+        },
+        {
+          "type": "paragraph",
+          "text": "Esses lugares representam espaços sagrados de conexão com as forças divinas."
+        },
+        {
+          "type": "paragraph",
+          "text": "Preservar a natureza é também uma maneira de demonstrar respeito à criação."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "A Lei Divina e a Evolução Espiritual"
+        },
+        {
+          "type": "paragraph",
+          "text": "A Lei Divina representa os princípios de ordem, equilíbrio e responsabilidade que sustentam a existência."
+        },
+        {
+          "type": "paragraph",
+          "text": "Cada escolha produz consequências, e nossas experiências representam oportunidades de aprendizado."
+        },
+        {
+          "type": "paragraph",
+          "text": "A evolução espiritual acontece por meio do desenvolvimento da consciência, da transformação das atitudes e da prática do bem."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "O Terreiro — Um Espaço Sagrado"
+        },
+        {
+          "type": "paragraph",
+          "text": "O terreiro é o espaço destinado às práticas religiosas da Umbanda."
+        },
+        {
+          "type": "paragraph",
+          "text": "Nele são realizados os trabalhos espirituais, as orações, as giras e as manifestações mediúnicas."
+        },
+        {
+          "type": "paragraph",
+          "text": "O Congá representa um espaço de reverência às forças divinas, enquanto a Trunqueira está associada à guarda e à proteção espiritual da casa."
+        },
+        {
+          "type": "paragraph",
+          "text": "Cada elemento do terreiro possui sua importância e deve ser tratado com respeito."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "A Disciplina e o Respeito"
+        },
+        {
+          "type": "paragraph",
+          "text": "A Umbanda ensina que a espiritualidade exige compromisso, responsabilidade e humildade."
+        },
+        {
+          "type": "paragraph",
+          "text": "O respeito aos dirigentes, aos Guias Espirituais, aos irmãos de corrente e aos frequentadores faz parte da vivência religiosa."
+        },
+        {
+          "type": "paragraph",
+          "text": "A disciplina não representa apenas o cumprimento das orientações da casa, mas também o compromisso individual com o próprio crescimento."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "A importância dos fundamentos"
+        },
+        {
+          "type": "paragraph",
+          "text": "Os fundamentos da Umbanda nos ajudam a compreender que a espiritualidade vai além das manifestações mediúnicas e dos rituais."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ela está presente na forma como pensamos, sentimos e agimos."
+        },
+        {
+          "type": "paragraph",
+          "text": "O verdadeiro aprendizado espiritual acontece quando transformamos o conhecimento em atitudes de amor, respeito, humildade e caridade.",
           "strong": true
         }
       ],
@@ -334,9 +420,207 @@ window.TUCA_CONTENT = {
       "template": "article",
       "order": 3,
       "showInNavigation": true,
-      "status": "demo",
-      "summary": "Espaço reservado para conteúdo educativo revisado pela casa.",
-      "blocks": []
+      "status": "provided",
+      "summary": "O que é mediunidade?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Na Umbanda, a mediunidade é compreendida como uma faculdade espiritual que permite a comunicação e a interação entre os seres humanos e o plano espiritual."
+        },
+        {
+          "type": "paragraph",
+          "text": "Por meio dessa faculdade, os médiuns podem perceber influências espirituais e participar de trabalhos religiosos realizados com o auxílio dos Guias Espirituais."
+        },
+        {
+          "type": "paragraph",
+          "text": "A mediunidade pode se manifestar de diferentes maneiras, variando conforme as características e a sensibilidade de cada pessoa."
+        },
+        {
+          "type": "paragraph",
+          "text": "Na Umbanda, ela é considerada uma importante ferramenta de auxílio espiritual, aprendizado e prática da caridade."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Quais são os tipos de mediunidade?"
+        },
+        {
+          "type": "paragraph",
+          "text": "Existem diferentes formas de manifestação mediúnica reconhecidas nas tradições espiritualistas e umbandistas."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Mediunidade de incorporação"
+        },
+        {
+          "type": "paragraph",
+          "text": "É uma das formas mais conhecidas de manifestação na Umbanda."
+        },
+        {
+          "type": "paragraph",
+          "text": "Durante a incorporação, o médium estabelece uma ligação espiritual com determinada entidade, permitindo que ela se manifeste conforme os fundamentos religiosos do terreiro."
+        },
+        {
+          "type": "paragraph",
+          "text": "A incorporação é compreendida como um trabalho de cooperação entre o médium e a entidade espiritual, exigindo preparo, equilíbrio e responsabilidade."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Mediunidade intuitiva"
+        },
+        {
+          "type": "paragraph",
+          "text": "Está relacionada à percepção de ideias, orientações e inspirações que o médium compreende como provenientes do plano espiritual."
+        },
+        {
+          "type": "paragraph",
+          "text": "A intuição pode se manifestar por meio de pensamentos, percepções e entendimentos espontâneos."
+        },
+        {
+          "type": "paragraph",
+          "text": "O estudo e o discernimento são importantes para que o médium aprenda a diferenciar suas próprias impressões daquilo que interpreta como influência espiritual."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Mediunidade de vidência"
+        },
+        {
+          "type": "paragraph",
+          "text": "É compreendida como a faculdade de perceber imagens, cenas ou manifestações relacionadas ao plano espiritual."
+        },
+        {
+          "type": "paragraph",
+          "text": "Essas percepções podem variar conforme a sensibilidade do médium e não precisam ocorrer de maneira constante."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Mediunidade de audiência"
+        },
+        {
+          "type": "paragraph",
+          "text": "Está relacionada à percepção de sons, palavras ou mensagens interpretadas como manifestações espirituais."
+        },
+        {
+          "type": "paragraph",
+          "text": "Assim como outras experiências mediúnicas, exige discernimento e orientação."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Mediunidade de psicografia"
+        },
+        {
+          "type": "paragraph",
+          "text": "É a faculdade pela qual o médium acredita receber mensagens espirituais por meio da escrita."
+        },
+        {
+          "type": "paragraph",
+          "text": "Embora seja mais conhecida em outras tradições espiritualistas, também pode estar presente em determinados trabalhos de Umbanda."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Mediunidade de efeitos físicos"
+        },
+        {
+          "type": "paragraph",
+          "text": "Em algumas tradições espiritualistas, essa expressão é utilizada para descrever fenômenos interpretados como manifestações espirituais capazes de produzir efeitos perceptíveis no ambiente físico."
+        },
+        {
+          "type": "paragraph",
+          "text": "Não constitui uma prática comum ou necessária aos trabalhos de todos os terreiros."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "O que é desenvolvimento mediúnico?"
+        },
+        {
+          "type": "paragraph",
+          "text": "O desenvolvimento mediúnico é um processo de aprendizado e preparação espiritual realizado com orientação religiosa."
+        },
+        {
+          "type": "paragraph",
+          "text": "Seu objetivo é proporcionar ao médium maior conhecimento sobre a própria sensibilidade, os fundamentos da Umbanda e as responsabilidades relacionadas ao trabalho espiritual."
+        },
+        {
+          "type": "paragraph",
+          "text": "Durante esse processo, são valorizados o estudo, a disciplina, a concentração, o equilíbrio emocional e o respeito às orientações do dirigente."
+        },
+        {
+          "type": "paragraph",
+          "text": "Cada pessoa possui seu próprio ritmo de aprendizado. Por isso, o desenvolvimento mediúnico não deve ser tratado como uma competição ou uma obrigação de apresentar manifestações rapidamente."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "O médium precisa incorporar?"
+        },
+        {
+          "type": "paragraph",
+          "text": "Não. A incorporação não é a única forma de manifestação mediúnica, nem a única maneira de participar da religião."
+        },
+        {
+          "type": "paragraph",
+          "text": "A Umbanda possui diferentes funções e responsabilidades dentro de um terreiro."
+        },
+        {
+          "type": "paragraph",
+          "text": "Cada pessoa pode contribuir para os trabalhos religiosos de acordo com suas capacidades, sua preparação e os fundamentos da casa."
+        },
+        {
+          "type": "paragraph",
+          "text": "O compromisso com a fé e com a caridade não depende necessariamente da incorporação."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "A importância da consciência e da responsabilidade"
+        },
+        {
+          "type": "paragraph",
+          "text": "O desenvolvimento espiritual exige autoconhecimento e equilíbrio."
+        },
+        {
+          "type": "paragraph",
+          "text": "O médium deve compreender suas responsabilidades, respeitar os limites pessoais e manter uma postura de humildade e disciplina."
+        },
+        {
+          "type": "paragraph",
+          "text": "As experiências interpretadas como mediúnicas também precisam ser observadas com discernimento. Nem toda sensação, emoção ou percepção deve ser automaticamente atribuída à espiritualidade."
+        },
+        {
+          "type": "paragraph",
+          "text": "A busca por orientação religiosa não substitui cuidados com a saúde física ou mental quando necessários."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Mediunidade e caridade"
+        },
+        {
+          "type": "paragraph",
+          "text": "Na Umbanda, a mediunidade é compreendida como uma oportunidade de aprendizado e serviço ao próximo."
+        },
+        {
+          "type": "paragraph",
+          "text": "Seu valor não está na intensidade das manifestações, na aparência dos fenômenos ou no reconhecimento individual, mas na responsabilidade e na disposição de trabalhar pelo bem."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ser médium é assumir um compromisso de aprendizado, disciplina, humildade e caridade.",
+          "strong": true
+        },
+        {
+          "type": "paragraph",
+          "text": "A evolução espiritual é construída diariamente, dentro e fora do terreiro, por meio das atitudes que cultivamos."
+        }
+      ],
+      "heading": "Mediunidade na Umbanda"
     },
     {
       "id": "umbanda-pontos-cantados",

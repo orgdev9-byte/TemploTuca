@@ -1,6 +1,8 @@
 # T.U.C.A — Portal institucional e educativo
 
-Site do Templo de Umbanda Caminhos de Aruanda. A identidade escolhida usa areia, palha e marrom, com Lora nos títulos e Manrope nos textos e interfaces.
+Site do Templo de Umbanda Caminhos de Aruanda. A direção visual atual usa verde escuro e fundo claro, com Lora nos títulos e Manrope nos textos e interfaces. O logotipo e a fotografia originais foram preservados.
+
+Atualização de 17/11/2026 aprovada para envio ao GitHub: navegação com busca nos submenus maiores, listas editoriais e índice nos artigos longos, além dos textos completos de Fundamentos e Mediunidade fornecidos pela casa. O CSS `src/styles/portal-refresh.css` aplica essa direção somente à entrada atual do portal. A publicação na Cloudflare continua separada e manual; a presença da versão no GitHub não comprova que esteja no ar.
 
 O portal abre em `dist/index.html`. A comparação visual e as três páginas antigas de propostas não fazem mais parte da publicação. Seus arquivos em `src` e o histórico Git foram preservados; o build os exclui de `dist`. Na hospedagem, os endereços antigos redirecionam para a página inicial por meio de `_redirects`.
 
@@ -40,6 +42,8 @@ Os arquivos `src/propostas.html` e `src/proposta-1.html`, `src/proposta-2.html`,
 O catálogo atual contém 51 páginas, organizadas em Início, O T.U.C.A, Umbanda, Orixás, Linhas de Trabalho, Atendimento e Conteúdos.
 
 As páginas usam `id`, `slug`, `parentId`, `title`, `template`, `order`, `showInNavigation`, `status`, `summary` e `blocks`. Novos assuntos podem ser adicionados aos dados sem programar rotas manualmente. O build impede IDs e caminhos duplicados, pais inexistentes e ciclos. As rotas por fragmento (`#/umbanda/fundamentos`) dispensam configuração de rotas no servidor.
+
+Blocos de título aceitam `level: 2` ou `level: 3` (padrão: 2). Artigos com quatro ou mais títulos recebem um índice gerado pelos dados; os botões deslocam o foco e a leitura para o trecho sem trocar a rota. O índice é recolhível no celular. Submenus com mais de seis assuntos têm filtro local por nome, insensível a acentos, sem serviços externos.
 
 Orixás e Guias Espirituais possuem introduções e páginas individuais. Os textos recebidos da casa são diferenciados de conteúdos demonstrativos ainda não aprovados. A retirada dos protótipos não aprova automaticamente conteúdos provisórios. Não há painel administrativo, CMS ou banco de dados nesta fase.
 
