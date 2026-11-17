@@ -39,7 +39,13 @@ Os arquivos `src/propostas.html` e `src/proposta-1.html`, `src/proposta-2.html`,
 
 ## Conteúdo e navegação
 
-O catálogo atual contém 51 páginas, organizadas em Início, O T.U.C.A, Umbanda, Orixás, Linhas de Trabalho, Atendimento e Conteúdos.
+O catálogo atual contém 55 páginas, organizadas em Início, O T.U.C.A, Umbanda, Orixás, Linhas de Trabalho, Atendimento e Conteúdos.
+
+Umbanda reúne Conheça a Umbanda, História da Umbanda, Fundamentos e Biblioteca de Conhecimento. A Biblioteca usa cartões com as imagens fornecidas pela casa e reúne Mediunidade, Chacras, Ervas/Frutas/Flores/Água e Dicionário da Umbanda. O texto de Mediunidade foi reaproveitado; seu endereço antigo continua funcionando. `showInCollection: false` permite manter páginas históricas fora dos cartões, independentemente de `showInNavigation`.
+
+O Dicionário aguarda verbetes aprovados. Quando sua lista `dictionary` receber objetos com `term` e `definition`, o campo de pesquisa local ficará disponível, sem distinção de acentos ou maiúsculas. Enquanto a lista estiver vazia, apresenta apenas um aviso de preparação. Não há definições fictícias.
+
+A Galeria de fotos usa a lista `photos`, com `src`, `alt` e `caption`. Os seis registros incluem a fotografia original do congá e as cinco novas fotos fornecidas. É possível ampliar as imagens, alternar por botões ou setas do teclado e fechar por Esc. A foto da mesa de produtos está identificada como “Lojinha do T.U.C.A.”. As imagens originais foram preservadas sem edição.
 
 As páginas usam `id`, `slug`, `parentId`, `title`, `template`, `order`, `showInNavigation`, `status`, `summary` e `blocks`. Novos assuntos podem ser adicionados aos dados sem programar rotas manualmente. O build impede IDs e caminhos duplicados, pais inexistentes e ciclos. As rotas por fragmento (`#/umbanda/fundamentos`) dispensam configuração de rotas no servidor.
 

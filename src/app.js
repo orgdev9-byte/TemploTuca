@@ -3,6 +3,8 @@
   // Replace only this adapter when a CMS is approved. Rendering consumes the same model.
   const repository = { load: async () => window.TUCA_CONTENT };
   const escape = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const inline = text => String(text??'').split(/(\*\*[^*]+\*\*)/g).map(part=>part.startsWith('**')&&part.endsWith('**')?`<strong>${escape(part.slice(2,-2))}</strong>`:escape(part)).join('').replace(/\n/g,'<br>');
+  const normalizeSearch = value => String(value).normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLocaleLowerCase('pt-BR').trim();
   const themes = {
     warm:{ number:'01',name:'Moderno e acolhedor',eyebrow:'Templo de Umbanda Caminhos de Aruanda',heading:'Uma casa.<br>Muitos caminhos.',intro:'Conheça o T.U.C.A, explore os assuntos do portal e encontre as informações para sua visita.' },
     dark:{ number:'02',name:'Tradicional e marcante',eyebrow:'Templo de Umbanda Caminhos de Aruanda',heading:'Presença.<br>Identidade. <em>T.U.C.A.</em>',intro:'Um portal para apresentar a casa, reunir conhecimento e aproximar caminhos.' },
@@ -53,6 +55,7 @@
       <div class="demo-bar"><div class="wrap"><span class="demo-dot" aria-hidden="true"></span>${escape(data.site.demoNotice)}</div></div>`;
   }
   function cards(items) {
+    if(current?.cardLayout==='illustrated')return `<h2 class="library-topics-title">Assuntos da biblioteca</h2><div class="topic-grid library-grid">${items.map(p=>`<a class="topic-card library-card" href="${escape(href(p))}"><div class="library-card-image${p.cardImage?.fit==='contain'?' library-card-image--contain':''}">${p.cardImage?`<img src="${escape(p.cardImage.src)}" alt="${escape(p.cardImage.alt)}" loading="lazy" decoding="async">`:''}</div><div class="library-card-copy"><h3>${escape(p.title)}</h3><p>${escape(p.cardSummary||p.summary)}</p><span class="card-bottom">${p.dictionary?'Conhecer o dicionário':'Ler conteúdo'} <span aria-hidden="true">↗</span></span></div></a>`).join('')}</div>`;
     return `<div class="topic-grid">${items.map((p,i)=>`<a class="topic-card" href="${escape(href(p))}"><span class="card-index">${String(i+1).padStart(2,'0')}</span><h3>${escape(p.title)}</h3><p>${escape(p.summary)}</p><span class="card-bottom">Explorar página <span aria-hidden="true">↗</span></span></a>`).join('')}</div>`;
   }
   function sectionCards(items) {
@@ -116,7 +119,7 @@
         const level=b.level===3?3:2;
         return `<h${level} id="reading-${escape(current.id)}-${index}" tabindex="-1">${escape(b.text)}</h${level}>`;
       }
-      return b.type==='page-link'&&find(b.pageId)?`<a class="text-link" href="${escape(href(find(b.pageId)))}">${escape(b.text)} →</a>`:b.type==='contact'?contactBlock():b.type==='location'?locationBlock():b.type==='paragraph'?`<p>${b.strong?`<strong>${escape(b.text)}</strong>`:escape(b.text)}</p>`:b.type==='list'?`<ul>${b.items.map(t=>`<li>${escape(t)}</li>`).join('')}</ul>`:'';
+      return b.type==='page-link'&&find(b.pageId)?`<a class="text-link" href="${escape(href(find(b.pageId)))}">${escape(b.text)} →</a>`:b.type==='contact'?contactBlock():b.type==='location'?locationBlock():b.type==='paragraph'?`<p>${b.strong?`<strong>${escape(b.text)}</strong>`:inline(b.text)}</p>`:b.type==='list'?`<ul>${b.items.map(t=>`<li>${escape(t)}</li>`).join('')}</ul>`:'';
     }).join('');
   }
   function readingContent() {
@@ -155,18 +158,48 @@
     return `<section class="calendar" aria-label="Calendário de giras e eventos"><div class="calendar-toolbar"><button class="icon-button" data-month="-1" aria-label="Mês anterior">←</button><h2 id="month-label" aria-live="polite">${escape(label)}</h2><button class="icon-button" data-month="1" aria-label="Próximo mês">→</button><button class="today-button">Mês atual</button></div><label class="filter-label" ${current.id==='calendario-eventos-especiais'||current.id==='calendario-proximas-giras'?'hidden':''}>Exibir <select id="calendar-filter"><option value="all" ${calendarFilter==='all'?'selected':''}>Todas as atividades</option><option value="giras" ${calendarFilter==='giras'?'selected':''}>Giras</option><option value="eventos" ${calendarFilter==='eventos'?'selected':''}>Eventos especiais</option></select></label><div class="calendar-table-wrap"><table aria-labelledby="month-label"><thead><tr>${['Dom','Seg','Ter','Qua','Qui','Sex','Sáb'].map(d=>`<th scope="col">${d}</th>`).join('')}</tr></thead><tbody>${Array.from({length:cells.length/7},(_,i)=>`<tr>${cells.slice(i*7,i*7+7).join('')}</tr>`).join('')}</tbody></table></div><p class="calendar-legend"><span class="today-sample" aria-hidden="true"></span> Hoje · As giras estão indicadas nos dias da programação</p><div class="month-events" aria-live="polite">${eventList(visible)}</div></section>`;
   }
   function gallery() {
-    return `<figure class="content-photo"><img src="${escape(data.site.photo)}" alt="Fotografia original do congá do T.U.C.A, com atabaque em primeiro plano" width="813" height="1314"><figcaption>Fotografia original fornecida para o projeto. A galeria definitiva poderá receber novos registros aprovados pela casa.</figcaption></figure>`;
+    const photos=current.photos||[{src:data.site.photo,alt:'Congá do T.U.C.A',caption:'Nosso congá'}];
+    return `<div class="photo-grid">${photos.map((photo,i)=>`<figure><button type="button" data-photo="${i}" aria-label="Ampliar fotografia: ${escape(photo.caption||photo.alt)}"><img src="${escape(photo.src)}" alt="${escape(photo.alt)}" loading="lazy" decoding="async"><span aria-hidden="true">Ampliar ↗</span></button><figcaption>${escape(photo.caption||photo.alt)}</figcaption></figure>`).join('')}</div><dialog class="photo-dialog" aria-labelledby="photo-caption"><div class="photo-dialog-toolbar"><p id="photo-position" aria-live="polite"></p><button type="button" data-photo-close autofocus>Fechar <span aria-hidden="true">×</span></button></div><figure><img id="photo-full" alt=""><figcaption id="photo-caption"></figcaption></figure><div class="photo-dialog-controls"><button type="button" data-photo-step="-1">← Anterior</button><button type="button" data-photo-step="1">Próxima →</button></div></dialog>`;
+  }
+  function bindGallery() {
+    const dialog=document.querySelector('.photo-dialog');if(!dialog)return;
+    const photos=current.photos||[{src:data.site.photo,alt:'Congá do T.U.C.A',caption:'Nosso congá'}];
+    let selected=0,opener;
+    const show=index=>{
+      selected=(index+photos.length)%photos.length;const photo=photos[selected];
+      const img=dialog.querySelector('#photo-full');img.src=photo.src;img.alt=photo.alt;
+      dialog.querySelector('#photo-caption').textContent=photo.caption||photo.alt;
+      dialog.querySelector('#photo-position').textContent=`${selected+1} de ${photos.length}`;
+    };
+    document.querySelectorAll('[data-photo]').forEach(button=>button.addEventListener('click',()=>{opener=button;show(Number(button.dataset.photo));dialog.showModal();}));
+    dialog.querySelector('[data-photo-close]').addEventListener('click',()=>dialog.close());
+    dialog.querySelectorAll('[data-photo-step]').forEach(button=>button.addEventListener('click',()=>show(selected+Number(button.dataset.photoStep))));
+    dialog.addEventListener('keydown',event=>{if(event.key==='ArrowRight'||event.key==='ArrowLeft'){event.preventDefault();show(selected+(event.key==='ArrowRight'?1:-1));}if(event.key==='Escape')event.stopPropagation();});
+    dialog.addEventListener('close',()=>opener?.focus({preventScroll:true}));
+    dialog.addEventListener('click',event=>{if(event.target===dialog){const rect=dialog.getBoundingClientRect();if(event.clientX<rect.left||event.clientX>rect.right||event.clientY<rect.top||event.clientY>rect.bottom)dialog.close();}});
+  }
+  function dictionary() {
+    const entries=current.dictionary;
+    if(!entries.length)return '<section class="dictionary-empty"><h2>Verbetes em preparação</h2><p>Os termos e seus significados serão disponibilizados após a seleção e aprovação dos textos pela casa.</p><p>A pesquisa por palavras estará disponível quando os verbetes forem incluídos.</p></section>';
+    return `<section class="dictionary"><label for="dictionary-query">Buscar no dicionário</label><input id="dictionary-query" type="search" placeholder="Digite uma palavra ou expressão" autocomplete="off"><p class="dictionary-count" role="status" aria-live="polite"></p><dl>${entries.map(entry=>`<div class="dictionary-entry"><dt>${escape(entry.term)}</dt><dd>${escape(entry.definition)}</dd></div>`).join('')}</dl></section>`;
+  }
+  function bindDictionary() {
+    const input=document.getElementById('dictionary-query');if(!input)return;
+    const entries=[...document.querySelectorAll('.dictionary-entry')];
+    const update=()=>{const query=normalizeSearch(input.value);entries.forEach(entry=>entry.hidden=!normalizeSearch(entry.textContent).includes(query));const count=entries.filter(entry=>!entry.hidden).length;document.querySelector('.dictionary-count').textContent=count?`${count} ${count===1?'verbete encontrado':'verbetes encontrados'}.`:'Nenhum verbete encontrado. Tente outra palavra.';};
+    input.addEventListener('input',update);update();
   }
   function contentPage() {
-    const parents=ancestors(current),section=parents[0]||current,sub=children(current.id),siblings=children(section.id);
+    const parents=ancestors(current),library=parents.find(p=>p.id==='umbanda-biblioteca'),section=library||parents[0]||current,sub=children(current.id).filter(p=>p.showInCollection!==false),siblings=children(section.id).filter(p=>library||p.showInNavigation);
     const summaryTag=current.template==='article'&&current.blocks?.find(b=>b.type==='heading')?.level===3?'h2':'p';
     return `<div class="wrap"><nav class="breadcrumbs" aria-label="Caminho da página"><ol><li><a href="#/">Início</a></li>${parents.map(p=>`<li>${link(p)}</li>`).join('')}<li aria-current="page">${escape(current.title)}</li></ol></nav><div class="content-layout${parents.length?'':' content-layout--overview'}">${parents.length?`<aside class="section-nav"><h2>${link(section)}</h2><nav aria-label="Páginas de ${escape(section.title)}"><ul>${siblings.map(p=>`<li>${link(p)}</li>`).join('')}</ul></nav></aside>`:''}<article class="page-content"><header class="page-heading"><h1 id="article-title" tabindex="-1">${escape(current.heading||current.title)}</h1><${summaryTag} class="page-summary">${escape(current.summary)}</${summaryTag}></header>
       ${(current.id==='orixas'||current.id==='linhas')&&current.status==='demo'?'<div class="editorial-note"><strong>Uma estrutura para conhecer os temas.</strong><p>Os assuntos abaixo são propostas de organização. Não representam uma lista oficial dos fundamentos ou das práticas do T.U.C.A. A seleção e os textos dependem da aprovação do dirigente.</p></div>':''}
       ${current.template==='calendar'?`<div id="calendar-region">${calendar()}</div>`:''}
       ${current.template==='gallery'?gallery():''}
-      ${current.image?`<figure class="orixa-image"><img src="${escape(current.image.src)}" alt="${escape(current.image.alt)}" width="1024" height="1024" loading="lazy" decoding="async">${current.image.caption?`<figcaption>${escape(current.image.caption)}</figcaption>`:''}</figure>`:''}
+      ${current.image?`<figure class="${library?'library-article-image'+(current.image.fit==='contain'?' library-article-image--contain':''):'orixa-image'}"><img src="${escape(current.image.src)}" alt="${escape(current.image.alt)}" ${library?'':'width="1024" height="1024"'} loading="lazy" decoding="async">${current.image.caption?`<figcaption>${escape(current.image.caption)}</figcaption>`:''}</figure>`:''}
+      ${Array.isArray(current.dictionary)?dictionary():''}
       ${readingContent()}
-      ${sub.length?`<section class="subtopics" aria-label="Páginas desta seção"><h2>${current.id==='orixas'?'Conheça os temas':current.id==='linhas'?'Conheça as linhas de trabalho':'Explore esta seção'}</h2>${sectionCards(sub)}</section>`:''}
+      ${sub.length?`<section class="subtopics" aria-label="Páginas desta seção">${current.cardLayout==='illustrated'?'':`<h2>${current.id==='orixas'?'Conheça os temas':current.id==='linhas'?'Conheça as linhas de trabalho':'Explore esta seção'}</h2>`}${sectionCards(sub)}</section>`:''}
       ${current.template==='visit'?'<div class="editorial-note"><strong>Planeje sua primeira visita.</strong><p>Nosso endereço: Av. Sapopemba, 633 — Vila Regente Feijó, São Paulo — SP. Acesse Como chegar para consultar o mapa. Horários, contatos e recomendações de visita serão apresentados após confirmação da casa.</p></div>':''}
       </article></div></div>`;
   }
@@ -177,6 +210,8 @@
     let path;
     try { path=decodeURIComponent(location.hash.slice(1)||'/').replace(/\/$/,'')||'/'; } catch { path='invalid'; }
     const aliases={'/linhas-de-trabalho/exus-e-pombagiras':'/linhas-de-trabalho','/linhas-de-trabalho/outras-linhas':'/linhas-de-trabalho','/orixas/outros-orixas':'/orixas','/calendario':'/atendimento/calendario','/calendario/proximas-giras':'/atendimento/calendario','/calendario/calendario-completo':'/atendimento/calendario','/calendario/eventos-especiais':'/atendimento/calendario','/visite-o-tuca':'/atendimento','/visite-o-tuca/como-chegar':'/atendimento/como-chegar','/visite-o-tuca/contatos':'/atendimento/contatos'};
+    aliases['/umbanda/mediunidade']='/umbanda/biblioteca/mediunidade';
+    aliases['/conteudos/artigos']='/umbanda/biblioteca';
     if(aliases[path]){path=aliases[path];history.replaceState(null,'','#'+path);}
     current=routeMap.get(path);
     document.title=`${current?.title||'Página não encontrada'} — T.U.C.A${isSite ? '' : ` · Proposta ${theme.number}`}`;
@@ -186,6 +221,8 @@
     bindCalendar();
     bindContact();
     bindReading();
+    bindGallery();
+    bindDictionary();
     if(focus) { document.getElementById('conteudo').focus({preventScroll:true});window.scrollTo({top:0,behavior:'instant'}); }
   }
   function bindNavigation() {

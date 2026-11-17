@@ -416,10 +416,10 @@ window.TUCA_CONTENT = {
       "id": "umbanda-mediunidade",
       "slug": "mediunidade",
       "title": "Mediunidade",
-      "parentId": "umbanda",
+      "parentId": "umbanda-biblioteca",
       "template": "article",
-      "order": 3,
-      "showInNavigation": true,
+      "order": 1,
+      "showInNavigation": false,
       "status": "provided",
       "summary": "O que é mediunidade?",
       "blocks": [
@@ -620,7 +620,17 @@ window.TUCA_CONTENT = {
           "text": "A evolução espiritual é construída diariamente, dentro e fora do terreiro, por meio das atitudes que cultivamos."
         }
       ],
-      "heading": "Mediunidade na Umbanda"
+      "heading": "Mediunidade na Umbanda",
+      "cardImage": {
+        "src": "assets/biblioteca/mediunidade.png",
+        "alt": "Pessoas vestidas de branco e atabaques em um ambiente natural"
+      },
+      "image": {
+        "src": "assets/biblioteca/mediunidade.png",
+        "alt": "Pessoas vestidas de branco e atabaques em um ambiente natural",
+        "caption": "Registro fornecido pelo T.U.C.A."
+      },
+      "cardSummary": "Sensibilidade, desenvolvimento e responsabilidade no trabalho espiritual."
     },
     {
       "id": "umbanda-pontos-cantados",
@@ -629,10 +639,11 @@ window.TUCA_CONTENT = {
       "parentId": "umbanda",
       "template": "article",
       "order": 4,
-      "showInNavigation": true,
+      "showInNavigation": false,
       "status": "demo",
       "summary": "Letras, referências e autorizações serão avaliadas antes da inclusão de materiais.",
-      "blocks": []
+      "blocks": [],
+      "showInCollection": false
     },
     {
       "id": "orixas",
@@ -715,7 +726,7 @@ window.TUCA_CONTENT = {
       "order": 6,
       "showInNavigation": true,
       "status": "demo",
-      "summary": "Um lugar para encontrar comunicados, leituras e registros escolhidos pela casa.",
+      "summary": "Comunicados, fotografias e registros da nossa casa.",
       "blocks": []
     },
     {
@@ -737,10 +748,11 @@ window.TUCA_CONTENT = {
       "parentId": "conteudos",
       "template": "article",
       "order": 1,
-      "showInNavigation": true,
+      "showInNavigation": false,
       "status": "demo",
       "summary": "Espaço reservado para artigos educativos revisados pela casa.",
-      "blocks": []
+      "blocks": [],
+      "showInCollection": false
     },
     {
       "id": "conteudos-galeria-de-fotos",
@@ -750,9 +762,41 @@ window.TUCA_CONTENT = {
       "template": "gallery",
       "order": 2,
       "showInNavigation": true,
-      "status": "demo",
-      "summary": "Demonstração da galeria com a fotografia original fornecida para o projeto.",
-      "blocks": []
+      "status": "provided",
+      "summary": "Um olhar sobre os espaços e os detalhes do T.U.C.A. Selecione uma fotografia para ampliar.",
+      "blocks": [],
+      "photos": [
+        {
+          "src": "assets/conga-original.jpeg",
+          "alt": "Congá do T.U.C.A com atabaque em primeiro plano",
+          "caption": "Nosso congá"
+        },
+        {
+          "src": "assets/galeria/espaco-tuca.png",
+          "alt": "Vista do espaço do T.U.C.A com iluminação verde",
+          "caption": "O espaço da casa"
+        },
+        {
+          "src": "assets/galeria/imagens-e-velas.png",
+          "alt": "Imagens e velas no congá do T.U.C.A",
+          "caption": "Imagens e velas"
+        },
+        {
+          "src": "assets/galeria/conga.png",
+          "alt": "Detalhes do congá com imagens, plantas e velas",
+          "caption": "Detalhes do congá"
+        },
+        {
+          "src": "assets/galeria/acolhimento.png",
+          "alt": "Mesa de recepção com senhas e informações",
+          "caption": "Recepção e acolhimento"
+        },
+        {
+          "src": "assets/galeria/mesa.png",
+          "alt": "Mesa com sabonetes, pulseiras e colares",
+          "caption": "Lojinha do T.U.C.A."
+        }
+      ]
     },
     {
       "id": "conteudos-eventos-realizados",
@@ -2034,6 +2078,565 @@ window.TUCA_CONTENT = {
         "alt": "Representação artística de Malandros e Malandras",
         "caption": "Representação artística de Malandros e Malandras."
       }
+    },
+    {
+      "id": "umbanda-biblioteca",
+      "parentId": "umbanda",
+      "slug": "biblioteca",
+      "title": "Biblioteca de Conhecimento",
+      "summary": "Um espaço para aprofundar seus estudos. Escolha um assunto e explore os conteúdos reunidos pela casa.",
+      "template": "collection",
+      "order": 3,
+      "showInNavigation": true,
+      "status": "provided",
+      "blocks": [],
+      "cardLayout": "illustrated"
+    },
+    {
+      "id": "umbanda-biblioteca-chacras",
+      "parentId": "umbanda-biblioteca",
+      "slug": "chacras",
+      "title": "Chacras",
+      "heading": "Os 7 Chacras na Umbanda",
+      "summary": "O que são os Chacras?",
+      "template": "article",
+      "order": 2,
+      "showInNavigation": false,
+      "status": "provided",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Os chacras são centros de força que, segundo as tradições espiritualistas, atuam na captação, circulação e irradiação das energias espirituais."
+        },
+        {
+          "type": "paragraph",
+          "text": "Na Umbanda, estão relacionados à mediunidade, ao equilíbrio energético e ao desenvolvimento espiritual. Cada um possui características próprias e pode ser associado às irradiações divinas dos Orixás."
+        },
+        {
+          "type": "paragraph",
+          "text": "Conhecer os sete principais chacras nos ajuda a compreender a importância do autoconhecimento e da harmonia entre pensamentos, sentimentos e atitudes."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "1. Chacra Coronário — Conexão com o Divino"
+        },
+        {
+          "type": "paragraph",
+          "text": "**Localização:** Topo da cabeça\n**Cores:** Violeta e branco\n**Irradiação:** Fé\n**Orixá associado:** Oxalá"
+        },
+        {
+          "type": "paragraph",
+          "text": "O Chacra Coronário representa nossa ligação com o Criador e com a espiritualidade. Está associado à fé, à consciência espiritual e à inspiração divina."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sua energia simboliza a conexão com as forças superiores e o desenvolvimento de uma espiritualidade consciente."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Qualidades positivas:** Fé, serenidade, inspiração e confiança."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Desequilíbrios simbólicos:** Confusão espiritual, falta de propósito e dificuldade de conexão com a fé."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "2. Chacra Frontal — Intuição e Conhecimento"
+        },
+        {
+          "type": "paragraph",
+          "text": "**Localização:** Entre as sobrancelhas\n**Cores:** Branco e azul-índigo\n**Irradiação:** Conhecimento\n**Orixá associado:** Oxóssi"
+        },
+        {
+          "type": "paragraph",
+          "text": "Conhecido como Terceiro Olho, o Chacra Frontal está associado à intuição, à percepção espiritual e à concentração."
+        },
+        {
+          "type": "paragraph",
+          "text": "Na Umbanda, representa a expansão da consciência e a capacidade de compreender as experiências espirituais com sabedoria e discernimento."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Qualidades positivas:** Intuição, concentração, clareza e sabedoria."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Desequilíbrios simbólicos:** Dispersão, confusão de pensamentos e falta de discernimento."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "3. Chacra Laríngeo — Comunicação e Expressão"
+        },
+        {
+          "type": "paragraph",
+          "text": "**Localização:** Garganta\n**Cor:** Azul-claro\n**Irradiação:** Lei\n**Orixá associado:** Ogum"
+        },
+        {
+          "type": "paragraph",
+          "text": "O Chacra Laríngeo está relacionado à comunicação, à expressão dos sentimentos e ao poder da palavra."
+        },
+        {
+          "type": "paragraph",
+          "text": "Na Umbanda, possui ligação simbólica com orações, pontos cantados e manifestações mediúnicas, representando a importância de utilizar a comunicação com verdade e responsabilidade."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Qualidades positivas:** Honestidade, criatividade, clareza e comunicação consciente."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Desequilíbrios simbólicos:** Dificuldade de expressão, insegurança e comunicação agressiva."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "4. Chacra Cardíaco — Amor e Harmonia"
+        },
+        {
+          "type": "paragraph",
+          "text": "**Localização:** Região do coração\n**Cores:** Verde e rosa\n**Irradiação:** Amor\n**Orixá associado:** Oxum"
+        },
+        {
+          "type": "paragraph",
+          "text": "O Chacra Cardíaco representa o amor, a compaixão e o equilíbrio dos sentimentos."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sua relação com Oxum simboliza o acolhimento, a união e a importância de cultivar relações baseadas no respeito e na caridade."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Qualidades positivas:** Amor, empatia, generosidade e harmonia."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Desequilíbrios simbólicos:** Egoísmo, ressentimento, possessividade e dificuldades afetivas."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "5. Chacra do Plexo Solar — Equilíbrio e Determinação"
+        },
+        {
+          "type": "paragraph",
+          "text": "**Localização:** Região superior do abdômen\n**Cor:** Amarelo\n**Irradiação:** Justiça\n**Orixá associado:** Xangô"
+        },
+        {
+          "type": "paragraph",
+          "text": "O Chacra do Plexo Solar está associado às emoções, à força de vontade e ao autocontrole."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sua ligação com Xangô representa o equilíbrio entre razão e emoção, incentivando decisões conscientes e atitudes responsáveis."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Qualidades positivas:** Determinação, autoconfiança, disciplina e equilíbrio."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Desequilíbrios simbólicos:** Insegurança, impulsividade, irritabilidade e dificuldade de controlar emoções."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "6. Chacra Esplênico — Vitalidade e Renovação"
+        },
+        {
+          "type": "paragraph",
+          "text": "**Localização:** Região associada ao baço\n**Cor:** Laranja\n**Irradiação:** Evolução\n**Orixá associado:** Obaluaiê"
+        },
+        {
+          "type": "paragraph",
+          "text": "O Chacra Esplênico está associado à vitalidade, à renovação energética e à capacidade de transformação."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sua ligação com Obaluaiê representa os processos de amadurecimento e evolução espiritual, incentivando a superação de padrões que dificultam nosso crescimento."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Qualidades positivas:** Vitalidade, renovação, adaptação e perseverança."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Desequilíbrios simbólicos:** Desânimo, resistência às mudanças e dificuldade de renovação."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "7. Chacra Básico — Sustentação e Segurança"
+        },
+        {
+          "type": "paragraph",
+          "text": "**Localização:** Base da coluna vertebral\n**Cor:** Vermelho\n**Irradiação:** Geração\n**Orixá associado:** Iemanjá"
+        },
+        {
+          "type": "paragraph",
+          "text": "O Chacra Básico, também conhecido como Chacra Raiz, representa a sustentação, a estabilidade e a vitalidade."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sua ligação com Iemanjá simboliza a geração, a preservação e o desenvolvimento da vida, lembrando-nos da importância do equilíbrio entre a existência material e a espiritual."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Qualidades positivas:** Segurança, coragem, estabilidade e confiança."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Desequilíbrios simbólicos:** Medo, insegurança, instabilidade e falta de confiança."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Os Chacras e a Mediunidade"
+        },
+        {
+          "type": "paragraph",
+          "text": "Na Umbanda, os chacras são compreendidos como centros de força relacionados à percepção e à circulação das energias espirituais."
+        },
+        {
+          "type": "paragraph",
+          "text": "Seu estudo contribui para a compreensão da sensibilidade mediúnica e da importância do equilíbrio interior."
+        },
+        {
+          "type": "paragraph",
+          "text": "Entretanto, o desenvolvimento espiritual também exige disciplina, autoconhecimento, responsabilidade e respeito aos fundamentos do terreiro."
+        },
+        {
+          "type": "paragraph",
+          "text": "**O equilíbrio espiritual começa dentro de nós e se manifesta em nossas atitudes, pensamentos e sentimentos.**"
+        }
+      ],
+      "cardImage": {
+        "src": "assets/biblioteca/chacras.png",
+        "alt": "Ilustração dos sete chacras, com suas posições e legendas",
+        "fit": "contain"
+      },
+      "image": {
+        "src": "assets/biblioteca/chacras.png",
+        "alt": "Ilustração dos sete chacras, com suas posições e legendas",
+        "fit": "contain"
+      },
+      "cardSummary": "Os sete centros de força e suas relações com a espiritualidade."
+    },
+    {
+      "id": "umbanda-biblioteca-elementos",
+      "parentId": "umbanda-biblioteca",
+      "slug": "elementos-naturais",
+      "title": "Ervas, Frutas, Flores e Água",
+      "heading": "Ervas, Frutas, Flores e Água na Umbanda",
+      "summary": "A força sagrada dos elementos da natureza",
+      "template": "article",
+      "order": 3,
+      "showInNavigation": false,
+      "status": "provided",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Na Umbanda, a natureza é uma manifestação da criação divina. As ervas, frutas, flores e a água possuem grande importância nos fundamentos religiosos, sendo utilizadas em práticas de harmonização, proteção, purificação e fortalecimento espiritual."
+        },
+        {
+          "type": "paragraph",
+          "text": "Dentro da compreensão da Umbanda Sagrada, esses elementos são associados às forças dos Orixás e aos mistérios da natureza, participando de trabalhos religiosos conforme suas características e finalidades."
+        },
+        {
+          "type": "paragraph",
+          "text": "Cada elemento possui seu simbolismo e sua forma de utilização, sendo importante respeitar os fundamentos, as tradições e as orientações de cada terreiro."
+        },
+        {
+          "type": "paragraph",
+          "text": "O uso desses elementos também nos ensina que a espiritualidade está presente na natureza e que preservar a criação é uma forma de reverenciar o sagrado."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "1. Ervas — A força do Reino Vegetal"
+        },
+        {
+          "type": "paragraph",
+          "text": "As ervas possuem grande importância nos trabalhos espirituais da Umbanda, especialmente por sua associação ao Reino Vegetal, ao conhecimento e às forças da natureza."
+        },
+        {
+          "type": "paragraph",
+          "text": "Na tradição religiosa, são consideradas portadoras de qualidades energéticas utilizadas em práticas de limpeza, proteção, equilíbrio e fortalecimento espiritual."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sua utilização pode ocorrer por meio de banhos, defumações, amacis, oferendas e outros rituais, sempre respeitando os fundamentos de cada casa."
+        },
+        {
+          "type": "paragraph",
+          "text": "As ervas também possuem uma relação especial com Oxóssi, Orixá associado às matas e ao Conhecimento Divino, embora diferentes vegetais possam ser relacionados a outros Orixás conforme seus atributos e fundamentos."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Ensinamento espiritual:** A natureza possui sabedoria e deve ser tratada com respeito. Conhecer as ervas é também aprender a valorizar e preservar as forças da criação."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "2. Frutas — A abundância e a geração da vida"
+        },
+        {
+          "type": "paragraph",
+          "text": "As frutas representam simbolicamente a fertilidade, a renovação, a prosperidade e os frutos da criação."
+        },
+        {
+          "type": "paragraph",
+          "text": "Na Umbanda, são utilizadas em determinadas oferendas e trabalhos religiosos, podendo ser relacionadas aos Orixás conforme suas características, cores e fundamentos espirituais."
+        },
+        {
+          "type": "paragraph",
+          "text": "Seu significado também está associado à abundância e ao resultado dos ciclos naturais, recordando-nos que toda colheita depende de um processo de crescimento e amadurecimento."
+        },
+        {
+          "type": "paragraph",
+          "text": "As frutas expressam a generosidade da natureza e a importância da gratidão por aquilo que recebemos."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Ensinamento espiritual:** Assim como a natureza produz seus frutos, nossas atitudes também geram resultados. Devemos cultivar aquilo que desejamos colher."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "3. Flores — A beleza e a expressão do sagrado"
+        },
+        {
+          "type": "paragraph",
+          "text": "As flores são elementos naturais que simbolizam a beleza, a delicadeza, a renovação e a expressão dos sentimentos."
+        },
+        {
+          "type": "paragraph",
+          "text": "Na Umbanda, estão presentes em altares, homenagens, oferendas e diferentes práticas religiosas."
+        },
+        {
+          "type": "paragraph",
+          "text": "Suas cores, formas e características podem representar atributos dos Orixás, conforme os fundamentos de cada tradição."
+        },
+        {
+          "type": "paragraph",
+          "text": "Também são utilizadas como demonstrações de fé, amor, respeito e gratidão, contribuindo para a simbologia e a harmonia dos espaços sagrados."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Ensinamento espiritual:** Assim como as flores precisam de cuidado para florescer, nossa espiritualidade também deve ser cultivada diariamente com fé, amor e dedicação."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "4. Água — A fonte da vida e da purificação"
+        },
+        {
+          "type": "paragraph",
+          "text": "A água é um dos elementos fundamentais da criação e possui profundo significado espiritual na Umbanda."
+        },
+        {
+          "type": "paragraph",
+          "text": "Associada à vida, à renovação, à purificação e ao equilíbrio, está presente em diferentes práticas religiosas, como banhos, amacis, firmezas e oferendas."
+        },
+        {
+          "type": "paragraph",
+          "text": "As águas também se relacionam a importantes forças divinas. As cachoeiras e os rios são especialmente associados a Oxum, enquanto o mar está ligado a Iemanjá. Nanã Buruquê também possui profunda relação com as águas paradas e o barro."
+        },
+        {
+          "type": "paragraph",
+          "text": "Em determinados trabalhos, a água é utilizada como elemento de sustentação e harmonização espiritual, conforme os fundamentos religiosos da casa."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Ensinamento espiritual:** A água nos ensina a importância de renovar sentimentos, seguir em frente e compreender que a vida está em constante movimento."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Banhos de Ervas, Frutas e Flores"
+        },
+        {
+          "type": "paragraph",
+          "text": "Os banhos de ervas são práticas tradicionais presentes em diferentes vertentes da Umbanda."
+        },
+        {
+          "type": "paragraph",
+          "text": "Dentro da compreensão religiosa, podem ser utilizados com finalidades como limpeza espiritual, harmonização, fortalecimento e preparação para determinados trabalhos."
+        },
+        {
+          "type": "paragraph",
+          "text": "Seu preparo pode envolver diferentes métodos, de acordo com a natureza dos elementos e as orientações espirituais da casa."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Maceração"
+        },
+        {
+          "type": "paragraph",
+          "text": "É um método de preparo no qual as plantas são colocadas em contato com a água, podendo ser suavemente amassadas ou deixadas em repouso para liberar seus componentes."
+        },
+        {
+          "type": "paragraph",
+          "text": "Na Umbanda, a maceração está presente em diferentes preparações ritualísticas com ervas."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Infusão"
+        },
+        {
+          "type": "paragraph",
+          "text": "É o processo de adicionar água quente às plantas e deixá-las em repouso por determinado período."
+        },
+        {
+          "type": "paragraph",
+          "text": "Esse método é utilizado em diversos preparos vegetais, embora nem todas as ervas sejam adequadas à exposição ao calor."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Decocção"
+        },
+        {
+          "type": "paragraph",
+          "text": "Consiste em aquecer determinados materiais vegetais juntamente com a água, permitindo a extração de seus componentes."
+        },
+        {
+          "type": "paragraph",
+          "text": "O método é conhecido especialmente pelo uso com partes vegetais mais resistentes, como algumas cascas e raízes."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "A importância da preparação espiritual"
+        },
+        {
+          "type": "paragraph",
+          "text": "Na Umbanda, os banhos ritualísticos não são compreendidos apenas como uma mistura de água e plantas."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sua preparação pode envolver orações, concentração, intenção religiosa e respeito às forças da natureza."
+        },
+        {
+          "type": "paragraph",
+          "text": "Entretanto, a escolha dos elementos e a maneira correta de utilizá-los devem considerar os fundamentos de cada terreiro e a orientação de pessoas preparadas."
+        },
+        {
+          "type": "paragraph",
+          "text": "Banhos de cabeça, amacis e outros procedimentos específicos exigem atenção especial, pois possuem significados religiosos próprios."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Defumações e Aromas na Umbanda"
+        },
+        {
+          "type": "paragraph",
+          "text": "As defumações fazem parte de diferentes tradições da Umbanda e são utilizadas em práticas de limpeza, harmonização e preparação dos ambientes religiosos."
+        },
+        {
+          "type": "paragraph",
+          "text": "Por meio da queima ritual de determinadas ervas ou resinas, a fumaça adquire um significado espiritual associado à purificação e à renovação."
+        },
+        {
+          "type": "paragraph",
+          "text": "Os aromas naturais também podem estar presentes em práticas de acolhimento, concentração e preparação dos espaços."
+        },
+        {
+          "type": "paragraph",
+          "text": "Dentro dos fundamentos religiosos, a defumação não depende apenas do aroma produzido, mas também de seu significado ritual e da finalidade do trabalho."
+        },
+        {
+          "type": "paragraph",
+          "text": "Seu uso deve respeitar as características dos materiais, a ventilação do ambiente e a segurança das pessoas presentes."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "A Água e os Pontos de Força da Natureza"
+        },
+        {
+          "type": "paragraph",
+          "text": "Na Umbanda, os pontos de força são ambientes naturais associados às irradiações dos Orixás."
+        },
+        {
+          "type": "paragraph",
+          "text": "As cachoeiras, os rios, o mar, os lagos e as nascentes possuem grande importância espiritual, representando diferentes manifestações da criação."
+        },
+        {
+          "type": "paragraph",
+          "text": "O contato respeitoso com esses lugares pode proporcionar momentos de oração, reflexão e conexão com a natureza."
+        },
+        {
+          "type": "paragraph",
+          "text": "As águas das cachoeiras são especialmente relacionadas a Oxum; o mar, a Iemanjá; e as águas paradas e regiões de barro, a Nanã Buruquê, conforme os fundamentos da tradição."
+        },
+        {
+          "type": "paragraph",
+          "text": "Essas associações representam diferentes mistérios divinos, demonstrando a importância da água na sustentação e na renovação da vida."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Respeito aos Fundamentos e à Natureza"
+        },
+        {
+          "type": "paragraph",
+          "text": "A utilização de ervas, frutas, flores e água deve estar acompanhada de conhecimento, responsabilidade e respeito."
+        },
+        {
+          "type": "paragraph",
+          "text": "Nem toda planta é adequada para contato com a pele, e algumas espécies podem provocar irritações, alergias ou intoxicações."
+        },
+        {
+          "type": "paragraph",
+          "text": "Por isso, o uso ritualístico desses elementos não deve ser confundido com tratamento médico, nem realizado de maneira indiscriminada."
+        },
+        {
+          "type": "paragraph",
+          "text": "Preparações destinadas à ingestão, banhos específicos, amacis e outros procedimentos religiosos devem seguir orientações adequadas."
+        },
+        {
+          "type": "paragraph",
+          "text": "Também é fundamental preservar os ambientes naturais, evitando o descarte de materiais que possam prejudicar os rios, as matas, as praias e outros espaços."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Cuidar da natureza é reconhecer o valor sagrado da criação. A fé também se manifesta no respeito à vida e na responsabilidade com o mundo ao nosso redor.**"
+        }
+      ],
+      "cardImage": {
+        "src": "assets/biblioteca/elementos-naturais.png",
+        "alt": "Ervas, flores e recipientes de vidro sobre uma mesa de madeira"
+      },
+      "image": {
+        "src": "assets/biblioteca/elementos-naturais.png",
+        "alt": "Ervas, flores e recipientes de vidro sobre uma mesa de madeira"
+      },
+      "cardSummary": "A presença e o significado dos elementos da natureza na Umbanda."
+    },
+    {
+      "id": "umbanda-biblioteca-dicionario",
+      "parentId": "umbanda-biblioteca",
+      "slug": "dicionario",
+      "title": "Dicionário da Umbanda",
+      "summary": "Um espaço de consulta aos termos utilizados na Umbanda.",
+      "template": "article",
+      "order": 4,
+      "showInNavigation": false,
+      "status": "demo",
+      "blocks": [],
+      "cardImage": {
+        "src": "assets/biblioteca/dicionario.png",
+        "alt": "Livro aberto sobre uma mesa de madeira"
+      },
+      "cardSummary": "Termos e significados para acompanhar seus estudos. Em preparação.",
+      "dictionary": []
     }
   ]
 };

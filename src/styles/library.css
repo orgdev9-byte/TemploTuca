@@ -1,0 +1,56 @@
+/* Library and gallery use the portal's existing colors, type and spacing. */
+.library-topics-title {position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;}
+body[data-mode="site"] .library-grid {gap:32px 28px;}
+body[data-mode="site"] .library-card {display:flex;flex-direction:column;padding:0;border:1px solid var(--line);border-radius:3px;overflow:hidden;background:var(--surface);}
+body[data-mode="site"] .library-card:hover {background:var(--surface);border-color:var(--accent);}
+.library-card-image {height:240px;overflow:hidden;background:var(--panel);}
+.library-card-image img {display:block;width:100%;height:100%;object-fit:cover;transition:transform .25s ease;}
+.library-card-image--contain {background:#fff;}
+.library-card-image--contain img {object-fit:contain;padding:12px;}
+body[data-mode="site"] .library-card-copy {display:flex;flex-direction:column;flex:1;padding:24px;}
+body[data-mode="site"] .library-card-copy h3 {margin:0 0 12px;font-size:23px;line-height:1.35;}
+body[data-mode="site"] .library-card-copy p {margin:0 0 24px;line-height:1.7;}
+body[data-mode="site"] .library-card-copy .card-bottom {margin-top:auto;padding-top:10px;}
+.library-card:hover .library-card-image:not(.library-card-image--contain) img {transform:scale(1.025);}
+.library-article-image {margin:32px 0 40px;max-width:800px;}
+.library-article-image img {display:block;width:100%;height:340px;object-fit:cover;border-radius:3px;}
+.library-article-image--contain {max-width:640px;}
+.library-article-image--contain img {height:auto;object-fit:contain;background:#fff;}
+.library-article-image figcaption {font-size:13px;color:var(--muted);margin-top:10px;}
+.dictionary-empty {border-top:1px solid var(--line);padding-top:28px;max-width:680px;}
+.dictionary-empty h2 {font-size:28px;}
+.dictionary-empty p {line-height:1.8;color:var(--muted);}
+.dictionary label {display:block;font-weight:600;margin-bottom:10px;}
+.dictionary input {display:block;max-width:560px;width:100%;padding:14px;border:1px solid var(--line);border-radius:3px;color:var(--ink);background:var(--surface);font:inherit;}
+.dictionary-count {color:var(--muted);font-size:14px;}
+.dictionary-entry {border-top:1px solid var(--line);padding:24px 0;}
+.dictionary-entry dt {font-size:22px;font-weight:600;}
+.dictionary-entry dd {margin:12px 0 0;line-height:1.8;}
+.photo-grid {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 24px;}
+.photo-grid figure {margin:0;min-width:0;}
+.photo-grid button {position:relative;display:block;width:100%;padding:0;border:0;background:var(--panel);color:#fff;cursor:zoom-in;overflow:hidden;border-radius:3px;}
+.photo-grid img {display:block;width:100%;height:300px;object-fit:cover;}
+.photo-grid button span {position:absolute;right:12px;bottom:12px;background:var(--accent);padding:7px 12px;border-radius:2px;font:500 13px Manrope,sans-serif;}
+.photo-grid figcaption {margin-top:10px;font-size:14px;color:var(--muted);}
+.photo-dialog {width:min(980px,calc(100vw - 32px));max-height:calc(100dvh - 32px);padding:20px;border:1px solid var(--line);border-radius:3px;background:var(--bg);color:var(--ink);overscroll-behavior:contain;}
+.photo-dialog::backdrop {background:rgba(15,28,22,.88);}
+body:has(.photo-dialog[open]) {overflow:hidden;}
+.photo-dialog-toolbar,.photo-dialog-controls {display:flex;align-items:center;justify-content:space-between;gap:16px;}
+.photo-dialog-toolbar {margin-bottom:16px;}
+.photo-dialog-toolbar p {margin:0;color:var(--muted);font-size:14px;}
+.photo-dialog button {min-height:44px;padding:8px 14px;border:1px solid var(--line);border-radius:3px;background:var(--surface);color:var(--ink);font:600 14px Manrope,sans-serif;cursor:pointer;}
+.photo-dialog button:hover {background:var(--panel);}
+.photo-dialog figure {margin:0;}
+.photo-dialog figure img {display:block;width:100%;height:min(65dvh,720px);object-fit:contain;}
+.photo-dialog figcaption {text-align:center;margin:16px 0;line-height:1.5;}
+@media(max-width:700px) {
+ body[data-mode="site"] .page-content .library-grid {grid-template-columns:1fr;gap:24px;}
+ .library-card-image {height:220px;}
+ .library-article-image img {height:260px;}
+ .library-article-image--contain img {height:auto;}
+ .photo-grid {grid-template-columns:1fr;gap:28px;}
+ .photo-grid img {height:340px;}
+ .photo-dialog {padding:12px;}
+ .photo-dialog figure img {height:60dvh;}
+}
+@media(prefers-reduced-motion:reduce) {.library-card-image img {transition:none;}.library-card:hover .library-card-image img {transform:none;}}

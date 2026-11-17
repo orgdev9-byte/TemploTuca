@@ -38,3 +38,27 @@ test('resumos aparecem uma vez e blocos genéricos não ocupam páginas',()=>{
     assert.ok(!page.blocks.some(b=>['Sobre este espaço','Conteúdo em preparação'].includes(b.text)),page.id+' contém estrutura genérica');
   }
 });
+
+test('biblioteca reúne quatro assuntos sem duplicar mediunidade nem expor um terceiro nível de menu',()=>{
+  const library=data.pages.find(p=>p.id==='umbanda-biblioteca');
+  assert.equal(library.parentId,'umbanda');
+  const topics=data.pages.filter(p=>p.parentId===library.id);
+  assert.deepEqual(topics.sort((a,b)=>a.order-b.order).map(p=>p.slug),['mediunidade','chacras','elementos-naturais','dicionario']);
+  assert.ok(topics.every(p=>!p.showInNavigation&&p.cardImage?.src&&p.showInCollection!==false));
+  assert.equal(data.pages.filter(p=>p.slug==='mediunidade').length,1);
+  assert.deepEqual(data.pages.filter(p=>p.parentId==='umbanda'&&p.showInNavigation).sort((a,b)=>a.order-b.order).map(p=>p.slug),['historia-da-umbanda','fundamentos','biblioteca']);
+  assert.equal(data.pages.find(p=>p.id==='conteudos-artigos').showInCollection,false);
+});
+
+test('imagens da biblioteca e galeria existem; diagrama não será recortado',async()=>{
+  const images=data.pages.flatMap(p=>[p.cardImage,p.image,...(p.photos||[])]).filter(Boolean);
+  for(const image of images){
+    assert.ok(image.alt?.trim(),'Imagem precisa de descrição');
+    assert.ok((await readFile(new URL('../src/'+image.src,import.meta.url))).length>0,image.src);
+  }
+  assert.equal(data.pages.find(p=>p.slug==='chacras').image.fit,'contain');
+  const gallery=data.pages.find(p=>p.id==='conteudos-galeria-de-fotos');
+  assert.equal(gallery.photos.length,6);
+  assert.ok(gallery.photos.some(photo=>photo.src===data.site.photo),'Preservar a fotografia original');
+  assert.equal(new Set(gallery.photos.map(photo=>photo.src)).size,6);
+});
