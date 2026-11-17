@@ -18,10 +18,12 @@
   const href = p => '#' + route(p);
   const link = (p,extra='') => `<a href="${escape(href(p))}" ${p.id===current?.id?'aria-current="page"':''} ${extra}>${escape(p.title)}</a>`;
   const find = id => pages.find(p=>p.id===id);
-  function navItems(items) {
+  function navItems(items,depth=0) {
     return `<ul>${items.filter(p=>p.showInNavigation).map(p=>{
       const sub=children(p.id).filter(x=>x.showInNavigation);
-      return `<li class="nav-item"><div class="nav-row">${link(p)}${sub.length?`<button class="submenu-toggle" aria-expanded="false" aria-controls="menu-${escape(p.id)}" aria-label="Abrir submenu ${escape(p.title)}" data-label="${escape(p.title)}"><span aria-hidden="true">⌄</span></button>`:''}</div>${sub.length?`<div class="submenu" id="menu-${escape(p.id)}" hidden>${p.id==='visite'?'':`<a class="overview-link" href="${escape(href(p))}">Ver introdução →</a>`}${navItems(sub)}</div>`:''}</li>`;
+      const wide=isSite&&depth===0&&sub.length>6;
+      const introduction=isSite&&depth===0?`<a class="submenu-intro" href="${escape(href(p))}"><span>${escape(p.heading||p.title)}</span><small>${escape(p.summary)}</small><span class="submenu-intro-arrow" aria-hidden="true">→</span></a>`:p.id==='visite'?'':`<a class="overview-link" href="${escape(href(p))}">Ver introdução →</a>`;
+      return `<li class="nav-item"><div class="nav-row">${link(p)}${sub.length?`<button class="submenu-toggle" aria-expanded="false" aria-controls="menu-${escape(p.id)}" aria-label="Abrir submenu ${escape(p.title)}" data-label="${escape(p.title)}"><span aria-hidden="true">⌄</span></button>`:''}</div>${sub.length?`<div class="submenu${wide?' submenu--wide':''}" id="menu-${escape(p.id)}" hidden>${introduction}${wide?`<label class="submenu-search">Buscar nesta seção<input type="search" placeholder="Digite um nome" aria-label="Buscar em ${escape(p.title)}" data-menu-filter></label><p class="submenu-no-results" role="status" aria-live="polite" hidden>Nenhum assunto encontrado.</p>`:''}${navItems(sub,depth+1)}</div>`:''}</li>`;
     }).join('')}</ul>`;
   }
   function closeSubmenus(except) {
@@ -81,7 +83,7 @@
   }
   function home() {
     return `<section class="hero wrap"><div class="hero-copy"><p class="eyebrow">${isSite ? escape(data.site.home.eyebrow) : theme.eyebrow}</p><h1 class="${isSite ? 'hero-title-name' : ''}">${isSite ? escape(data.site.home.title) : theme.heading}</h1><p class="hero-intro">${isSite ? escape(data.site.home.description) : theme.intro}</p><div class="hero-actions"><a class="button" href="${href(find('tuca'))}">Conheça o T.U.C.A <span aria-hidden="true">↗</span></a><a class="text-link" href="${href(find('calendario'))}">Ver calendário <span aria-hidden="true">→</span></a></div></div><figure class="hero-photo"><img src="${escape(data.site.photo)}" alt="Fotografia original fornecida do congá do T.U.C.A, com atabaque em primeiro plano" width="813" height="1314"><figcaption>Um olhar para a nossa casa <span>Fotografia original · T.U.C.A</span></figcaption></figure><span class="hero-vertical" aria-hidden="true">T.U.C.A / CAMINHOS DE ARUANDA</span></section>
-      <section class="quick-paths wrap" aria-label="Acessos rápidos"><a href="${href(find('visite'))}"><span class="eyebrow">01 · Sua visita</span><strong>Encontre seu caminho <span aria-hidden="true">↗</span></strong><p>Orientações e informações da casa.</p></a><a href="${href(find('orixas'))}"><span class="eyebrow">02 · Conhecimento</span><strong>Explore os assuntos <span aria-hidden="true">↗</span></strong><p>Orixás, Umbanda e Linhas de Trabalho.</p></a><a href="${href(find('calendario'))}"><span class="eyebrow">03 · Programação</span><strong>Acompanhe a agenda <span aria-hidden="true">↗</span></strong><p>Consulte as datas e os horários das giras.</p></a></section>
+      <section class="quick-paths wrap" aria-label="Acessos rápidos"><a href="${href(find('visite'))}"><span class="eyebrow">Sua visita</span><strong>Encontre seu caminho <span aria-hidden="true">↗</span></strong><p>Orientações e informações da casa.</p></a><a href="${href(find('orixas'))}"><span class="eyebrow">Conhecimento</span><strong>Explore os assuntos <span aria-hidden="true">↗</span></strong><p>Orixás, Umbanda e Linhas de Trabalho.</p></a><a href="${href(find('calendario'))}"><span class="eyebrow">Programação</span><strong>Acompanhe a agenda <span aria-hidden="true">↗</span></strong><p>Consulte as datas e os horários das giras.</p></a></section>
       <section class="portal-section wrap"><div class="section-heading"><div><p class="eyebrow">Conhecer, aprender, se aproximar</p><h2>Um portal para explorar.</h2></div><p>Escolha um assunto para navegar.</p></div>${cards([find('umbanda'),find('orixas'),find('linhas')])}</section>
       ${isSite?homeAgenda():`<section class="agenda-callout wrap"><div><p class="eyebrow">Calendário da casa</p><h2>O próximo encontro<br>começa por aqui.</h2></div><div>${eventList(upcomingEvents().slice(0,3))}<a class="text-link" href="${href(find('calendario'))}">Explorar o calendário <span aria-hidden="true">→</span></a></div></section>`}`;
   }
@@ -109,7 +111,30 @@
     });
   }
   function blocks(list=[]) {
-    return list.map(b=>b.type==='page-link'&&find(b.pageId)?`<a class="text-link" href="${escape(href(find(b.pageId)))}">${escape(b.text)} →</a>`:b.type==='contact'?contactBlock():b.type==='location'?locationBlock():b.type==='heading'?`<h2>${escape(b.text)}</h2>`:b.type==='paragraph'?`<p>${b.strong?`<strong>${escape(b.text)}</strong>`:escape(b.text)}</p>`:b.type==='list'?`<ul>${b.items.map(t=>`<li>${escape(t)}</li>`).join('')}</ul>`:'').join('');
+    return list.map((b,index)=>{
+      if(b.type==='heading'){
+        const level=b.level===3?3:2;
+        return `<h${level} id="reading-${escape(current.id)}-${index}" tabindex="-1">${escape(b.text)}</h${level}>`;
+      }
+      return b.type==='page-link'&&find(b.pageId)?`<a class="text-link" href="${escape(href(find(b.pageId)))}">${escape(b.text)} →</a>`:b.type==='contact'?contactBlock():b.type==='location'?locationBlock():b.type==='paragraph'?`<p>${b.strong?`<strong>${escape(b.text)}</strong>`:escape(b.text)}</p>`:b.type==='list'?`<ul>${b.items.map(t=>`<li>${escape(t)}</li>`).join('')}</ul>`:'';
+    }).join('');
+  }
+  function readingContent() {
+    if(!current.blocks?.length)return '';
+    const headings=current.blocks.map((b,index)=>({...b,index})).filter(b=>b.type==='heading');
+    if(!isSite||current.template!=='article'||headings.length<4)return `<div class="prose">${blocks(current.blocks)}</div>`;
+    const mainHeadings=headings.filter(b=>b.level!==3);
+    const sections=mainHeadings.length>=3?mainHeadings:headings;
+    return `<div class="article-reading-layout"><details class="reading-guide" ${matchMedia('(min-width:1280px)').matches?'open':''}><summary>Nesta página</summary><nav aria-label="Seções desta página"><ol><li><button type="button" data-reading-target="article-title">Introdução</button></li>${sections.map(b=>`<li><button type="button" data-reading-target="reading-${escape(current.id)}-${b.index}">${escape(b.text)}</button></li>`).join('')}</ol></nav></details><div class="prose">${blocks(current.blocks)}<button type="button" class="reading-back" data-reading-target="article-title">Voltar ao início do texto <span aria-hidden="true">↑</span></button></div></div>`;
+  }
+  function bindReading() {
+    document.querySelectorAll('[data-reading-target]').forEach(button=>button.addEventListener('click',()=>{
+      const target=document.getElementById(button.dataset.readingTarget);if(!target)return;
+      document.querySelectorAll('.reading-guide [aria-current]').forEach(item=>item.removeAttribute('aria-current'));
+      document.querySelector(`.reading-guide [data-reading-target="${button.dataset.readingTarget}"]`)?.setAttribute('aria-current','location');
+      target.focus({preventScroll:true});
+      target.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'auto':'smooth',block:'start'});
+    }));
   }
   function calendar() {
     const year=calendarDate.getFullYear(),month=calendarDate.getMonth();
@@ -134,12 +159,13 @@
   }
   function contentPage() {
     const parents=ancestors(current),section=parents[0]||current,sub=children(current.id),siblings=children(section.id);
-    return `<div class="wrap"><nav class="breadcrumbs" aria-label="Caminho da página"><ol><li><a href="#/">Início</a></li>${parents.map(p=>`<li>${link(p)}</li>`).join('')}<li aria-current="page">${escape(current.title)}</li></ol></nav><div class="content-layout${parents.length?'':' content-layout--overview'}">${parents.length?`<aside class="section-nav"><h2>${link(section)}</h2><nav aria-label="Páginas de ${escape(section.title)}"><ul>${siblings.map(p=>`<li>${link(p)}</li>`).join('')}</ul></nav></aside>`:''}<article class="page-content"><header class="page-heading"><h1>${escape(current.heading||current.title)}</h1><p class="page-summary">${escape(current.summary)}</p></header>
+    const summaryTag=current.template==='article'&&current.blocks?.find(b=>b.type==='heading')?.level===3?'h2':'p';
+    return `<div class="wrap"><nav class="breadcrumbs" aria-label="Caminho da página"><ol><li><a href="#/">Início</a></li>${parents.map(p=>`<li>${link(p)}</li>`).join('')}<li aria-current="page">${escape(current.title)}</li></ol></nav><div class="content-layout${parents.length?'':' content-layout--overview'}">${parents.length?`<aside class="section-nav"><h2>${link(section)}</h2><nav aria-label="Páginas de ${escape(section.title)}"><ul>${siblings.map(p=>`<li>${link(p)}</li>`).join('')}</ul></nav></aside>`:''}<article class="page-content"><header class="page-heading"><h1 id="article-title" tabindex="-1">${escape(current.heading||current.title)}</h1><${summaryTag} class="page-summary">${escape(current.summary)}</${summaryTag}></header>
       ${(current.id==='orixas'||current.id==='linhas')&&current.status==='demo'?'<div class="editorial-note"><strong>Uma estrutura para conhecer os temas.</strong><p>Os assuntos abaixo são propostas de organização. Não representam uma lista oficial dos fundamentos ou das práticas do T.U.C.A. A seleção e os textos dependem da aprovação do dirigente.</p></div>':''}
       ${current.template==='calendar'?`<div id="calendar-region">${calendar()}</div>`:''}
       ${current.template==='gallery'?gallery():''}
       ${current.image?`<figure class="orixa-image"><img src="${escape(current.image.src)}" alt="${escape(current.image.alt)}" width="1024" height="1024" loading="lazy" decoding="async">${current.image.caption?`<figcaption>${escape(current.image.caption)}</figcaption>`:''}</figure>`:''}
-      ${current.blocks?.length?`<div class="prose">${blocks(current.blocks)}</div>`:''}
+      ${readingContent()}
       ${sub.length?`<section class="subtopics" aria-label="Páginas desta seção"><h2>${current.id==='orixas'?'Conheça os temas':current.id==='linhas'?'Conheça as linhas de trabalho':'Explore esta seção'}</h2>${sectionCards(sub)}</section>`:''}
       ${current.template==='visit'?'<div class="editorial-note"><strong>Planeje sua primeira visita.</strong><p>Nosso endereço: Av. Sapopemba, 633 — Vila Regente Feijó, São Paulo — SP. Acesse Como chegar para consultar o mapa. Horários, contatos e recomendações de visita serão apresentados após confirmação da casa.</p></div>':''}
       </article></div></div>`;
@@ -159,9 +185,17 @@
     bindNavigation();
     bindCalendar();
     bindContact();
+    bindReading();
     if(focus) { document.getElementById('conteudo').focus({preventScroll:true});window.scrollTo({top:0,behavior:'instant'}); }
   }
   function bindNavigation() {
+    document.querySelectorAll('[data-menu-filter]').forEach(input=>input.addEventListener('input',()=>{
+      const normalize=value=>value.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLocaleLowerCase('pt-BR').trim();
+      const panel=input.closest('.submenu'),query=normalize(input.value);
+      const items=[...panel.querySelectorAll(':scope > ul > .nav-item')];
+      items.forEach(item=>{item.hidden=!normalize(item.textContent).includes(query);});
+      panel.querySelector('.submenu-no-results').hidden=items.some(item=>!item.hidden);
+    }));
     document.querySelector('.mobile-toggle').addEventListener('click',event=>{
       const btn=event.currentTarget,open=btn.getAttribute('aria-expanded')!=='true';
       btn.setAttribute('aria-expanded',String(open));btn.setAttribute('aria-label',`${open?'Fechar':'Abrir'} menu principal`);
